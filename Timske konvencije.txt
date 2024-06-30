@@ -1,0 +1,25 @@
+za imena promenljivih camelCase
+imena funkcija i klasa PascalCase
+
+za nove funkcionalnosti ime grane feature/ime-grane
+za testiranje funkcionalnosti ime grane test/ime-grane
+za refaktorisanje funkcionalnosti ime grane refactor/ime-grane
+za popravljanje necega ime grane fix/ime-grane
+reci u imenima grana razdvajamo crticom -
+
+komit poruke za funkcionalnosti [FEATURE]
+komit poruke za refaktorisanje [REFACTOR]
+komit poruke za testiranje [TEST]
+komit poruke za neke sitne izmene [ADD] ili [ENHACEMENT]
+komit poruke za popravljanje [FIX]
+komit poruke ako se nesto brise [DELETE]
+
+funkcije za dobavljanje Get, za kreiranje Create, za azuriranje Update, za brisanje Delete
+
+u json-u cuvamo podatke
+
+radimo MVVM ----> MARE HOCE DA NAUCI
+
+Sve se pise na engleskom, kao i nazivi grana i komit poruke i sve na guiju
+
+valjalo bi da se pridrzavamo ovga koliko mozemo
