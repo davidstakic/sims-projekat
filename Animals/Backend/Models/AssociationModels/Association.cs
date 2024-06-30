@@ -1,4 +1,4 @@
-﻿namespace Backend.Models
+﻿namespace Backend.Models.AssociationModels
 {
     public class Association
     {
@@ -10,7 +10,7 @@
         public List<int> VetOfficeIds { get; set; }
 
         public Association() { }
-        public Association (int id, string name, string address, DateOnly establishedDate, string accountNumber, List<int> vetOfficeIds)
+        public Association(int id, string name, string address, DateOnly establishedDate, string accountNumber, List<int> vetOfficeIds)
         {
             Id = id;
             Name = name;

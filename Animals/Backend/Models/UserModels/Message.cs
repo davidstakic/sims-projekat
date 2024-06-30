@@ -1,4 +1,4 @@
-﻿namespace Backend.Models
+﻿namespace Backend.Models.UserModels
 {
     public class Message
     {
@@ -9,7 +9,6 @@
         public int RecieverId { get; set; }
 
         public Message() { }
-
         public Message(int id, DateTime sentDate, string content, int senderId, int recieverId)
         {
             Id = id;
