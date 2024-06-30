@@ -1,7 +1,6 @@
 ﻿using Backend.Models.UserModels;
-using Backend.Repositories.Interface;
 
-namespace Backend.Repositories
+namespace Backend.Repositories.Interface.IUserRepository
 {
     public interface IMessageRepository : IRepository<Message>
     {
