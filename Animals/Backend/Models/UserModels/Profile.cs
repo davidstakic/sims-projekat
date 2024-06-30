@@ -3,15 +3,17 @@
     public class Profile
     {
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
+        public DateTime CreationDate { get; set; }
 
         public Profile() { }
-        public Profile(int id, string userName, string password)
+        public Profile(int id, string username, string password, DateTime creationDate)
         {
             Id = id;
-            UserName = userName;
+            Username = username;
             Password = password;
+            CreationDate = creationDate;
         }
     }
 }
