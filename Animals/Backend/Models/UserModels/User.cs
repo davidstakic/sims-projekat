@@ -1,6 +1,6 @@
 ﻿using Backend.Utils;
 
-namespace Backend.Models
+namespace Backend.Models.UserModels
 {
     public abstract class User
     {
