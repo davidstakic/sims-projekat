@@ -3,9 +3,9 @@ using Backend.Repositories.Interface.IRepositoryUser;
 
 namespace Backend.Repositories.UserRepository.UserRepository
 {
-    public class UserGradeRepositoryRepository : Repository<UserGrade>, IUserGradeRepository
+    public class UserGradeRepository : Repository<UserGrade>, IUserGradeRepository
     {
-        public UserGradeRepositoryRepository(string filePath) : base(filePath)
+        public UserGradeRepository(string filePath) : base(filePath)
         {
         }
 
