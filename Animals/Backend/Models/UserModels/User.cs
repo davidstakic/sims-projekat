@@ -1,6 +1,6 @@
 ﻿using Backend.Utils;
 
-namespace Backend.Models
+namespace Backend.Models.UserModels
 {
     public abstract class User
     {
@@ -11,9 +11,10 @@ namespace Backend.Models
         public DateOnly BirthDate { get; set; }
         public Gender Gender { get; set; }
         public int ProfileId { get; set; }
+        public int AssociationId { get; set; }
 
         public User() { }
-        public User(int id, string name, string phoneNumber, string email, DateOnly birthDate, Gender gender, int profileId)
+        public User(int id, string name, string phoneNumber, string email, DateOnly birthDate, Gender gender, int profileId, int associationId)
         {
             Id = id;
             Name = name;
@@ -22,6 +23,7 @@ namespace Backend.Models
             BirthDate = birthDate;
             Gender = gender;
             ProfileId = profileId;
+            AssociationId = associationId;
         }
     }
 }
