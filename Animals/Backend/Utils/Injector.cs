@@ -1,4 +1,6 @@
-﻿using Backend.Repositories.AnimalRepository;
+﻿using Backend.Models.UserModels;
+using Backend.Repositories;
+using Backend.Repositories.AnimalRepository;
 using Backend.Repositories.AssociationRepository;
 using Backend.Repositories.PostRepository;
 using Backend.Repositories.UserRepository;
@@ -39,6 +41,7 @@ namespace Backend.Utils
             Instances.Add("IVetOfficeRepository", new VetOfficeRepository("../../../Data/VetOffices.json"));
             Instances.Add("IVoteRepository", new VoteRepository("../../../Data/Votes.json"));
             Instances.Add("IVotingRepository", new VotingRepository("../../../Data/Votings.json"));
+            Instances.Add("IProfileRepository", new Repository<Profile>("../../../Data/Profiles.json"));
         }
     }
 }
