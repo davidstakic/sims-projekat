@@ -9,8 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\animal-service-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\animal-service-icon.png" />
   </ItemGroup>
 
 </Project>
