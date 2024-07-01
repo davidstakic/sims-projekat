@@ -2,9 +2,9 @@
 
 namespace Frontend.View
 {
-    public partial class VolunteerRegistrationView : Window
+    public partial class RegistrationView : Window
     {
-        public VolunteerRegistrationView()
+        public RegistrationView()
         {
             InitializeComponent();
         }

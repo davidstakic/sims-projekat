@@ -9,5 +9,10 @@ namespace Backend.Services.UserServices
         public ProfileService() : base((IProfileRepository)Injector.GetRepositoryInstance("IProfileRepository"))
         {
         }
+
+        public Profile GetByUsernameAndPassword(string username, string password)
+        {
+            return GetAll().FirstOrDefault(p => p.Username == username && p.Password == password)!;
+        }
     }
 }

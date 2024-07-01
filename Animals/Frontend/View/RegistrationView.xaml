@@ -1,11 +1,11 @@
-﻿<Window x:Class="Frontend.View.VolunteerRegistrationView"
+﻿<Window x:Class="Frontend.View.RegistrationView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend.View"
         mc:Ignorable="d"
-        Title="Volunteer Registration" Height="730" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Volunteer Registration" Height="700" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -170,7 +170,7 @@
                 <!-- Animal Icon -->
                 <Image Source="pack://application:,,,/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
-                <TextBlock Text="Volunteer Registration" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+                <TextBlock Text="Member Registration" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="FirstNameTextBox" Margin="0" VerticalAlignment="Center" />
@@ -222,10 +222,6 @@
                     <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"/>
                     <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
                                VerticalAlignment="Center" Visibility="Visible" />
-                </Grid>
-
-                <Grid Margin="0,0,0,10">
-                    <CheckBox Name="IsAdminCheckBox" Content="Is Admin" VerticalAlignment="Center" Margin="5,0,0,0"/>
                 </Grid>
 
                 <Button x:Name="RegisterButton" Content="Register" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
