@@ -40,7 +40,7 @@ namespace Frontend
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            new VolunteerRegistrationView().Show();
+            new RegistrationView().Show();
             //new RegistrationMenu(_studentsController).Show();
             Close();
         }

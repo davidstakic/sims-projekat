@@ -56,6 +56,30 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="PasswordBox">
+    <Setter Property="FontFamily" Value="Calibri" />
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="Foreground" Value="#4e54c8" />
+    <Setter Property="Margin" Value="0,5" />
+    <Setter Property="Padding" Value="10,5" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="PasswordBox">
+                <Grid>
+                    <Border x:Name="Border" CornerRadius="25" Background="White" BorderBrush="#4e54c8" BorderThickness="2">
+                        <ScrollViewer x:Name="PART_ContentHost" />
+                    </Border>
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter TargetName="Border" Property="Opacity" Value="0.5"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
     </Window.Resources>
     <Grid>
         <!-- Background Gradient -->
@@ -80,7 +104,7 @@
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="EmailTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Email" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
