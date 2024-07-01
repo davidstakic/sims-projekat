@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Frontend.View;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Frontend
@@ -23,10 +24,27 @@ namespace Frontend
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             //new LoginMenu(_studentsController, _professorsController, _professorGradesController).Show();
-            string email = EmailTextBox.Text;
+            /*string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
-            MessageBox.Show($"Attempting to log in with Email: {email} and Password: {password}");
-            Close();
+            ProfileService profileService = new ProfileService();
+            Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
+            if (loginProfile == null) return;
+            UserService userService = new UserService();
+            User user = userService.GetUserByProfileId(loginProfile.Id);
+            if (user == null) return;
+            if (user is Member)
+            {
+                Member member = (Member)user;
+            }
+            else if (user is Volunteer)
+            {
+                Volunteer volunteer = (Volunteer)user;
+                if (volunteer.IsAdmin)
+                {
+
+                }
+            }
+            Close();*/
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
@@ -39,12 +57,19 @@ namespace Frontend
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
+            new MemberMainPageView().Show();
             //new RegistrationMenu(_studentsController).Show();
             Close();
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void Posts_Click(object sender, RoutedEventArgs e)
+        {
+            new PostsView().Show();
+            Close();
         }
     }
 }
