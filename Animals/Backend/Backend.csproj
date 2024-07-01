@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Frontend\Frontend.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Services\VoteServices\" />
     <Folder Include="Services\VetOfficeServices\" />
