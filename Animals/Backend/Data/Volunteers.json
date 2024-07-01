@@ -1,29 +1,5 @@
 [
     {
-        "Id": 1,
-        "FirstName": "John",
-        "LastName": "Doe",
-        "PhoneNumber": "123-456-7890",
-        "Email": "john.doe@example.com",
-        "BirthDate": "1990-01-01",
-        "Gender": 0,
-        "ProfileId": 1,
-        "AssociationId": 202,
-        "IsAdmin": true
-    },
-    {
-        "Id": 2,
-        "FirstName": "Jane",
-        "LastName": "Smith",
-        "PhoneNumber": "234-567-8901",
-        "Email": "jane.smith@example.com",
-        "BirthDate": "1985-05-15",
-        "Gender": 1,
-        "ProfileId": 2,
-        "AssociationId": 203,
-        "IsAdmin": false
-    },
-    {
         "Id": 3,
         "FirstName": "Alice",
         "LastName": "Brown",

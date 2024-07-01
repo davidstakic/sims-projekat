@@ -29,10 +29,6 @@ namespace Frontend
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
             ProfileService profileService = new ProfileService();
-            foreach (Profile profile in profileService.GetAll())
-            {
-                MessageBox.Show(profile.Username + " " + profile.Password);
-            }
             Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
             if (loginProfile == null)
             {
@@ -50,6 +46,7 @@ namespace Frontend
                     {
                         new MemberMainPageView().Show();
                         Close();
+                        return;
                     }
                     new PostsView().Show();
                     Close();
@@ -66,6 +63,7 @@ namespace Frontend
                     {
                         new AdministratorMainPageView().Show();
                         Close();
+                        return;
                     }
                     new VolunteerMainPageView().Show();
                     Close();
