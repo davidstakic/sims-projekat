@@ -4,7 +4,7 @@ namespace Backend.Repositories.Interfaces.UserInterfaces
 {
     public interface IUserRepository : IRepository<User>
     {
-        IEnumerable<User> GetUserByProfileId(int profileId);
-        IEnumerable<User> GetUserByAssociationId(int associationId);
+        User GetUserByProfileId(int profileId);
+        User GetUserByAssociationId(int associationId);
     }
 }

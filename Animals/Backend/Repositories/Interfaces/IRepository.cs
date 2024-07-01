@@ -1,4 +1,6 @@
-﻿namespace Backend.Repositories.Interfaces
+﻿using Backend.Models.UserModels;
+
+namespace Backend.Repositories.Interfaces
 {
     public interface IRepository<T>
     {

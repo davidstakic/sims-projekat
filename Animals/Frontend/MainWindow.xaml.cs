@@ -1,4 +1,6 @@
-﻿using Frontend.View;
+﻿using Backend.Models.UserModels;
+using Backend.Services.UserServices;
+using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,9 +26,26 @@ namespace Frontend
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             //new LoginMenu(_studentsController, _professorsController, _professorGradesController).Show();
-            string email = EmailTextBox.Text;
+            string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
-            MessageBox.Show($"Attempting to log in with Email: {email} and Password: {password}");
+            ProfileService profileService = new ProfileService();
+            Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
+            if (loginProfile == null) return;
+            UserService userService = new UserService();
+            User user = userService.GetUserByProfileId(loginProfile.Id);
+            if (user == null) return;
+            if (user is Member)
+            {
+                Member member = (Member)user;
+            }
+            else if (user is Volunteer)
+            {
+                Volunteer volunteer = (Volunteer)user;
+                if (volunteer.IsAdmin)
+                {
+
+                }
+            }
             Close();
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)

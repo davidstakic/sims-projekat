@@ -103,7 +103,7 @@
                 <TextBlock Text="Login" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
                 <Grid Margin="0,0,0,10">
-                    <TextBox Name="EmailTextBox" Margin="0" VerticalAlignment="Center" />
+                    <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>

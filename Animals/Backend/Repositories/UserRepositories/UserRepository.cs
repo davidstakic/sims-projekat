@@ -9,14 +9,14 @@ namespace Backend.Repositories.UserRepositories
         {
         }
 
-        IEnumerable<User> IUserRepository.GetUserByProfileId(int profileId)
+        public User GetUserByProfileId(int profileId)
         {
-            return GetAll().Where(m => m.ProfileId == profileId);
+            return GetAll().FirstOrDefault(m => m.ProfileId == profileId)!;
         }
 
-        IEnumerable<User> IUserRepository.GetUserByAssociationId(int associationId)
+        public User GetUserByAssociationId(int associationId)
         {
-            return GetAll().Where(m => m.AssociationId == associationId);
+            return GetAll().FirstOrDefault(m => m.AssociationId == associationId)!;
         }
     }
 }
