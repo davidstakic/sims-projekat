@@ -8,7 +8,7 @@
     "Email": "john.doe@example.com",
     "BirthDate": "1990-01-01",
     "Gender": 0,
-    "ProfileId": 101,
+    "ProfileId": 1,
     "AssociationId": 202
   },
   {
@@ -20,7 +20,43 @@
     "Email": "asdf.doe@example.com",
     "BirthDate": "1990-01-01",
     "Gender": 1,
-    "ProfileId": 101,
+    "ProfileId": 2,
     "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 1,
+    "Id": 3,
+    "Name": "Alice Brown",
+    "PhoneNumber": "234-567-8901",
+    "Email": "alice.brown@example.com",
+    "BirthDate": "1985-05-15",
+    "Gender": 1,
+    "ProfileId": 3,
+    "AssociationId": 203
+  },
+  {
+    "IsBlacklisted": true,
+    "Status": 0,
+    "Id": 4,
+    "Name": "Bob White",
+    "PhoneNumber": "345-678-9012",
+    "Email": "bob.white@example.com",
+    "BirthDate": "1978-09-23",
+    "Gender": 0,
+    "ProfileId": 4,
+    "AssociationId": 204
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 1,
+    "Id": 5,
+    "Name": "Cathy Green",
+    "PhoneNumber": "456-789-0123",
+    "Email": "cathy.green@example.com",
+    "BirthDate": "1992-12-30",
+    "Gender": 1,
+    "ProfileId": 5,
+    "AssociationId": 205
   }
 ]
