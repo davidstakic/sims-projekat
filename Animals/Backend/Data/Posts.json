@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "Title": "Adopting",
+    "Description": "Hi, I am doing...",
+    "CreationDate": "2024-07-01T15:56:12.776842+02:00",
+    "Image": "../../../Data/PostImages.txt",
+    "Video": "../../../Data/dog.avif",
+    "Status": 2,
+    "AnimalId": 1,
+    "UserId": 1
+  },
+  {
+    "Id": 2,
+    "Title": "For Adoption",
+    "Description": "Hi, I am doing...",
+    "CreationDate": "2024-07-01T15:56:12.7825813+02:00",
+    "Image": "../../../Data/PostImages.txt",
+    "Video": "../../../Data/dog.avif",
+    "Status": 2,
+    "AnimalId": 2,
+    "UserId": 1
+  },
+  {
+    "Id": 3,
+    "Title": "Adopting",
+    "Description": "Hi, I am putting...",
+    "CreationDate": "2024-07-01T15:56:12.782584+02:00",
+    "Image": "../../../Data/PostImages.txt",
+    "Video": "../../../Data/dog.avif",
+    "Status": 2,
+    "AnimalId": 3,
+    "UserId": 2
+  },
+  {
+    "Id": 4,
+    "Title": "Adopting",
+    "Description": "Hi, I am adopting...",
+    "CreationDate": "2024-07-01T15:56:12.7825844+02:00",
+    "Image": "../../../Data/PostImages.txt",
+    "Video": "../../../Data/dog.avif",
+    "Status": 2,
+    "AnimalId": 4,
+    "UserId": 1
+  },
+  {
+    "Id": 5,
+    "Title": "For Adoption",
+    "Description": "Hi, I am putting...",
+    "CreationDate": "2024-07-01T15:56:12.7825846+02:00",
+    "Image": "../../../Data/PostImages.txt",
+    "Video": "../../../Data/dog.avif",
+    "Status": 2,
+    "AnimalId": 5,
+    "UserId": 2
+  }
+]

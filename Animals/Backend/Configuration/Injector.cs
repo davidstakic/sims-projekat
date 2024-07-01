@@ -36,7 +36,6 @@ namespace Backend.Configuration
             Instances.Add("IMessageRepository", new MessageRepository("../../../Data/Messages.json"));
             Instances.Add("IProfileRepository", new ProfileRepository("../../../Data/Profiles.json"));
             Instances.Add("IUserGradeRepository", new UserGradeRepository("../../../Data/UserGrades.json"));
-            Instances.Add("IUserRepository", new UserRepository("../../../Data/Users.json"));
             Instances.Add("IVolunteerRepository", new VolunteerRepository("../../../Data/Volunteers.json"));
             Instances.Add("ITreatmentRepository", new TreatmentRepository("../../../Data/Treatments.json"));
             Instances.Add("IVetOfficeRepository", new VetOfficeRepository("../../../Data/VetOffices.json"));

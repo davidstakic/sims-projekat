@@ -42,6 +42,7 @@ namespace Frontend
         {
             new VolunteerRegistrationView().Show();
             //new RegistrationMenu(_studentsController).Show();
+            new PostsView().Show();
             Close();
         }
         private void Close_Click(object sender, RoutedEventArgs e)
