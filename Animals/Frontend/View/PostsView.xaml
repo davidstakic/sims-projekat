@@ -65,12 +65,12 @@
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                                            <Image Source="pack://application:,,,/Frontend;component/Images/like.png" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0" Panel.ZIndex="1"/>
+                                            <Image Source="pack://application:,,,/Frontend;component/Images/like.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0" Panel.ZIndex="1"/>
                                             <TextBlock Text="{Binding LikeCount}" FontSize="16" VerticalAlignment="Center"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
                                             <TextBlock Text="{Binding CommentCount}" FontSize="16" VerticalAlignment="Center"/>
-                                            <Image Source="pack://application:,,,/Frontend;component/Images/comment.png" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,0,0,0" Panel.ZIndex="1"/>
+                                            <Image Source="pack://application:,,,/Frontend;component/Images/comment.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,0,0,0" Panel.ZIndex="1"/>
                                         </StackPanel>
                                     </Grid>
                                 </StackPanel>

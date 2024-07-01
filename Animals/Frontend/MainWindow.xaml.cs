@@ -1,6 +1,4 @@
-﻿using Backend.Models.UserModels;
-using Backend.Services.UserServices;
-using Frontend.View;
+﻿using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -26,7 +24,7 @@ namespace Frontend
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             //new LoginMenu(_studentsController, _professorsController, _professorGradesController).Show();
-            string username = UsernameTextBox.Text;
+            /*string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
             ProfileService profileService = new ProfileService();
             Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
@@ -46,7 +44,7 @@ namespace Frontend
 
                 }
             }
-            Close();
+            Close();*/
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
@@ -61,12 +59,17 @@ namespace Frontend
         {
             new RegistrationView().Show();
             //new RegistrationMenu(_studentsController).Show();
-            new PostsView().Show();
             Close();
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void Posts_Click(object sender, RoutedEventArgs e)
+        {
+            new PostsView().Show();
+            Close();
         }
     }
 }

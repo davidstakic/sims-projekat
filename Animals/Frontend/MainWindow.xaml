@@ -121,6 +121,8 @@
                            MouseLeftButtonUp="ForgotPassword_Click" />
                 <TextBlock Text="Don't have an account? Sign up" Foreground="#4e54c8" HorizontalAlignment="Center"
                            MouseLeftButtonUp="SignUp_Click" />
+                <TextBlock Text="Discover New Posts!" Foreground="#4e54c8" HorizontalAlignment="Center"
+                           MouseLeftButtonUp="Posts_Click" />
             </StackPanel>
         </Border>
     </Grid>
