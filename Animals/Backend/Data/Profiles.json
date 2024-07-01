@@ -1,0 +1,33 @@
+[
+    {
+      "Id": 1,
+      "Username": "john_doe",
+      "Password": "password123",
+      "CreationDate": "2023-01-15T10:20:30"
+    },
+    {
+      "Id": 2,
+      "Username": "jane_smith",
+      "Password": "securePass!456",
+      "CreationDate": "2023-02-20T14:35:00"
+    },
+    {
+      "Id": 3,
+      "Username": "alice_brown",
+      "Password": "brownPass789",
+      "CreationDate": "2023-03-25T09:15:45"
+    },
+    {
+      "Id": 4,
+      "Username": "bob_white",
+      "Password": "whitePass321",
+      "CreationDate": "2023-04-10T12:45:30"
+    },
+    {
+      "Id": 5,
+      "Username": "cathy_green",
+      "Password": "greenPass654",
+      "CreationDate": "2023-05-18T08:30:25"
+    }
+  ]
+  

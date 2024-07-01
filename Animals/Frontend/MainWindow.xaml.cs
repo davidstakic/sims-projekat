@@ -1,4 +1,7 @@
-﻿using Frontend.View;
+﻿using Backend.Models.Enums;
+using Backend.Models.UserModels;
+using Backend.Services.UserServices;
+using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -23,28 +26,50 @@ namespace Frontend
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            //new LoginMenu(_studentsController, _professorsController, _professorGradesController).Show();
-            /*string username = UsernameTextBox.Text;
+            string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
             ProfileService profileService = new ProfileService();
             Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
-            if (loginProfile == null) return;
-            UserService userService = new UserService();
-            User user = userService.GetUserByProfileId(loginProfile.Id);
-            if (user == null) return;
-            if (user is Member)
+            if (loginProfile == null)
             {
-                Member member = (Member)user;
+                MessageBox.Show("Username or password incorrect!");
+                return;
             }
-            else if (user is Volunteer)
+            MemberService memberService = new MemberService();
+            Profile memberProfile;
+            foreach (Member member in memberService.GetAll())
             {
-                Volunteer volunteer = (Volunteer)user;
-                if (volunteer.IsAdmin)
+                memberProfile = profileService.GetById(member.ProfileId);
+                if (loginProfile.Username == memberProfile.Username && loginProfile.Password == memberProfile.Password)
                 {
-
+                    if (member.Status == Status.Accepted || !member.IsBlacklisted)
+                    {
+                        new MemberMainPageView().Show();
+                        Close();
+                        return;
+                    }
+                    new PostsView().Show();
+                    Close();
                 }
             }
-            Close();*/
+            VolunteerService volunteerService = new VolunteerService();
+            Profile volunteerProfile;
+            foreach (Volunteer volunteer in volunteerService.GetAll())
+            {
+                volunteerProfile = profileService.GetById(volunteer.ProfileId);
+                if (loginProfile.Username == volunteerProfile.Username && loginProfile.Password == volunteerProfile.Password)
+                {
+                    if (volunteer.IsAdmin)
+                    {
+                        new AdministratorMainPageView().Show();
+                        Close();
+                        return;
+                    }
+                    new VolunteerMainPageView().Show();
+                    Close();
+                }
+            }
+            Close();
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
