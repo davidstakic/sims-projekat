@@ -47,7 +47,7 @@
         <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" Margin="0,10,10,0"
                 Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" Panel.ZIndex="1" />
 
-        <Image Source="pack://application:,,,/Frontend;component/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0"/>
+        <Image Source="pack://application:,,,/Frontend;component/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
 
         <!-- Posts Container -->
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,70,0,0">
@@ -55,12 +55,16 @@
                 <ItemsControl ItemsSource="{Binding Posts}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Background="White" CornerRadius="10" Margin="0,0,0,10" Padding="10">
+                            <Border Background="White" CornerRadius="10" Margin="0,0,0,10" Padding="10"
+                            MouseLeftButtonDown="PostBorder_MouseLeftButtonDown">
                                 <StackPanel>
-                                    <TextBlock Text="{Binding Post.Title}" FontWeight="Bold" FontSize="22" />
-                                    <TextBlock Text="{Binding Post.Description}" Margin="0,5,0,10" TextWrapping="Wrap" />
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Post.Title}" FontSize="22" FontWeight="Bold" />
+                                        <TextBlock Text="{Binding FullName}" Margin="0,5,0,10" FontSize="13" />
+                                    </StackPanel>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
@@ -68,7 +72,10 @@
                                             <Image Source="pack://application:,,,/Frontend;component/Images/like.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,10,0" Panel.ZIndex="1"/>
                                             <TextBlock Text="{Binding LikeCount}" FontSize="16" VerticalAlignment="Center"/>
                                         </StackPanel>
-                                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Post.CreationDate}" FontSize="10" VerticalAlignment="Center" Margin="0,40,10,0"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
                                             <TextBlock Text="{Binding CommentCount}" FontSize="16" VerticalAlignment="Center"/>
                                             <Image Source="pack://application:,,,/Frontend;component/Images/comment.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,0,0,0" Panel.ZIndex="1"/>
                                         </StackPanel>

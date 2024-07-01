@@ -2,10 +2,10 @@
   {
     "Id": 1,
     "Title": "Adopting",
-    "Description": "Hi, I am doing...",
+    "Description": "Hi, I am doing... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "CreationDate": "2024-07-01T15:56:12.776842+02:00",
-    "Image": "../../../Data/PostImages.txt",
-    "Video": "../../../Data/dog.avif",
+    "Image": "https://i.pinimg.com/736x/cb/e8/6a/cbe86acfb4ec78e2b4c368daf5c60095.jpg",
+    "Video": "None",
     "Status": 2,
     "AnimalId": 1,
     "UserId": 1
@@ -15,8 +15,8 @@
     "Title": "For Adoption",
     "Description": "Hi, I am doing...",
     "CreationDate": "2024-07-01T15:56:12.7825813+02:00",
-    "Image": "../../../Data/PostImages.txt",
-    "Video": "../../../Data/dog.avif",
+    "Image": "https://cw33.com/wp-content/uploads/sites/8/2022/08/Fa8VfwHXEAAtCLi.jpg",
+    "Video": "None",
     "Status": 2,
     "AnimalId": 2,
     "UserId": 1
@@ -26,8 +26,8 @@
     "Title": "Adopting",
     "Description": "Hi, I am putting...",
     "CreationDate": "2024-07-01T15:56:12.782584+02:00",
-    "Image": "../../../Data/PostImages.txt",
-    "Video": "../../../Data/dog.avif",
+    "Image": "https://t3.ftcdn.net/jpg/07/17/33/40/360_F_717334058_zZu41aMmrR0CvBxI3WLbWRjrqFyLAdW1.jpg",
+    "Video": "None",
     "Status": 2,
     "AnimalId": 3,
     "UserId": 2
@@ -37,8 +37,8 @@
     "Title": "Adopting",
     "Description": "Hi, I am adopting...",
     "CreationDate": "2024-07-01T15:56:12.7825844+02:00",
-    "Image": "../../../Data/PostImages.txt",
-    "Video": "../../../Data/dog.avif",
+    "Image": "https://www.boredpanda.com/blog/wp-content/uploads/2021/11/6188f4805c24d_kcm73mko3m631__700.jpg",
+    "Video": "None",
     "Status": 2,
     "AnimalId": 4,
     "UserId": 1
@@ -48,8 +48,8 @@
     "Title": "For Adoption",
     "Description": "Hi, I am putting...",
     "CreationDate": "2024-07-01T15:56:12.7825846+02:00",
-    "Image": "../../../Data/PostImages.txt",
-    "Video": "../../../Data/dog.avif",
+    "Image": "https://i.pinimg.com/originals/1c/a3/1a/1ca31a8bec053cb87c74dc46671b9823.jpg",
+    "Video": "None",
     "Status": 2,
     "AnimalId": 5,
     "UserId": 2

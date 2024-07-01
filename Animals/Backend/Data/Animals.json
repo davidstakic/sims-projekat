@@ -12,17 +12,17 @@
   {
     "Id": 2,
     "Name": "Boa",
-    "Breed": "Beagle",
+    "Breed": "Monkey",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
     "HealthCondition": "Great",
     "Location": "Serbia",
-    "AnimalSpecieId": 1
+    "AnimalSpecieId": 2
   },
   {
     "Id": 3,
     "Name": "Gordon",
-    "Breed": "Beagle",
+    "Breed": "Cat",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
     "HealthCondition": "Great",
@@ -32,21 +32,21 @@
   {
     "Id": 4,
     "Name": "Sunny",
-    "Breed": "Beagle",
+    "Breed": "Cow",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
     "HealthCondition": "Great",
     "Location": "Cacak",
-    "AnimalSpecieId": 1
+    "AnimalSpecieId": 3
   },
   {
     "Id": 5,
     "Name": "Ramstein",
-    "Breed": "Beagle",
+    "Breed": "Horse",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
     "HealthCondition": "Great",
     "Location": "Kraljevo",
-    "AnimalSpecieId": 1
+    "AnimalSpecieId": 5
   }
 ]
