@@ -13,7 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Folder Include="ViewModel\ModelViewModels\AnimalViewModels\" />
+    <Folder Include="ViewModel\ModelViewModels\AssociationViewModels\" />
+    <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
+    <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
+    <Folder Include="ViewModel\ModelViewModels\UserViewModels\" />
+    <Folder Include="ViewModel\ModelViewModels\PostViewModels\" />
+    <Folder Include="ViewModel\PageViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
