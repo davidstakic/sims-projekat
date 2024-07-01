@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace Frontend.View
 {
     /// <summary>
-    /// Interaction logic for RegistrationMenu.xaml
+    /// Interaction logic for AdministratorMainPageView.xaml
     /// </summary>
-    public partial class RegistrationMenu : Window
+    public partial class AdministratorMainPageView : Window
     {
-        public RegistrationMenu()
+        public AdministratorMainPageView()
         {
             InitializeComponent();
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
+
 }
