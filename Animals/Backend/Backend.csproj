@@ -13,8 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Services\AnimalServices\" />
-    <Folder Include="Services\AssociationServices\" />
     <Folder Include="Services\VoteServices\" />
     <Folder Include="Services\VetOfficeServices\" />
     <Folder Include="Services\PostServices\" />
