@@ -1,11 +1,11 @@
-﻿<Window x:Class="Frontend.View.AdministratorMainPageView"
+﻿<Window x:Class="Frontend.View.MemberMainPageView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
-        Title="Create Animal Species" Height="570" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Create Animal Species" Height="580" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
@@ -66,7 +66,7 @@
         </Grid.Background>
 
         <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" Margin="0,10,10,0"
-                Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" Click="Close_Click" />
+                Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" />
 
         <Border Background="White" CornerRadius="10" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20">
             <StackPanel>
@@ -75,10 +75,7 @@
                 <Grid Margin="0,0,0,0"/>
 
                 <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btAssociation" Content="Associations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="UpdateButton" Content="Volunteers" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="DeleteButton" Content="Animal Species" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="btAssociation" Content="Donate" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             </StackPanel>
         </Border>

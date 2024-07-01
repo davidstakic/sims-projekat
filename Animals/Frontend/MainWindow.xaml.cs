@@ -57,7 +57,7 @@ namespace Frontend
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            new AdministratorMainPageView().Show();
+            new MemberMainPageView().Show();
             //new RegistrationMenu(_studentsController).Show();
             Close();
         }
