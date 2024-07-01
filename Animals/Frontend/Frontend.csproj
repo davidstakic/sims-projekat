@@ -9,9 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="beagle.jpg" />
     <None Remove="Images\animal-service-icon.png" />
     <None Remove="Images\comment.png" />
+    <None Remove="Images\hamburger.png" />
     <None Remove="Images\like.png" />
+    <None Remove="View\beagle.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +36,7 @@
 
   <ItemGroup>
     <Resource Include="Images\animal-service-icon.png" />
+    <Resource Include="Images\hamburger.png" />
     <Resource Include="Images\like.png" />
   </ItemGroup>
 
