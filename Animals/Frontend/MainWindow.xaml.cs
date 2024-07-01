@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Frontend.View;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Frontend
@@ -11,7 +12,7 @@ namespace Frontend
         //private ProfessorGradesController _professorGradesController { get; set; }
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();          
             //new Database().CreateAndPopulateTables();
             //_profilesController = new ProfilesController();
             //_studentsController = new StudentsController();
@@ -39,6 +40,7 @@ namespace Frontend
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
+            new VolunteerRegistrationView().Show();
             //new RegistrationMenu(_studentsController).Show();
             new PostsView().Show();
             Close();
