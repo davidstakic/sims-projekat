@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Resource Include="Images\animal-service-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\animal-service-icon.png" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
 
 </Project>
