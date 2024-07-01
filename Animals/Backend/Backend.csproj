@@ -13,7 +13,8 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\VoteServices\" />
+    <Folder Include="Services\VetOfficeServices\" />
   </ItemGroup>
 
   <ItemGroup>
