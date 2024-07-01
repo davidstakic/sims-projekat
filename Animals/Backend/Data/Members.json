@@ -1,0 +1,26 @@
+[
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 1,
+    "Name": "John Doe",
+    "PhoneNumber": "123-456-7890",
+    "Email": "john.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 0,
+    "ProfileId": 101,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 2,
+    "Name": "Marry Curry",
+    "PhoneNumber": "123-456-7890",
+    "Email": "asdf.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 1,
+    "ProfileId": 101,
+    "AssociationId": 202
+  }
+]

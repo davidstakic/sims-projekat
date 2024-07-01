@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <None Remove="Images\animal-service-icon.png" />
+    <None Remove="Images\comment.png" />
+    <None Remove="Images\like.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\comment.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,12 +24,16 @@
     <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\UserViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\PostViewModels\" />
     <Folder Include="ViewModel\PageViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\animal-service-icon.png" />
+    <Resource Include="Images\like.png" />
   </ItemGroup>
 
 </Project>

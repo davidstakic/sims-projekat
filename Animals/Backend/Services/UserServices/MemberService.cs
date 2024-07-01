@@ -3,7 +3,7 @@ using Backend.Repositories.Interfaces.UserInterfaces;
 
 namespace Backend.Services.UserServices
 {
-    public class MemberService : UserService
+    public class MemberService
     {
         private readonly IMemberRepository _memberRepository;
 
