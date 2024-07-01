@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="Data\PostPictures\" />
     <Folder Include="Services\VoteServices\" />
     <Folder Include="Services\VetOfficeServices\" />
   </ItemGroup>

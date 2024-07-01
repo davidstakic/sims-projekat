@@ -24,24 +24,16 @@ namespace Backend.Services
         public void Create(T entity)
         {
             _repository.Create(entity);
-            Save();
         }
 
         public void Update(T entity)
         {
             _repository.Update(entity);
-            Save();
         }
 
         public void Delete(int id)
         {
             _repository.Delete(id);
-            Save();
-        }
-
-        public void Save()
-        {
-            _repository.Save();
         }
     }
 }

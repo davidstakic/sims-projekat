@@ -3,7 +3,7 @@ using Backend.Repositories.Interfaces.UserInterfaces;
 
 namespace Backend.Services.UserServices
 {
-    public class VolunteerService : UserService
+    public class VolunteerService
     {
         private readonly IVolunteerRepository _volunteerRepository;
 
