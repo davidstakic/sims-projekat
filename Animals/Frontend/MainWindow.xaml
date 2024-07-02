@@ -104,14 +104,14 @@
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                     VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,20">
                     <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"
                                  PasswordChanged="PasswordBox_PasswordChanged"/>
-                    <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="Visible" />
                 </Grid>
 
@@ -121,8 +121,6 @@
                            MouseLeftButtonUp="ForgotPassword_Click" />
                 <TextBlock Text="Don't have an account? Sign up" Foreground="#4e54c8" HorizontalAlignment="Center"
                            MouseLeftButtonUp="SignUp_Click" />
-                <TextBlock Text="Discover New Posts!" Foreground="#4e54c8" HorizontalAlignment="Center"
-                           MouseLeftButtonUp="Posts_Click" />
             </StackPanel>
         </Border>
     </Grid>

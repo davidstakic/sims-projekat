@@ -1,4 +1,5 @@
-﻿using Frontend.View;
+﻿using Backend.Models.UserModels;
+using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -6,10 +7,12 @@ namespace Frontend
 {
     public partial class PostsView : Window
     {
-        public PostsView()
+        private Member currentMember { get; set; }
+        public PostsView(Member currentMember)
         {
             InitializeComponent();
             DataContext = new PostsViewModel();
+            this.currentMember = currentMember;
         }
 
         private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

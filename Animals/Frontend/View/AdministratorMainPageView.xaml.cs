@@ -28,5 +28,11 @@ namespace Frontend.View
         {
             Close();
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            Close();
+        }
     }
 }
