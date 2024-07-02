@@ -1,4 +1,4 @@
-﻿using Backend.Models.Enums;
+﻿using Backend.Utils;
 
 namespace Backend.Models.AnimalModels
 {

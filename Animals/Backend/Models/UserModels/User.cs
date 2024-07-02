@@ -1,12 +1,11 @@
-﻿using Backend.Models.Enums;
+﻿using Backend.Utils;
 
 namespace Backend.Models.UserModels
 {
     public abstract class User
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public DateOnly BirthDate { get; set; }
@@ -15,11 +14,10 @@ namespace Backend.Models.UserModels
         public int AssociationId { get; set; }
 
         public User() { }
-        public User(int id, string firstName, string lastName, string phoneNumber, string email, DateOnly birthDate, Gender gender, int profileId, int associationId)
+        public User(int id, string name, string phoneNumber, string email, DateOnly birthDate, Gender gender, int profileId, int associationId)
         {
             Id = id;
-            FirstName = firstName;
-            LastName = lastName;
+            Name = name;
             PhoneNumber = phoneNumber;
             Email = email;
             BirthDate = birthDate;
