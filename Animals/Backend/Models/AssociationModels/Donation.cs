@@ -10,14 +10,6 @@
         public int AssociationId { get; set; }
 
         public Donation() { }
-        public Donation(DateTime date, int amount, int memberId, int animalId, int associationId)
-        {
-            Date = date;
-            Amount = amount;
-            MemberId = memberId;
-            AnimalId = animalId;
-            AssociationId = associationId;
-        }
         public Donation(int id, DateTime date, int amount, int memberId, int animalId, int associationId)
         {
             Id = id;

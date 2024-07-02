@@ -1,47 +1,24 @@
-﻿using Backend.Models.Enums;
-using Backend.Models.UserModels;
-using Backend.Services.UserServices;
-using Frontend.View;
-using Frontend.ViewModels;
+﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace Frontend
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly LoginViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            _viewModel = new LoginViewModel();
-            DataContext = _viewModel;
-        }
-
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            _viewModel.Username = UsernameTextBox.Text;
-            _viewModel.Password = PasswordBox.Password;
-            _viewModel.Login();
-            Close();
-        }
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            PasswordText.Visibility = string.IsNullOrEmpty(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
-        }
-        private void ForgotPassword_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Forgot Password clicked!");
-        }
-
-        private void SignUp_Click(object sender, RoutedEventArgs e)
-        {
-            new RegistrationView().Show();
-            Close();
-        }
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }

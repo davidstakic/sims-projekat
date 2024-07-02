@@ -9,37 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="beagle.jpg" />
-    <None Remove="Images\animal-service-icon.png" />
-    <None Remove="Images\comment.png" />
-    <None Remove="Images\hamburger.png" />
-    <None Remove="Images\like.png" />
-    <None Remove="View\beagle.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\comment.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\ModelViewModels\AnimalViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\AssociationViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Backend\Backend.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\animal-service-icon.png" />
-    <Resource Include="Images\hamburger.png" />
-    <Resource Include="Images\like.png" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="View\" />
   </ItemGroup>
 
 </Project>

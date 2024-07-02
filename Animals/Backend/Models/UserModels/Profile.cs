@@ -8,12 +8,6 @@
         public DateTime CreationDate { get; set; }
 
         public Profile() { }
-        public Profile(string username, string password, DateTime creationDate)
-        {
-            Username = username;
-            Password = password;
-            CreationDate = creationDate;
-        }
         public Profile(int id, string username, string password, DateTime creationDate)
         {
             Id = id;
