@@ -9,12 +9,12 @@ namespace Backend.Repositories.VetOfficeRepositories
         {
         }
 
-        IEnumerable<Treatment> ITreatmentRepository.GetMessageByAnimalId(int animalId)
+        IEnumerable<Treatment> ITreatmentRepository.GetTreatmentByAnimalId(int animalId)
         {
             return GetAll().Where(m => m.AnimalId == animalId);
         }
 
-        IEnumerable<Treatment> ITreatmentRepository.GetMessageByVetOfficeId(int vetOfficeId)
+        IEnumerable<Treatment> ITreatmentRepository.GetTreatmentByVetOfficeId(int vetOfficeId)
         {
             return GetAll().Where(m => m.VetOfficeId == vetOfficeId);
         }

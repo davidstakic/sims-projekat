@@ -4,7 +4,7 @@ using Observer;
 
 namespace Backend.Repositories
 {
-    public class Repository<T> : Subject, IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         private readonly string _filePath;
         private List<T> _entities;
@@ -32,7 +32,6 @@ namespace Backend.Repositories
             obj.Id = maxId + 1;
             _entities.Add(obj);
             Save();
-            NotifyObservers();
         }
 
         public void Update(T entity)
@@ -43,7 +42,6 @@ namespace Backend.Repositories
                 _entities.Remove(existingEntity);
                 _entities.Add(entity);
                 Save();
-                NotifyObservers();
             }
         }
 
@@ -54,7 +52,6 @@ namespace Backend.Repositories
             {
                 _entities.Remove(entityToDelete);
                 Save();
-                NotifyObservers();
             }
         }
 

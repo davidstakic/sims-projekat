@@ -1,6 +1,10 @@
 ﻿using Backend.Models.Enums;
 using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
+using Backend.Services.PostServices;
 using Backend.Services.UserServices;
+using Backend.Services.VetOfficeServices;
 using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,9 +13,28 @@ namespace Frontend
 {
     public partial class MainWindow : Window
     {
+        private SpecieService _specieService;
+        private AnimalService _animalService;
+        private PostService _postService;
+        private LikeService _likeService;
+        private CommentService _commentService;
+        private TreatmentService _treatmentService;
+        private FeedbackService _feedbackService;
+        private AdoptionService _adoptionService;
+        private DonationService _donationService;
+
         public MainWindow()
         {
             InitializeComponent();
+            _specieService = new SpecieService();
+            _animalService = new AnimalService();
+            _postService = new PostService();
+            _likeService = new LikeService();
+            _commentService = new CommentService();
+            _treatmentService = new TreatmentService();
+            _feedbackService = new FeedbackService();
+            _adoptionService = new AdoptionService();
+            _donationService = new DonationService();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -51,7 +74,7 @@ namespace Frontend
                 {
                     if (volunteer.IsAdmin)
                     {
-                        new AdministratorMainPageView().Show();
+                        new AdministratorMainPageView(_specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService).Show();
                         Close();
                         return;
                     }

@@ -4,7 +4,7 @@ namespace Backend.Repositories.Interfaces.VetOfficeInterfaces
 {
     public interface ITreatmentRepository : IRepository<Treatment>
     {
-        IEnumerable<Treatment> GetMessageByAnimalId(int animalId);
-        IEnumerable<Treatment> GetMessageByVetOfficeId(int vetOfficeId);
+        IEnumerable<Treatment> GetTreatmentByAnimalId(int animalId);
+        IEnumerable<Treatment> GetTreatmentByVetOfficeId(int vetOfficeId);
     }
 }
