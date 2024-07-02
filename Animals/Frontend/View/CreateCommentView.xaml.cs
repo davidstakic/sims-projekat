@@ -2,12 +2,12 @@
 
 namespace Frontend.View
 {
-    public partial class PostDetailView : Window
+    public partial class CreateCommentView : Window
     {
-        public PostDetailView(PostDetailViewModel postViewModel)
+        public CreateCommentView(CreateCommentViewModel newCommentViewModel)
         {
             InitializeComponent();
-            DataContext = postViewModel;
+            DataContext = newCommentViewModel;
         }
 
         private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -16,6 +16,11 @@ namespace Frontend.View
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
