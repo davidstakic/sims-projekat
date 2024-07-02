@@ -30,5 +30,13 @@
     "MemberId": 2,
     "AnimalId": -1,
     "AssociationId": 202
+  },
+  {
+    "Id": 5,
+    "Date": "2024-07-02T13:31:55.1861751+02:00",
+    "Amount": 40,
+    "MemberId": 3,
+    "AnimalId": -1,
+    "AssociationId": 202
   }
 ]

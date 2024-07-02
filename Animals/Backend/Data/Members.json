@@ -27,19 +27,6 @@
   },
   {
     "IsBlacklisted": false,
-    "Status": 0,
-    "Id": 3,
-    "FirstName": "mare",
-    "LastName": "test",
-    "PhoneNumber": "1364689",
-    "Email": "mare@gmail.com",
-    "BirthDate": "2004-02-02",
-    "Gender": 0,
-    "ProfileId": 6,
-    "AssociationId": 202
-  },
-  {
-    "IsBlacklisted": false,
     "Status": 2,
     "Id": 4,
     "FirstName": "vlado1",

@@ -1,4 +1,5 @@
 ﻿using Backend.Models.UserModels;
+using Backend.Services.UserServices;
 using System.Windows;
 
 namespace Frontend.View
@@ -31,6 +32,19 @@ namespace Frontend.View
         private void Donate_Click(object sender, RoutedEventArgs e)
         {
             new DonationView(currentMember).Show();
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            new MemberUpdateView(currentMember).Show();
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            new ProfileService().Delete(currentMember.ProfileId);
+            new MemberService().Delete(currentMember.Id);
+            new MainWindow().Show();
+            Close();
         }
     }
 }

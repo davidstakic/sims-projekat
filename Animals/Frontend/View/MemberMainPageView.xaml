@@ -76,7 +76,9 @@
 
                 <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Posts_Click"/>
                 <Button x:Name="btAssociation" Content="Donate" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donate_Click"/>
-                <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
+                <Button x:Name="btUpdate" Content="Update Profile" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Update_Click"/>
+                <Button x:Name="btDelete" Content="Delete Profile" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Delete_Click"/>
+                <Button x:Name="btLogout" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
             </StackPanel>
         </Border>
     </Grid>
