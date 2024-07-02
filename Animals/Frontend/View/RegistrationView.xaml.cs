@@ -52,5 +52,10 @@ namespace Frontend.View
             new MainWindow().Show();
             Close();
         }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordText.Visibility = string.IsNullOrEmpty(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
+        }
     }
 }

@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Frontend.View"
+        xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
         Title="Volunteer Registration" Height="730" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
+        <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Calibri" />
             <Setter Property="FontSize" Value="20" />
@@ -137,13 +138,26 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="DatePicker">
                         <Grid>
-                            <TextBox x:Name="PART_TextBox" Background="Transparent" BorderBrush="Transparent" VerticalContentAlignment="Center" />
-                            <Button x:Name="PART_Button" Content="📅" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="25" />
+                            <DatePickerTextBox x:Name="PART_TextBox" Margin="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" />
+                            <Button x:Name="PART_Button" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Content="📅" Foreground="{TemplateBinding Foreground}" />
+                            <Popup x:Name="PART_Popup" StaysOpen="False" Placement="Bottom">
+                                <Border x:Name="PART_PopupBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" Background="{TemplateBinding Background}">
+                                    <Calendar x:Name="PART_Calendar" />
+                                </Border>
+                            </Popup>
                         </Grid>
                         <ControlTemplate.Triggers>
+                            <Trigger Property="IsDropDownOpen" Value="True">
+                                <Setter TargetName="PART_Popup" Property="IsOpen" Value="True" />
+                            </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="PART_TextBox" Property="Opacity" Value="0.5"/>
-                                <Setter TargetName="PART_Button" Property="Opacity" Value="0.5"/>
+                                <Setter TargetName="PART_TextBox" Property="Opacity" Value="0.5" />
+                                <Setter TargetName="PART_Button" Property="Opacity" Value="0.5" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -175,31 +189,29 @@
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="FirstNameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="First Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=FirstNameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=FirstNameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="LastNameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Last Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=LastNameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=LastNameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="EmailTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Email" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="PhoneNumberTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Phone Number" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=PhoneNumberTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=PhoneNumberTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <DatePicker Name="BirthDatePicker" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Birth Date" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding SelectedDate, ElementName=BirthDatePicker, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
@@ -209,17 +221,18 @@
                         <RadioButton Name="OtherRadioButton" Content="Other" GroupName="GenderGroup" Margin="5,0"/>
                     </StackPanel>
                     <TextBlock Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding IsChecked, ElementName=MaleRadioButton, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding IsChecked, ElementName=MaleRadioButton, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,20">
-                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"/>
+                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"
+                                 PasswordChanged="PasswordBox_PasswordChanged"/>
                     <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="Visible" />
                 </Grid>
