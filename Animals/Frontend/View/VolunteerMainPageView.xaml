@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
-        Title="Create Animal Species" Height="500" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Create Animal Species" Height="650" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
@@ -77,6 +77,9 @@
                 <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="btVoting" Content="Voting" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donations_Click" />
+                <Button x:Name="RegistrationRequestsButton" Content="Registration Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="RegistrationRequests_Click" />
+                <Button x:Name="PostRequestsButton" Content="Post Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PostRequests_Click" />
+                <Button x:Name="AdoptionRequestsButton" Content="Adoption Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="AdoptionRequests_Click" />
                 <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
             </StackPanel>
         </Border>
