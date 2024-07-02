@@ -27,7 +27,6 @@
     <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\UserViewModels\" />
-    <Folder Include="ViewModel\PageViewModels\" />
   </ItemGroup>
 
   <ItemGroup>

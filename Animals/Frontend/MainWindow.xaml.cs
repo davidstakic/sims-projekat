@@ -2,6 +2,7 @@
 using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using Frontend.View;
+using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,57 +10,19 @@ namespace Frontend
 {
     public partial class MainWindow : Window
     {
+        private readonly LoginViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new LoginViewModel();
+            DataContext = _viewModel;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameTextBox.Text;
-            string password = PasswordBox.Password;
-            ProfileService profileService = new ProfileService();
-            Profile loginProfile = profileService.GetByUsernameAndPassword(username, password);
-            if (loginProfile == null)
-            {
-                MessageBox.Show("Username or password incorrect!");
-                return;
-            }
-            MemberService memberService = new MemberService();
-            Profile memberProfile;
-            foreach (Member member in memberService.GetAll())
-            {
-                memberProfile = profileService.GetById(member.ProfileId);
-                if (loginProfile.Username == memberProfile.Username && loginProfile.Password == memberProfile.Password)
-                {
-                    if (member.Status == Status.Accepted && !member.IsBlacklisted)
-                    {
-                        new MemberMainPageView(member).Show();
-                        Close();
-                        return;
-                    }
-                    new PostsView(member).Show();
-                    Close();
-                }
-            }
-            VolunteerService volunteerService = new VolunteerService();
-            Profile volunteerProfile;
-            foreach (Volunteer volunteer in volunteerService.GetAll())
-            {
-                volunteerProfile = profileService.GetById(volunteer.ProfileId);
-                if (loginProfile.Username == volunteerProfile.Username && loginProfile.Password == volunteerProfile.Password)
-                {
-                    if (volunteer.IsAdmin)
-                    {
-                        new AdministratorMainPageView().Show();
-                        Close();
-                        return;
-                    }
-                    new VolunteerMainPageView().Show();
-                    Close();
-                }
-            }
-            Close();
+            _viewModel.Username = UsernameTextBox.Text;
+            _viewModel.Password = PasswordBox.Password;
+            _viewModel.Login();
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {

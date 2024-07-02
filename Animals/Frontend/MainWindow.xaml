@@ -57,29 +57,29 @@
             </Setter>
         </Style>
         <Style TargetType="PasswordBox">
-    <Setter Property="FontFamily" Value="Calibri" />
-    <Setter Property="FontSize" Value="20" />
-    <Setter Property="Foreground" Value="#4e54c8" />
-    <Setter Property="Margin" Value="0,5" />
-    <Setter Property="Padding" Value="10,5" />
-    <Setter Property="VerticalAlignment" Value="Center" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="PasswordBox">
-                <Grid>
-                    <Border x:Name="Border" CornerRadius="25" Background="White" BorderBrush="#4e54c8" BorderThickness="2">
-                        <ScrollViewer x:Name="PART_ContentHost" />
-                    </Border>
-                </Grid>
-                <ControlTemplate.Triggers>
-                    <Trigger Property="IsEnabled" Value="False">
-                        <Setter TargetName="Border" Property="Opacity" Value="0.5"/>
-                    </Trigger>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="#4e54c8" />
+            <Setter Property="Margin" Value="0,5" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Grid>
+                            <Border x:Name="Border" CornerRadius="25" Background="White" BorderBrush="#4e54c8" BorderThickness="2">
+                                <ScrollViewer x:Name="PART_ContentHost" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <!-- Background Gradient -->
@@ -103,14 +103,13 @@
                 <TextBlock Text="Login" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
                 <Grid Margin="0,0,0,10">
-                    <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
+                    <TextBox Name="UsernameTextBox" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                     VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,20">
-                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"
-                                 PasswordChanged="PasswordBox_PasswordChanged"/>
+                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center" PasswordChanged="PasswordBox_PasswordChanged"/>
                     <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="Visible" />
                 </Grid>
