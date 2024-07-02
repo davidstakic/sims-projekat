@@ -174,31 +174,31 @@
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="FirstNameTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="First Name" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="First Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=FirstNameTextBox, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="LastNameTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Last Name" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Last Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=LastNameTextBox, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="EmailTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Email" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Email" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="PhoneNumberTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Phone Number" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Phone Number" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=PhoneNumberTextBox, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <DatePicker Name="BirthDatePicker" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Birth Date" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Birth Date" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding SelectedDate, ElementName=BirthDatePicker, Converter={x:Null}}" />
                 </Grid>
 
@@ -214,13 +214,13 @@
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
-                    <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,20">
                     <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"/>
-                    <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
+                    <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="Visible" />
                 </Grid>
 

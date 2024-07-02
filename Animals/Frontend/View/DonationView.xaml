@@ -1,11 +1,11 @@
-﻿<Window x:Class="Frontend.View.AdministratorMainPageView"
+﻿<Window x:Class="Frontend.View.DonationView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
-        mc:Ignorable="d"
-        Title="Create Animal Species" Height="570" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+    mc:Ignorable="d"
+        Title="Donation" Height="500" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
@@ -72,14 +72,15 @@
             <StackPanel>
                 <Image Source="pack://application:,,,/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
-                <Grid Margin="0,0,0,0"/>
+                <TextBlock Text="Donation" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
-                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btAssociation" Content="Associations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="UpdateButton" Content="Volunteers" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="DeleteButton" Content="Animal Species" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
+                <Grid Margin="0,0,0,10">
+                    <TextBox Name="AmountTextBox" Margin="0" VerticalAlignment="Center" />
+                    <TextBlock Text="Amount" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=AmountTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
+                </Grid>
+
+                <Button x:Name="DonateButton" Content="Donate" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donate_Click"/>
             </StackPanel>
         </Border>
     </Grid>

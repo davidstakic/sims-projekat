@@ -9,19 +9,9 @@ namespace Frontend
 {
     public partial class MainWindow : Window
     {
-        //private ProfilesController _profilesController { get; set; }
-        //private StudentsController _studentsController { get; set; }
-        //private ProfessorsController _professorsController { get; set; }
-        //private ProfessorGradesController _professorGradesController { get; set; }
         public MainWindow()
         {
-            InitializeComponent();          
-            //new Database().CreateAndPopulateTables();
-            //_profilesController = new ProfilesController();
-            //_studentsController = new StudentsController();
-            //_studentsController.ReducePenaltyPoints(_profilesController);
-            //_professorsController = new ProfessorsController();
-            //_professorGradesController = new ProfessorGradesController();
+            InitializeComponent();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -42,13 +32,13 @@ namespace Frontend
                 memberProfile = profileService.GetById(member.ProfileId);
                 if (loginProfile.Username == memberProfile.Username && loginProfile.Password == memberProfile.Password)
                 {
-                    if (member.Status == Status.Accepted || !member.IsBlacklisted)
+                    if (member.Status == Status.Accepted && !member.IsBlacklisted)
                     {
-                        new MemberMainPageView().Show();
+                        new MemberMainPageView(member).Show();
                         Close();
                         return;
                     }
-                    new PostsView().Show();
+                    new PostsView(member).Show();
                     Close();
                 }
             }
@@ -82,18 +72,11 @@ namespace Frontend
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            new MemberMainPageView().Show();
-            //new RegistrationMenu(_studentsController).Show();
+            new RegistrationView().Show();
             Close();
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            Close();
-        }
-
-        private void Posts_Click(object sender, RoutedEventArgs e)
-        {
-            new PostsView().Show();
             Close();
         }
     }
