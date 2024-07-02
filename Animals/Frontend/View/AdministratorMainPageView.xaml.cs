@@ -19,5 +19,10 @@ namespace Frontend.View
             new MainWindow().Show();
             Close();
         }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            new VolunteerRegistrationView().Show();
+        }
     }
 }

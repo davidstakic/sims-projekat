@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Frontend.View"
+        xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
         Title="Member Registration" Height="700" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
+        <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Calibri" />
             <Setter Property="FontSize" Value="20" />
@@ -188,25 +189,25 @@
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="FirstNameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="First Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=FirstNameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=FirstNameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="LastNameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Last Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=LastNameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=LastNameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="EmailTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Email" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=EmailTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="PhoneNumberTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Phone Number" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=PhoneNumberTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=PhoneNumberTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
@@ -219,20 +220,19 @@
                         <RadioButton Name="FemaleRadioButton" Content="Female" GroupName="GenderGroup" Margin="5,0"/>
                         <RadioButton Name="OtherRadioButton" Content="Other" GroupName="GenderGroup" Margin="5,0"/>
                     </StackPanel>
-                    <TextBlock Foreground="Gray" IsHitTestVisible="False" Margin="5,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding IsChecked, ElementName=MaleRadioButton, Converter={x:Null}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,10">
                     <TextBox Name="UsernameTextBox" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Username" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={x:Null}}" />
+                               VerticalAlignment="Center" Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Grid Margin="0,0,0,20">
-                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"/>
+                    <PasswordBox Name="PasswordBox" Margin="0" VerticalAlignment="Center"
+                                 PasswordChanged="PasswordBox_PasswordChanged"/>
                     <TextBlock x:Name="PasswordText" Text="Password" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
-                               VerticalAlignment="Center" Visibility="Visible" />
+                               VerticalAlignment="Center" Visibility="{Binding Password.Length, ElementName=PasswordBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
                 <Button x:Name="RegisterButton" Content="Register" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Register_Click"/>
