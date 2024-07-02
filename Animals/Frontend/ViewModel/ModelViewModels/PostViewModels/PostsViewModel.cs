@@ -5,9 +5,14 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using Newtonsoft.Json;
+using CommunityToolkit.Mvvm.Input;
+using Frontend.View;
+using System.Windows.Input;
 
 public class PostsViewModel : INotifyPropertyChanged
 {
+    private Member CurrentMember { get; set; }
+
     private ObservableCollection<PostDetailViewModel> posts;
 
     public ObservableCollection<PostDetailViewModel> Posts
@@ -19,10 +24,19 @@ public class PostsViewModel : INotifyPropertyChanged
             OnPropertyChanged("Posts");
         }
     }
+    public ICommand CreateCommand { get; }
 
-    public PostsViewModel()
+    public PostsViewModel(Member currentMember)
     {
+        CreateCommand = new RelayCommand(OnCreate);
+        CurrentMember = currentMember;
+
         // Load data from JSON files
+        LoadData();
+    }
+
+    private void LoadData()
+    {
         var postsData = LoadDataFromFile<Post>("../../../../Backend/Data/Posts.json");
         var likesData = LoadDataFromFile<Like>("../../../../Backend/Data/Likes.json");
         var commentsData = LoadDataFromFile<Comment>("../../../../Backend/Data/Comments.json");
@@ -51,5 +65,10 @@ public class PostsViewModel : INotifyPropertyChanged
     protected void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+    private void OnCreate()
+    {
+        new CreatePostView(CurrentMember).ShowDialog();
+        LoadData();
     }
 }

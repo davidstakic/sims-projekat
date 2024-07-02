@@ -34,5 +34,11 @@
     "Username": "vlado1",
     "Password": "vlado123",
     "CreationDate": "2024-07-02T13:19:04.2600728+02:00"
+  },
+  {
+    "Id": 8,
+    "Username": "asdf",
+    "Password": "asdf",
+    "CreationDate": "2024-07-02T13:19:04.2600728+02:00"
   }
 ]

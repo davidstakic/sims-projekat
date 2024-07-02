@@ -2,6 +2,7 @@
 using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Frontend
 {
@@ -11,11 +12,11 @@ namespace Frontend
         public PostsView(Member currentMember)
         {
             InitializeComponent();
-            DataContext = new PostsViewModel();
+            DataContext = new PostsViewModel(currentMember);
             this.currentMember = currentMember;
         }
 
-        private void Window_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
@@ -25,12 +26,17 @@ namespace Frontend
             Close();
         }
 
-        private void PostBorder_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void PostBorder_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (sender is Border border && border.DataContext is PostDetailViewModel postViewModel)
             {
                 new PostDetailView(postViewModel).ShowDialog();
             }
+        }
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            new CreatePostView(currentMember).ShowDialog();
         }
     }
 }

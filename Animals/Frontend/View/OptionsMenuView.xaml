@@ -6,7 +6,8 @@
         mc:Ignorable="d"
         Title="Options Menu" WindowStartupLocation="CenterScreen"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None"
-        Height="316" Width="288">
+        Height="316" Width="288"
+        MouseDown="Window_MouseDown">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Calibri" />
