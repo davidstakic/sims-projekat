@@ -1,0 +1,67 @@
+[
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 1,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "PhoneNumber": "123-456-7890",
+    "Email": "john.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 0,
+    "ProfileId": 1,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 2,
+    "FirstName": "Marry",
+    "LastName": "Curry",
+    "PhoneNumber": "123-456-7890",
+    "Email": "asdf.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 1,
+    "ProfileId": 2,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 2,
+    "Id": 4,
+    "FirstName": "david",
+    "LastName": "test",
+    "PhoneNumber": "2467358697",
+    "Email": "david@gmail.com",
+    "BirthDate": "2024-06-05",
+    "Gender": 1,
+    "ProfileId": 8,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 2,
+    "Id": 5,
+    "FirstName": "test3",
+    "LastName": "test3",
+    "PhoneNumber": "13553864",
+    "Email": "test3@gmail.com",
+    "BirthDate": "2024-05-05",
+    "Gender": 2,
+    "ProfileId": 9,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 2,
+    "Id": 3,
+    "FirstName": "vlado1",
+    "LastName": "test",
+    "PhoneNumber": "64895723",
+    "Email": "vlado@gmail.com",
+    "BirthDate": "2003-12-24",
+    "Gender": 0,
+    "ProfileId": 7,
+    "AssociationId": 202
+  }
+]

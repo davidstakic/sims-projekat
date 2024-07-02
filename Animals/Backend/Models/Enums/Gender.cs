@@ -1,4 +1,4 @@
-﻿namespace Backend.Utils
+﻿namespace Backend.Models.Enums
 {
     public enum Gender
     {
