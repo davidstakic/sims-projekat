@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "Id": 202,
+        "Name": "Animal Rescue Association",
+        "Address": "123 Main St, Cityville",
+        "EstablishedDate": "2020-05-15",
+        "AccountNumber": "ACCT-202",
+        "VetOfficeIds": [101, 102]
+    }
+]

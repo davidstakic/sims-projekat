@@ -24,5 +24,10 @@ namespace Frontend.View
         {
             new VolunteerRegistrationView().Show();
         }
+
+        private void Donations_Click(object sender, RoutedEventArgs e)
+        {
+            new DonationsView().Show();
+        }
     }
 }

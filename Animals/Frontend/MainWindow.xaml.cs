@@ -23,6 +23,7 @@ namespace Frontend
             _viewModel.Username = UsernameTextBox.Text;
             _viewModel.Password = PasswordBox.Password;
             _viewModel.Login();
+            Close();
         }
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
