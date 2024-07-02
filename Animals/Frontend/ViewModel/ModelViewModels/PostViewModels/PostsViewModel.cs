@@ -8,9 +8,9 @@ using Newtonsoft.Json;
 
 public class PostsViewModel : INotifyPropertyChanged
 {
-    private ObservableCollection<PostViewModel> posts;
+    private ObservableCollection<PostDetailViewModel> posts;
 
-    public ObservableCollection<PostViewModel> Posts
+    public ObservableCollection<PostDetailViewModel> Posts
     {
         get { return posts; }
         set
@@ -36,9 +36,9 @@ public class PostsViewModel : INotifyPropertyChanged
                                join member in memberData on post.UserId equals member.Id
                                join animal in animalsData on post.AnimalId equals animal.Id
                                join specie in speciesData on animal.AnimalSpecieId equals specie.Id
-                               select new PostViewModel(post, member.FirstName, member.LastName, animal, specie.Name, postLikes.Count(), postComments.Count());
+                               select new PostDetailViewModel(post, member, animal, specie.Name, postLikes.Count(), postComments.Count());
 
-        Posts = new ObservableCollection<PostViewModel>(postsWithDetails);
+        Posts = new ObservableCollection<PostDetailViewModel>(postsWithDetails);
     }
 
     private ObservableCollection<T> LoadDataFromFile<T>(string fileName)

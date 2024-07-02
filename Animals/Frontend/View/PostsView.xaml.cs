@@ -27,10 +27,9 @@ namespace Frontend
 
         private void PostBorder_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            if (sender is Border border && border.DataContext is PostViewModel postViewModel)
+            if (sender is Border border && border.DataContext is PostDetailViewModel postViewModel)
             {
-                var postDetailView = new PostDetailView(postViewModel);
-                postDetailView.ShowDialog();
+                new PostDetailView(postViewModel).ShowDialog();
             }
         }
     }
