@@ -82,7 +82,7 @@
                 <Button x:Name="btAssociation" Content="Associations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="UpdateButton" Content="Volunteers" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="UpdateButton_Click"/>
                 <Button x:Name="DeleteButton" Content="Animal Species" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donations_Click" />
                 <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
             </StackPanel>
         </Border>

@@ -14,5 +14,15 @@ namespace Frontend.View
             new MainWindow().Show();
             Close();
         }
+
+        private void Donations_Click(object sender, RoutedEventArgs e)
+        {
+            new DonationsView().Show();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

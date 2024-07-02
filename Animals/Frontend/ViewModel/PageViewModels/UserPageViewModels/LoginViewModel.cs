@@ -90,7 +90,6 @@ namespace Frontend.ViewModels
                     Application.Current.MainWindow.Close();
                 }
             }
-            Application.Current.MainWindow.Close();
         }
     }
 }
