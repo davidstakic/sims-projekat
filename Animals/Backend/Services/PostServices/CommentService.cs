@@ -4,9 +4,9 @@ using Backend.Repositories.Interfaces.PostInterfaces;
 
 namespace Backend.Services.PostServices
 {
-    public class CommentSevice : Service<Comment>
+    public class CommentService : Service<Comment>
     {
-        public CommentSevice() : base((ICommentRepository)Injector.GetRepositoryInstance("ICommentRepository"))
+        public CommentService() : base((ICommentRepository)Injector.GetRepositoryInstance("ICommentRepository"))
         {
         }
     }

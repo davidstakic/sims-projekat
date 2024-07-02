@@ -2,9 +2,9 @@
 
 namespace Frontend.View
 {
-    public partial class AdministratorMainPageView : Window
+    public partial class OptionsMenuView : Window
     {
-        public AdministratorMainPageView()
+        public OptionsMenuView()
         {
             InitializeComponent();
         }
