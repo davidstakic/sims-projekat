@@ -20,6 +20,21 @@ namespace Frontend.View
             new DonationsView().Show();
         }
 
+        private void RegistrationRequests_Click(object sender, RoutedEventArgs e)
+        {
+            new RegistrationRequestsView().Show();
+        }
+
+        private void PostRequests_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AdoptionRequests_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
