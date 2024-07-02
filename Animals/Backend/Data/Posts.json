@@ -6,7 +6,7 @@
     "CreationDate": "2024-07-01T15:56:12.776842+02:00",
     "Image": "https://i.pinimg.com/736x/cb/e8/6a/cbe86acfb4ec78e2b4c368daf5c60095.jpg",
     "Video": "None",
-    "Status": 2,
+    "Status": 0,
     "AnimalId": 1,
     "UserId": 1
   },
@@ -17,7 +17,7 @@
     "CreationDate": "2024-07-01T15:56:12.7825813+02:00",
     "Image": "https://cw33.com/wp-content/uploads/sites/8/2022/08/Fa8VfwHXEAAtCLi.jpg",
     "Video": "None",
-    "Status": 2,
+    "Status": 0,
     "AnimalId": 2,
     "UserId": 1
   },
@@ -28,9 +28,9 @@
     "CreationDate": "2024-07-01T15:56:12.782584+02:00",
     "Image": "https://t3.ftcdn.net/jpg/07/17/33/40/360_F_717334058_zZu41aMmrR0CvBxI3WLbWRjrqFyLAdW1.jpg",
     "Video": "None",
-    "Status": 2,
+    "Status": 0,
     "AnimalId": 3,
-    "UserId": 2
+    "UserId": 1
   },
   {
     "Id": 4,
@@ -39,7 +39,7 @@
     "CreationDate": "2024-07-01T15:56:12.7825844+02:00",
     "Image": "https://www.boredpanda.com/blog/wp-content/uploads/2021/11/6188f4805c24d_kcm73mko3m631__700.jpg",
     "Video": "None",
-    "Status": 2,
+    "Status": 0,
     "AnimalId": 4,
     "UserId": 1
   },
@@ -50,8 +50,41 @@
     "CreationDate": "2024-07-01T15:56:12.7825846+02:00",
     "Image": "https://i.pinimg.com/originals/1c/a3/1a/1ca31a8bec053cb87c74dc46671b9823.jpg",
     "Video": "None",
-    "Status": 2,
+    "Status": 0,
     "AnimalId": 5,
-    "UserId": 2
+    "UserId": 1
+  },
+  {
+    "Id": 7,
+    "Title": "ff",
+    "Description": "ff",
+    "CreationDate": "2024-07-02T18:22:43.6279297+02:00",
+    "Image": "ff",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 2,
+    "UserId": 4
+  },
+  {
+    "Id": 8,
+    "Title": "Adopting",
+    "Description": "Cute Dog",
+    "CreationDate": "2024-07-02T18:44:53.3838882+02:00",
+    "Image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b354189b-2c6d-4256-9c57-f9913fb25d9b/dg8dnqi-e948e2e1-5640-42ae-8b8e-9cd20defd275.png/v1/fill/w_893,h_895,q_70,strp/cute_husky_puppy_ai_image__by_greybonz_dg8dnqi-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IzNTQxODliLTJjNmQtNDI1Ni05YzU3LWY5OTEzZmIyNWQ5YlwvZGc4ZG5xaS1lOTQ4ZTJlMS01NjQwLTQyYWUtOGI4ZS05Y2QyMGRlZmQyNzUucG5nIiwiaGVpZ2h0IjoiPD0xMjg0Iiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvYjM1NDE4OWItMmM2ZC00MjU2LTljNTctZjk5MTNmYjI1ZDliXC9ncmV5Ym9uei00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.KBApwdB2Eatu0myQ5FLYhIZlkgG74doNnkcTb9P-jLY",
+    "Video": "",
+    "Status": 0,
+    "AnimalId": 4,
+    "UserId": 4
+  },
+  {
+    "Id": 9,
+    "Title": "TEST",
+    "Description": "asdf",
+    "CreationDate": "2024-07-02T19:24:28.1399942+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 2,
+    "UserId": 4
   }
 ]

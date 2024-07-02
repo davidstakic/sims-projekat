@@ -27,7 +27,7 @@ namespace Frontend.View
 
         private void PostRequests_Click(object sender, RoutedEventArgs e)
         {
-
+            new PostRequestsView().Show();
         }
 
         private void AdoptionRequests_Click(object sender, RoutedEventArgs e)
