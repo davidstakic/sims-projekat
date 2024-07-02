@@ -8,6 +8,7 @@ namespace Frontend.View
         public PostDetailView(PostDetailViewModel postViewModel)
         {
             InitializeComponent();
+            postViewModel.PostDetailView = this;
             DataContext = postViewModel;
         }
 

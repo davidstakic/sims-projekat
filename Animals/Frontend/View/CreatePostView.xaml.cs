@@ -1,5 +1,4 @@
-﻿using Backend.Models.UserModels;
-using Frontend.ViewModels;
+﻿using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Input;
 
@@ -7,13 +6,13 @@ namespace Frontend.View
 {
     public partial class CreatePostView : Window
     {
-        private Member _currentMember { get; set; }
+        private int _currentUser { get; set; }
 
-        public CreatePostView(Member currentMember)
+        public CreatePostView(int currentUser)
         {
             InitializeComponent();
-            _currentMember = currentMember;
-            DataContext = new CreatePostViewModel(currentMember);
+            _currentUser = currentUser;
+            DataContext = new CreatePostViewModel(currentUser);
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)

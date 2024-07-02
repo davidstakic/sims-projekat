@@ -1,5 +1,7 @@
 ﻿using Backend.Models.Enums;
 using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.PostServices;
 using Backend.Services.UserServices;
 using Frontend.View;
 using System.Windows;
@@ -9,6 +11,11 @@ namespace Frontend
 {
     public partial class MainWindow : Window
     {
+        public PostService postService = new();
+        public LikeService likeService = new();
+        public CommentService commentService = new();
+        public AnimalService animalService = new();
+        public SpecieService specieService = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,11 +41,11 @@ namespace Frontend
                 {
                     if (member.Status == Status.Accepted && !member.IsBlacklisted)
                     {
-                        new MemberMainPageView(member).Show();
+                        new MemberMainPageView(member, postService, likeService, commentService, animalService, specieService).Show();
                         Close();
                         return;
                     }
-                    new PostsView(member).Show();
+                    new PostsView(member, postService, likeService, commentService, animalService, specieService).Show();
                     Close();
                 }
             }

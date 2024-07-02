@@ -1,6 +1,5 @@
 ﻿using Backend.Models.AnimalModels;
 using Backend.Models.PostModels;
-using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
 using Backend.Services.UserServices;
@@ -50,12 +49,12 @@ namespace Frontend.ViewModels
         [ObservableProperty]
         private ObservableCollection<AnimalSpecie> _animalSpecies;
 
-        public Member CurrentMember { get; }
+        public int CurrentUser { get; }
         public ICommand CreatePostCommand { get; }
 
-        public CreatePostViewModel(Member currentMember)
+        public CreatePostViewModel(int currentUser)
         {
-            CurrentMember = currentMember;
+            CurrentUser = currentUser;
             LoadAnimalSpecies();
             CreatePostCommand = new RelayCommand(CreatePost);
         }
@@ -76,7 +75,7 @@ namespace Frontend.ViewModels
                 Video = "",
                 Status = Backend.Models.Enums.Status.Waiting,
                 AnimalId = SelectedSpecie.Id,
-                UserId = CurrentMember.Id
+                UserId = CurrentUser
             };
 
             _postService.Create(newPost);
