@@ -48,12 +48,12 @@ namespace Frontend.View
         {
             if (sender is FrameworkElement element && element.DataContext is VolunteerViewModel volunteerViewModel)
             {
-                var destructiveActionView = new DestructiveActionView();
+                var destructiveActionView = new ActionView("Are you sure you want to delete?");
 
                 destructiveActionView.OnYesAction = () =>
                 {
-                    _profileService.Delete(volunteerViewModel.ProfileId);
                     _volunteerService.Delete(volunteerViewModel.Id);
+                    _profileService.Delete(volunteerViewModel.ProfileId);
                     new PrintMessageView("Successfuly deleted volunteer.").Show();
                 };
 
