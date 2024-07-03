@@ -1,17 +1,16 @@
-﻿using Frontend.ViewModels;
+﻿using Frontend.ViewModel.ModelViewModels.UserViewModels;
 using System.Windows;
 
 namespace Frontend.View
 {
-    public partial class UpdateAnimalSpecieView : Window
+    public partial class VolunteerUpdateView : Window
     {
-        public AnimalSpecieViewModel AnimalSpecie { get; set; }
+        public VolunteerViewModel Volunteer { get; set; }
 
-        public UpdateAnimalSpecieView(AnimalSpecieViewModel animalSpecie)
+        public VolunteerUpdateView(VolunteerViewModel volunteer)
         {
             InitializeComponent();
-
-            AnimalSpecie = animalSpecie;
+            Volunteer = volunteer;
             DataContext = this;
         }
 
@@ -22,7 +21,7 @@ namespace Frontend.View
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            AnimalSpecie.UpdateAnimalSpecie();
+            Volunteer.UpdateVolunteer();
             Close();
         }
     }
