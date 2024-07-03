@@ -63,5 +63,6 @@ public class OptionsViewModel : ObservableObject
 
     private void OnShowLikes()
     {
+        new LikesView(UserId, PostId, _postService, _likeService).ShowDialog();
     }
 }

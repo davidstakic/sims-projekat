@@ -35,4 +35,19 @@ public partial class OptionsView : Window
     {
         Close();
     }
+
+    private void Likes_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+
+    private void Comments_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+
+    private void Adopt_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }
