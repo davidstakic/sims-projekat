@@ -32,7 +32,7 @@ namespace Frontend.View
 
         private void AdoptionRequests_Click(object sender, RoutedEventArgs e)
         {
-
+            new AdoptionRequestsView().Show();
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
