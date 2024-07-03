@@ -104,7 +104,7 @@ namespace Frontend.ViewModels
                 {
                     if (volunteer.IsAdmin)
                     {
-                        new AdministratorMainPageView(volunteer, _specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService).Show();
+                        new AdministratorMainPageView(volunteer, _specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService, _volunteerService, _profileService).Show();
                         Application.Current.MainWindow.Close();
                         return;
                     }

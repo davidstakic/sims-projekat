@@ -24,6 +24,7 @@ namespace Frontend.View
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             AnimalSpecie.UpdateAnimalSpecie();
+            Close();
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

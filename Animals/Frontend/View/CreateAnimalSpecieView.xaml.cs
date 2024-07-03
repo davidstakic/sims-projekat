@@ -25,6 +25,7 @@ namespace Frontend.View
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
             AnimalSpecie.CreateAnimalSpecie();
+            Close();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

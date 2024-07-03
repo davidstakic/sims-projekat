@@ -2,6 +2,7 @@
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
+using Backend.Services.UserServices;
 using Backend.Services.VetOfficeServices;
 using System.Windows;
 using System.Windows.Input;
@@ -20,8 +21,10 @@ namespace Frontend.View
         private FeedbackService _feedbackService;
         private AdoptionService _adoptionService;
         private DonationService _donationService;
+        private VolunteerService _volunterService;
+        private ProfileService _profileService;
 
-        public AdministratorMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService)
+        public AdministratorMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService, VolunteerService volunteerService, ProfileService profileService)
         {
             InitializeComponent();
 
@@ -36,6 +39,8 @@ namespace Frontend.View
             _feedbackService = feedbackService;
             _adoptionService = adoptionService;
             _donationService = donationService;
+            _volunterService = volunteerService;
+            _profileService = profileService;
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -51,7 +56,7 @@ namespace Frontend.View
 
         private void VolunteersButton_Click(object sender, RoutedEventArgs e)
         {
-            new VolunteerRegistrationView().Show();
+            new VolunteersView(_volunterService, _profileService).Show();
         }
 
         private void Donations_Click(object sender, RoutedEventArgs e)

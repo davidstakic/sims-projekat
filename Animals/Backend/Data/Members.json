@@ -8,7 +8,7 @@
     "PhoneNumber": "2467358697",
     "Email": "david@gmail.com",
     "BirthDate": "2024-06-05",
-    "Gender": 1,
+    "Gender": 0,
     "ProfileId": 8,
     "AssociationId": 202
   },
@@ -49,6 +49,19 @@
     "BirthDate": "1990-01-01",
     "Gender": 0,
     "ProfileId": 1,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 2,
+    "FirstName": "Marry",
+    "LastName": "Pero",
+    "PhoneNumber": "123-456-7890",
+    "Email": "asdf.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 1,
+    "ProfileId": 2,
     "AssociationId": 202
   }
 ]

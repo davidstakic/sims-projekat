@@ -14,5 +14,10 @@ namespace Backend.Services.UserServices
         {
             return GetAll().FirstOrDefault(p => p.Username == username && p.Password == password)!;
         }
+
+        public bool DoesUsernameExist(string username)
+        {
+            return GetAll().Any(p => p.Username == username);
+        }
     }
 }

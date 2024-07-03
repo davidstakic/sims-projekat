@@ -70,6 +70,7 @@ namespace Frontend.View
                 destructiveActionView.OnYesAction = () =>
                 {
                     DeleteSpecie(specieViewModel.Id);
+                    new PrintMessageView("Successfuly deleted animal specie.").Show();
                 };
 
                 destructiveActionView.ShowDialog();
