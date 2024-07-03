@@ -1,4 +1,6 @@
 ﻿using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.PostServices;
 using Backend.Services.UserServices;
 using System.Windows;
 
@@ -7,10 +9,20 @@ namespace Frontend.View
     public partial class MemberMainPageView : Window
     {
         private Member currentMember { get; set; }
-        public MemberMainPageView(Member currentMember)
+        private PostService postService { get; set; }
+        private LikeService likeService { get; set; }
+        private CommentService commentService { get; set; }
+        private AnimalService animalService { get; set; }
+        private SpecieService specieService { get; set; }
+        public MemberMainPageView(Member currentMember, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService)
         {
             InitializeComponent();
             this.currentMember = currentMember;
+            this.postService = postService;
+            this.likeService = likeService;
+            this.commentService = commentService;
+            this.animalService = animalService;
+            this.specieService = specieService;
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -26,7 +38,7 @@ namespace Frontend.View
 
         private void Posts_Click(object sender, RoutedEventArgs e)
         {
-            new PostsView(currentMember).Show();
+            new PostsView(currentMember, postService, likeService, commentService, animalService, specieService).Show();
         }
 
         private void Donate_Click(object sender, RoutedEventArgs e)

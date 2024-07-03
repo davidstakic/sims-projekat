@@ -1,15 +1,5 @@
 [
   {
-    "Id": 1,
-    "Name": "Timmy",
-    "Breed": "Beagle",
-    "Color": "3-color",
-    "BirthDate": "1990-01-01",
-    "HealthCondition": "Great",
-    "Location": "France",
-    "AnimalSpecieId": 1
-  },
-  {
     "Id": 2,
     "Name": "Boa",
     "Breed": "Monkey",
@@ -78,5 +68,25 @@
     "HealthCondition": "Great",
     "Location": "Senta",
     "AnimalSpecieId": 4
+  },
+  {
+    "Id": 9,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 2
+  },
+  {
+    "Id": 1,
+    "Name": "Timmy",
+    "Breed": "Beagle",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Awesome",
+    "Location": "France",
+    "AnimalSpecieId": 1
   }
 ]

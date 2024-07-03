@@ -1,6 +1,5 @@
 ﻿using Backend.Repositories.Interfaces;
 using Newtonsoft.Json;
-using Observer;
 
 namespace Backend.Repositories
 {
