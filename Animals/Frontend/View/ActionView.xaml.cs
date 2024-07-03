@@ -2,13 +2,14 @@
 
 namespace Frontend.View
 {
-    public partial class DestructiveActionView : Window
+    public partial class ActionView : Window
     {
         public Action OnYesAction { get; set; }
 
-        public DestructiveActionView()
+        public ActionView(string action)
         {
             InitializeComponent();
+            Message.Text = action;
         }
 
         private void Yes_Click(object sender, RoutedEventArgs e)

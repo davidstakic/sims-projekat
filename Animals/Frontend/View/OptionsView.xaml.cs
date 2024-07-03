@@ -1,8 +1,7 @@
-﻿using System.Windows.Input;
-using System.Windows;
+﻿using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
-using Backend.Services.AnimalServices;
-using Backend.Services.UserServices;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View;
 public partial class OptionsView : Window

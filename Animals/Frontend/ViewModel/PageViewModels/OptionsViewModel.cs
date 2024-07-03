@@ -1,6 +1,7 @@
-﻿using Backend.Services.AnimalServices;
+﻿using Backend.Models.AnimalModels;
+using Backend.Models.Enums;
+using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
@@ -8,13 +9,13 @@ using System.Windows.Input;
 
 public class OptionsViewModel : ObservableObject
 {
+    public int UserId { get; }
+    public int PostId { get; }
     public ICommand DeletePostCommand { get; }
     public ICommand UpdatePostCommand { get; }
     public ICommand AdoptAnimalCommand { get; }
     public ICommand ShowCommentsCommand { get; }
     public ICommand ShowLikesCommand { get; }
-    public int UserId { get; }
-    public int PostId { get; }
     public PostDetailView PostDetailView { get; }
     private PostService _postService { get; set; }
     private LikeService _likeService { get; set; }
@@ -54,15 +55,24 @@ public class OptionsViewModel : ObservableObject
 
     private void OnAdoptAnimal()
     {
-        PostDetailView.Close();
+        var actionView = new ActionView("Are you sure you wish to adopt this animal?");
+        actionView.OnYesAction = () =>
+        {
+            AdoptionService ass = new AdoptionService();
+            ass.Create(new Adoption(1, DateOnly.FromDateTime(DateTime.Now), DateOnly.FromDateTime(DateTime.Now.AddMonths(1)), Status.Waiting, UserId, _postService.GetById(PostId).AnimalId));
+            PostDetailView.Close();
+        };
+
+        actionView.ShowDialog();
     }
 
     private void OnShowComments()
     {
+        new CommentsView(UserId, PostId, _commentService).ShowDialog();
     }
 
     private void OnShowLikes()
     {
-        new LikesView(UserId, PostId, _postService, _likeService).ShowDialog();
+        new LikesView(UserId, PostId, _likeService).ShowDialog();
     }
 }

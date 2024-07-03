@@ -66,7 +66,7 @@ namespace Frontend.View
         {
             if (sender is FrameworkElement element && element.DataContext is AnimalSpecieViewModel specieViewModel)
             {
-                var destructiveActionView = new DestructiveActionView();
+                var destructiveActionView = new ActionView("Are you sure you want to delete?");
 
                 destructiveActionView.OnYesAction = () =>
                 {

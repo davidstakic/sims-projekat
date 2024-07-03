@@ -14,5 +14,10 @@ namespace Backend.Services.UserServices
         {
             return GetAll().FirstOrDefault(m => m.Id == likeUserId)!;
         }
+
+        public Member GetMemberByCommentId(int commentUserId)
+        {
+            return GetAll().FirstOrDefault(m => m.Id == commentUserId)!;
+        }
     }
 }
