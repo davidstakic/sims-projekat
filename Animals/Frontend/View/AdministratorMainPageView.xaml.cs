@@ -73,5 +73,10 @@ namespace Frontend.View
         {
             new AnimalSpeciesView(_specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService).Show();
         }
+
+        private void Members_Click(object sender, RoutedEventArgs e)
+        {
+            new MembersView().Show();
+        }
     }
 }

@@ -39,5 +39,10 @@ namespace Frontend.View
         {
             Close();
         }
+
+        private void Members_Click(object sender, RoutedEventArgs e)
+        {
+            new MembersView().Show();
+        }
     }
 }
