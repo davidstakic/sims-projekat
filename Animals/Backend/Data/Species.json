@@ -1,9 +1,5 @@
 [
   {
-    "Id": 1,
-    "Name": "Beagle"
-  },
-  {
     "Id": 2,
     "Name": "Orange"
   },
@@ -18,5 +14,17 @@
   {
     "Id": 5,
     "Name": "Mustang"
+  },
+  {
+    "Id": 1,
+    "Name": "Beagle"
+  },
+  {
+    "Id": 6,
+    "Name": "Pas"
+  },
+  {
+    "Id": 8,
+    "Name": "Krava"
   }
 ]

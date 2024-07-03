@@ -1,8 +1,9 @@
 ﻿using Backend.Repositories.Interfaces;
+using Observer;
 
 namespace Backend.Services
 {
-    public class Service<T>
+    public class Service<T> : Subject
     {
         protected readonly IRepository<T> _repository;
 
@@ -24,16 +25,19 @@ namespace Backend.Services
         public void Create(T entity)
         {
             _repository.Create(entity);
+            NotifyObservers();
         }
 
         public void Update(T entity)
         {
             _repository.Update(entity);
+            NotifyObservers();
         }
 
         public void Delete(int id)
         {
             _repository.Delete(id);
+            NotifyObservers();
         }
     }
 }

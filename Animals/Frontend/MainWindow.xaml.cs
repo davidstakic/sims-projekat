@@ -1,7 +1,4 @@
-﻿using Backend.Models.Enums;
-using Backend.Models.UserModels;
-using Backend.Services.UserServices;
-using Frontend.View;
+﻿using Frontend.View;
 using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Controls;

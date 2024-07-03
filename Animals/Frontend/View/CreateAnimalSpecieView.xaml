@@ -75,12 +75,12 @@
                 <TextBlock Text="Create Animal Species" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
                 <Grid Margin="0,0,0,10">
-                    <TextBox Name="NameTextBox" Margin="0" VerticalAlignment="Center" />
+                    <TextBox Name="NameTextBox" Text="{Binding AnimalSpecie.Name, UpdateSourceTrigger=PropertyChanged}" Margin="0" VerticalAlignment="Center" />
                     <TextBlock Text="Name" Foreground="Gray" IsHitTestVisible="False" Margin="12,0,0,0"
                                VerticalAlignment="Center" Visibility="{Binding Text, ElementName=NameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
                 </Grid>
 
-                <Button x:Name="CreateButton" Content="Create" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="CreateButton" Content="Create" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="CreateButton_Click"/>
             </StackPanel>
         </Border>
     </Grid>

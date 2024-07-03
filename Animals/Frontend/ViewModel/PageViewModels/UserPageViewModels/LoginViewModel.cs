@@ -1,6 +1,10 @@
 ﻿using Backend.Models.Enums;
 using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
+using Backend.Services.PostServices;
 using Backend.Services.UserServices;
+using Backend.Services.VetOfficeServices;
 using Frontend.View;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -15,6 +19,15 @@ namespace Frontend.ViewModels
         private readonly ProfileService _profileService;
         private readonly MemberService _memberService;
         private readonly VolunteerService _volunteerService;
+        private SpecieService _specieService;
+        private AnimalService _animalService;
+        private PostService _postService;
+        private LikeService _likeService;
+        private CommentService _commentService;
+        private TreatmentService _treatmentService;
+        private FeedbackService _feedbackService;
+        private AdoptionService _adoptionService;
+        private DonationService _donationService;
 
         public string Username
         {
@@ -43,6 +56,15 @@ namespace Frontend.ViewModels
             _profileService = new ProfileService();
             _memberService = new MemberService();
             _volunteerService = new VolunteerService();
+            _specieService = new SpecieService();
+            _animalService = new AnimalService() ;
+            _postService = new PostService();
+            _likeService = new LikeService();
+            _commentService = new CommentService();
+            _treatmentService = new TreatmentService();
+            _feedbackService = new FeedbackService();
+            _adoptionService = new AdoptionService();
+            _donationService = new DonationService();
         }
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -82,7 +104,7 @@ namespace Frontend.ViewModels
                 {
                     if (volunteer.IsAdmin)
                     {
-                        new AdministratorMainPageView().Show();
+                        new AdministratorMainPageView(_specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService).Show();
                         Application.Current.MainWindow.Close();
                         return;
                     }

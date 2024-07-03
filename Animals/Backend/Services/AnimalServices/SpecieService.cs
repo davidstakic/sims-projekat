@@ -2,7 +2,7 @@
 using Backend.Models.AnimalModels;
 using Backend.Repositories.Interfaces.AnimalInterfaces;
 
-namespace Backend.Services.UserServices
+namespace Backend.Services.AnimalServices
 {
     public class SpecieService : Service<AnimalSpecie>
     {

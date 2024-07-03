@@ -9,5 +9,20 @@ namespace Backend.Services.AssociationServices
         public DonationService() : base((IDonationRepository)Injector.GetRepositoryInstance("IDonationRepository"))
         {
         }
+
+        public List<Donation> GetDonationByAnimalId(int animalId)
+        {
+            return GetAll().Where(m => m.AnimalId == animalId).ToList();
+        }
+
+        public List<Donation> GetDonationByAssociationId(int associationId)
+        {
+            return GetAll().Where(m => m.AssociationId == associationId).ToList();
+        }
+
+        public List<Donation> GetDonationByMemberId(int memberId)
+        {
+            return GetAll().Where(m => m.MemberId == memberId).ToList();
+        }
     }
 }

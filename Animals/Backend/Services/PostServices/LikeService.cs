@@ -9,5 +9,15 @@ namespace Backend.Services.PostServices
         public LikeService() : base((ILikeRepository)Injector.GetRepositoryInstance("ILikeRepository"))
         {
         }
+
+        public List<Like> GetLikeByUserId(int userId)
+        {
+            return GetAll().Where(m => m.UserId == userId).ToList();
+        }
+
+        public List<Like> GetLikeByPostId(int postId)
+        {
+            return GetAll().Where(m => m.PostId == postId).ToList();
+        }
     }
 }
