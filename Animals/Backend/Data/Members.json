@@ -2,19 +2,6 @@
   {
     "IsBlacklisted": false,
     "Status": 0,
-    "Id": 1,
-    "FirstName": "John",
-    "LastName": "Doe",
-    "PhoneNumber": "123-456-7890",
-    "Email": "john.doe@example.com",
-    "BirthDate": "1990-01-01",
-    "Gender": 0,
-    "ProfileId": 1,
-    "AssociationId": 202
-  },
-  {
-    "IsBlacklisted": false,
-    "Status": 0,
     "Id": 2,
     "FirstName": "Marry",
     "LastName": "Curry",
@@ -62,6 +49,19 @@
     "BirthDate": "2003-12-24",
     "Gender": 0,
     "ProfileId": 7,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 1,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "PhoneNumber": "123-456-7890",
+    "Email": "john.doe@example.com",
+    "BirthDate": "1990-01-01",
+    "Gender": 0,
+    "ProfileId": 1,
     "AssociationId": 202
   }
 ]
