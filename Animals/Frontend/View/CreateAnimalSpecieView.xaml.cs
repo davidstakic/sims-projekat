@@ -24,6 +24,7 @@ namespace Frontend.View
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
             AnimalSpecie.CreateAnimalSpecie();
+            Close();
         }
     }
 }
