@@ -1,7 +1,9 @@
 ﻿using Backend.Models.AnimalModels;
 using Backend.Models.PostModels;
 using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
+using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
@@ -9,8 +11,6 @@ using System.Windows.Input;
 
 public class PostDetailViewModel : ObservableObject
 {
-    private LikeService _likeService = new LikeService();
-    private CommentService _commentService = new CommentService();
     public Post Post { get; set; }
     public Member Member { get; set; }
     public string FirstName { get; set; }
@@ -36,11 +36,17 @@ public class PostDetailViewModel : ObservableObject
         set { SetProperty(ref _commentCount, value); }
     }
     public string FullName => $"{FirstName} {LastName}";
+    public PostDetailView PostDetailView { get; set; }
+    private PostService _postService { get; set; }
+    private LikeService _likeService { get; set; }
+    private CommentService _commentService { get; set; }
+    private AnimalService _animalService { get; set; }
+    private SpecieService _specieService { get; set; }
     public ICommand LikeCommand { get; }
     public ICommand CommentCommand { get; }
     public ICommand OptionsCommand { get; }
 
-    public PostDetailViewModel(Post post, Member member, Animal animal, string specieName, int likeCount, int commentCount)
+    public PostDetailViewModel(Post post, Member member, Animal animal, string specieName, int likeCount, int commentCount, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService)
     {
         Post = post;
         Member = member;
@@ -50,6 +56,11 @@ public class PostDetailViewModel : ObservableObject
         SpecieName = specieName;
         LikeCount = likeCount;
         CommentCount = commentCount;
+        _postService = postService;
+        _likeService = likeService;
+        _commentService = commentService;
+        _animalService = animalService;
+        _specieService = specieService;
 
         LikeCommand = new RelayCommand(OnLike);
         CommentCommand = new RelayCommand(OnComment);
@@ -88,11 +99,6 @@ public class PostDetailViewModel : ObservableObject
 
     private void OnOptions()
     {
-        var optionsMenuViewModel = new OptionsMenuViewModel();
-        var optionsMenuView = new OptionsMenuView
-        {
-            DataContext = optionsMenuViewModel
-        };
-        optionsMenuView.ShowDialog();
+        new OptionsView(Member.Id, Post.Id, _postService, _likeService, _commentService, _animalService, _specieService, PostDetailView).ShowDialog();
     }
 }

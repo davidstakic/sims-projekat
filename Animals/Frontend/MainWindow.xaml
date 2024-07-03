@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
-        Title="Login" Height="500" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Login" Height="467" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Background="Transparent" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
@@ -95,7 +95,7 @@
                 Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" />
 
         <!-- Login Form Container -->
-        <Border Background="White" CornerRadius="10" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20">
+        <Border Background="White" CornerRadius="10" Width="300" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="20" Margin="0,65,0,0">
             <StackPanel>
                 <!-- Animal Icon -->
                 <Image Source="pack://application:,,,/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" Margin="0,0,0,20"/>

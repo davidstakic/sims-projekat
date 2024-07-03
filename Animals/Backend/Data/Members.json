@@ -9,7 +9,7 @@
     "Email": "asdf.doe@example.com",
     "BirthDate": "1990-01-01",
     "Gender": 1,
-    "ProfileId": 2,
+    "ProfileId": 9,
     "AssociationId": 202
   },
   {
@@ -48,7 +48,7 @@
     "Email": "vlado@gmail.com",
     "BirthDate": "2003-12-24",
     "Gender": 0,
-    "ProfileId": 7,
+    "ProfileId": 8,
     "AssociationId": 202
   },
   {

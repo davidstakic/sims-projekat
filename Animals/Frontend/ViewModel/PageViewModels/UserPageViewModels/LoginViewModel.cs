@@ -88,11 +88,11 @@ namespace Frontend.ViewModels
                 {
                     if (member.Status == Status.Accepted && !member.IsBlacklisted)
                     {
-                        new MemberMainPageView(member).Show();
+                        new MemberMainPageView(member, _postService, _likeService, _commentService, _animalService, _specieService).Show();
                         Application.Current.MainWindow.Close();
                         return;
                     }
-                    new PostsView(member).Show();
+                    new PostsView(member, _postService, _likeService, _commentService, _animalService, _specieService).Show();
                     Application.Current.MainWindow.Close();
                 }
             }

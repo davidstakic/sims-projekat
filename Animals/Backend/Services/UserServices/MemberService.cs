@@ -9,5 +9,10 @@ namespace Backend.Services.UserServices
         public MemberService() : base((IMemberRepository)Injector.GetRepositoryInstance("IMemberRepository"))
         {
         }
+
+        public Member GetMemberByLikeId(int likeUserId)
+        {
+            return GetAll().FirstOrDefault(m => m.Id == likeUserId)!;
+        }
     }
 }
