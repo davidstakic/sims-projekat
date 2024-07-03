@@ -1,15 +1,5 @@
 [
   {
-    "Id": 2,
-    "Name": "Boa",
-    "Breed": "Monkey",
-    "Color": "3-color",
-    "BirthDate": "1990-01-01",
-    "HealthCondition": "Great",
-    "Location": "Serbia",
-    "AnimalSpecieId": 2
-  },
-  {
     "Id": 3,
     "Name": "Gordon",
     "Breed": "Cat",
@@ -80,13 +70,53 @@
     "AnimalSpecieId": 2
   },
   {
+    "Id": 10,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 3
+  },
+  {
+    "Id": 11,
+    "Name": "asdf",
+    "Breed": "asdfasdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 3
+  },
+  {
+    "Id": 12,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 4
+  },
+  {
+    "Id": 2,
+    "Name": "Boa",
+    "Breed": "Monkey",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Serbia",
+    "AnimalSpecieId": 2
+  },
+  {
     "Id": 1,
     "Name": "Timmy",
     "Breed": "Beagle",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
     "HealthCondition": "Awesome",
-    "Location": "France",
+    "Location": "Japan",
     "AnimalSpecieId": 1
   }
 ]

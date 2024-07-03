@@ -1,5 +1,6 @@
 ﻿using Frontend.ViewModels;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
@@ -23,6 +24,10 @@ namespace Frontend.View
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             AnimalSpecie.UpdateAnimalSpecie();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

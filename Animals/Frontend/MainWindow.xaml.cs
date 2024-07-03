@@ -2,12 +2,14 @@
 using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Frontend
 {
     public partial class MainWindow : Window
     {
         private readonly LoginViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -20,12 +22,13 @@ namespace Frontend
             _viewModel.Username = UsernameTextBox.Text;
             _viewModel.Password = PasswordBox.Password;
             _viewModel.Login();
-            Close();
         }
+
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             PasswordText.Visibility = string.IsNullOrEmpty(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
         }
+
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Forgot Password clicked!");
@@ -39,6 +42,10 @@ namespace Frontend
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

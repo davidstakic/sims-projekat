@@ -2,6 +2,7 @@
 using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
@@ -65,6 +66,10 @@ namespace Frontend.View
             new MemberService().Update(currentMember);
             MessageBox.Show("Succesfully updated!");
             Close();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

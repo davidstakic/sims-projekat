@@ -51,11 +51,11 @@
         <Border Background="White" CornerRadius="15" Width="244" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="20" Height="340" Margin="0,60,0,0">
             <StackPanel>
                 <!-- Options Buttons -->
-                <Button Content="Delete Post" Cursor="Hand" Command="{Binding DeletePostCommand}" Margin="0,5,0,5" Width="200" Click="Delete_Click"/>
-                <Button Content="Update Post" Cursor="Hand" Command="{Binding UpdatePostCommand}" Margin="0,5,0,5" Width="200" Click="Update_Click"/>
-                <Button Content="Adopt Animal" Cursor="Hand" Command="{Binding AdoptAnimalCommand}" Margin="0,5,0,5" Width="200" Click="Adopt_Click"/>
-                <Button Content="Show Comments" Cursor="Hand" Command="{Binding ShowCommentsCommand}" Margin="0,5,0,5" Width="200" Click="Comments_Click"/>
-                <Button Content="Show Likes" Cursor="Hand" Command="{Binding ShowLikesCommand}" Margin="0,5,0,5" Width="200" Click="Likes_Click"/>
+                <Button Content="Delete Post" Cursor="Hand" Command="{Binding DeletePostCommand}" Margin="0,5,0,5" Width="200" Click="Close_Click"/>
+                <Button Content="Update Post" Cursor="Hand" Command="{Binding UpdatePostCommand}" Margin="0,5,0,5" Width="200" Click="Close_Click"/>
+                <Button Content="Adopt Animal" Cursor="Hand" Command="{Binding AdoptAnimalCommand}" Margin="0,5,0,5" Width="200" Click="Close_Click"/>
+                <Button Content="Show Comments" Cursor="Hand" Command="{Binding ShowCommentsCommand}" Margin="0,5,0,5" Width="200" Click="Close_Click"/>
+                <Button Content="Show Likes" Cursor="Hand" Command="{Binding ShowLikesCommand}" Margin="0,5,0,5" Width="200" Click="Close_Click"/>
             </StackPanel>
         </Border>
     </Grid>

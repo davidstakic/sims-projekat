@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Frontend.View"
         mc:Ignorable="d"
         Title="Member Update" Height="700" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Calibri" />

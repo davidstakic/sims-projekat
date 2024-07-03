@@ -2,6 +2,7 @@
 using Backend.Models.PostModels;
 using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
 using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.Input;
@@ -15,12 +16,14 @@ using System.Windows.Input;
 
 public class PostsViewModel : INotifyPropertyChanged, IObserver
 {
-    private Member CurrentMember { get; set; }
+    private User CurrentUser { get; set; }
     private PostService postService { get; set; }
     private LikeService likeService { get; set; }
     private CommentService commentService { get; set; }
     private AnimalService animalService { get; set; }
     private SpecieService specieService { get; set; }
+    private AdoptionService adoptionService { get; set; }
+    private DonationService donationService { get; set; }
     private ObservableCollection<PostDetailViewModel> posts;
     public ObservableCollection<PostDetailViewModel> Posts
     {
@@ -33,21 +36,25 @@ public class PostsViewModel : INotifyPropertyChanged, IObserver
     }
     public ICommand CreateCommand { get; }
 
-    public PostsViewModel(Member currentMember, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService)
+    public PostsViewModel(User currentUser, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService)
     {
         CreateCommand = new RelayCommand(OnCreate);
-        CurrentMember = currentMember;
+        CurrentUser = currentUser;
         this.postService = postService;
         this.likeService = likeService;
         this.commentService = commentService;
         this.animalService = animalService;
         this.specieService = specieService;
+        this.adoptionService = adoptionService;
+        this.donationService = donationService;
 
         this.postService.Subscribe(this);
         this.likeService.Subscribe(this);
         this.commentService.Subscribe(this);
         this.animalService.Subscribe(this);
         this.specieService.Subscribe(this);
+        this.adoptionService.Subscribe(this);
+        this.donationService.Subscribe(this);
 
         Update();
     }
@@ -67,7 +74,8 @@ public class PostsViewModel : INotifyPropertyChanged, IObserver
                                join member in memberData on post.UserId equals member.Id
                                join animal in animalsData on post.AnimalId equals animal.Id
                                join specie in speciesData on animal.AnimalSpecieId equals specie.Id
-                               select new PostDetailViewModel(post, member, animal, specie.Name, postLikes.Count(), postComments.Count(), postService, likeService, commentService, animalService, specieService);
+                               where post.Status is not Backend.Models.Enums.Status.Waiting
+                               select new PostDetailViewModel(CurrentUser, post, member, animal, specie.Name, postLikes.Count(), postComments.Count(), postService, likeService, commentService, animalService, specieService, adoptionService, donationService);
 
         postsWithDetails = postsWithDetails.OrderBy(post => post.Post.Id);
 
@@ -88,7 +96,7 @@ public class PostsViewModel : INotifyPropertyChanged, IObserver
     }
     private void OnCreate()
     {
-        new CreatePostView(CurrentMember.Id).ShowDialog();
+        new CreatePostView(CurrentUser, postService, animalService, specieService).ShowDialog();
         Update();
     }
 }

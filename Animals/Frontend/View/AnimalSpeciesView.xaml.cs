@@ -35,7 +35,6 @@ namespace Frontend.View
             _donationService = donationService;
              
             DataContext = new AnimalSpeciesListViewModel(_specieService);
-
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

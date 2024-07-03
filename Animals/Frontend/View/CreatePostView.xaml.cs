@@ -1,4 +1,7 @@
-﻿using Frontend.ViewModels;
+﻿using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.PostServices;
+using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Input;
 
@@ -6,13 +9,13 @@ namespace Frontend.View
 {
     public partial class CreatePostView : Window
     {
-        private int _currentUser { get; set; }
+        private User _currentUser { get; set; }
 
-        public CreatePostView(int currentUser)
+        public CreatePostView(User currentUser, PostService postService, AnimalService animalService, SpecieService specieService)
         {
             InitializeComponent();
             _currentUser = currentUser;
-            DataContext = new CreatePostViewModel(currentUser);
+            DataContext = new CreatePostViewModel(currentUser, postService, animalService, specieService);
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
