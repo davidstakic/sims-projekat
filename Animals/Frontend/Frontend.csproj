@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\ModelViewModels\AnimalViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\AssociationViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
     <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
