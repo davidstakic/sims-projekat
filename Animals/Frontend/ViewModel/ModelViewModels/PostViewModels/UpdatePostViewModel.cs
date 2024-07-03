@@ -2,9 +2,9 @@
 using Backend.Models.PostModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Frontend.View;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -88,7 +88,7 @@ namespace Frontend.ViewModels
                     PostAnimalName = animal.Name;
                     PostBreed = animal.Breed;
                     PostColor = animal.Color;
-                    PostAnimalDate = animal.BirthDate.ToDateTime(TimeOnly.MinValue); // Convert DateOnly to DateTime
+                    PostAnimalDate = animal.BirthDate.ToDateTime(TimeOnly.MinValue);
                     PostHealth = animal.HealthCondition;
                     PostLocation = animal.Location;
                     SelectedSpecie = _animalSpecieService.GetById(animal.AnimalSpecieId);
@@ -96,8 +96,30 @@ namespace Frontend.ViewModels
             }
         }
 
+        private bool ValidateFields()
+        {
+            if (string.IsNullOrWhiteSpace(PostTitle) ||
+                string.IsNullOrWhiteSpace(PostDescription) ||
+                string.IsNullOrWhiteSpace(PostImage) ||
+                string.IsNullOrWhiteSpace(PostAnimalName) ||
+                string.IsNullOrWhiteSpace(PostBreed) ||
+                string.IsNullOrWhiteSpace(PostColor) ||
+                string.IsNullOrWhiteSpace(PostHealth) ||
+                string.IsNullOrWhiteSpace(PostLocation) ||
+                SelectedSpecie == null)
+            {
+                new PrintMessageView("Not all data was inputed!").ShowDialog();
+                return false;
+            }
+
+            return true;
+        }
+
         private void UpdatePost()
         {
+            if (!ValidateFields())
+                return;
+
             var updatedPost = new Post
             {
                 Id = PostId,
@@ -111,21 +133,26 @@ namespace Frontend.ViewModels
                 UserId = _userId
             };
 
-            _postService.Update(updatedPost);
-
             var updatedAnimal = new Animal
             {
                 Id = updatedPost.AnimalId,
                 Name = PostAnimalName,
                 Breed = PostBreed,
                 Color = PostColor,
-                BirthDate = DateOnly.FromDateTime(PostAnimalDate), // Convert DateTime back to DateOnly
+                BirthDate = DateOnly.FromDateTime(PostAnimalDate),
                 HealthCondition = PostHealth,
                 Location = PostLocation,
                 AnimalSpecieId = SelectedSpecie.Id
             };
 
-            _animalService.Update(updatedAnimal);
+            var actionView = new ActionView("Are you sure you want to update this post?");
+            actionView.OnYesAction = () =>
+            {
+                _postService.Update(updatedPost);
+                _animalService.Update(updatedAnimal);
+            };
+
+            actionView.ShowDialog();
         }
     }
 }

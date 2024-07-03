@@ -1,6 +1,7 @@
-﻿using Backend.Services.UserServices;
-using Frontend.ViewModel.ModelViewModels.UserViewModels;
 using System.Windows;
+using System.Windows.Input;
+using Backend.Services.UserServices;
+using Frontend.ViewModel.ModelViewModels.UserViewModels;
 
 namespace Frontend.View
 {
@@ -24,6 +25,10 @@ namespace Frontend.View
         {
             Volunteer.CreateVolunteer();
             Close();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

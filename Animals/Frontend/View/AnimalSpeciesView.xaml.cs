@@ -35,7 +35,6 @@ namespace Frontend.View
             _donationService = donationService;
              
             DataContext = new AnimalSpeciesListViewModel(_specieService);
-
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -66,7 +65,7 @@ namespace Frontend.View
         {
             if (sender is FrameworkElement element && element.DataContext is AnimalSpecieViewModel specieViewModel)
             {
-                var destructiveActionView = new DestructiveActionView();
+                var destructiveActionView = new ActionView("Are you sure you want to delete?");
 
                 destructiveActionView.OnYesAction = () =>
                 {

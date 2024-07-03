@@ -38,5 +38,13 @@
     "Status": 2,
     "MemberId": 3,
     "AnimalId": 3
+  },
+  {
+    "Id": 6,
+    "Start": "2024-07-03",
+    "End": "2024-08-03",
+    "Status": 2,
+    "MemberId": 1,
+    "AnimalId": 1
   }
 ]

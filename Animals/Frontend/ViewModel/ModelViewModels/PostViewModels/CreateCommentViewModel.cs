@@ -8,15 +8,15 @@ using System.Windows.Input;
 public class CreateCommentViewModel : ObservableObject
 {
     private readonly Post _post;
-    private readonly Member _currentMember;
+    private readonly User _currentUser;
     private readonly CommentService _commentService;
     public string CommentText { get; set; }
     public ICommand SubmitCommentCommand { get; }
 
-    public CreateCommentViewModel(CommentService commentService, Post post, Member currentMember)
+    public CreateCommentViewModel(CommentService commentService, Post post, User currentUser)
     {
         _post = post;
-        _currentMember = currentMember;
+        _currentUser = currentUser;
         _commentService = commentService;
 
         SubmitCommentCommand = new RelayCommand(OnSubmitComment);
@@ -30,7 +30,7 @@ public class CreateCommentViewModel : ObservableObject
             {
                 Date = DateTime.Now,
                 Content = CommentText,
-                UserId = _currentMember.Id,
+                UserId = _currentUser.Id,
                 PostId = _post.Id,
             };
 

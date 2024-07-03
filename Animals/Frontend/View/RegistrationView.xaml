@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
         Title="Member Registration" Height="700" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">

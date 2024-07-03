@@ -1,19 +1,6 @@
 [
   {
     "IsBlacklisted": false,
-    "Status": 0,
-    "Id": 2,
-    "FirstName": "Marry",
-    "LastName": "Curry",
-    "PhoneNumber": "123-456-7890",
-    "Email": "asdf.doe@example.com",
-    "BirthDate": "1990-01-01",
-    "Gender": 1,
-    "ProfileId": 9,
-    "AssociationId": 202
-  },
-  {
-    "IsBlacklisted": false,
     "Status": 2,
     "Id": 4,
     "FirstName": "david",

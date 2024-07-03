@@ -2,6 +2,7 @@
 using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
@@ -56,6 +57,10 @@ namespace Frontend.View
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             PasswordText.Visibility = string.IsNullOrEmpty(PasswordBox.Password) ? Visibility.Visible : Visibility.Collapsed;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

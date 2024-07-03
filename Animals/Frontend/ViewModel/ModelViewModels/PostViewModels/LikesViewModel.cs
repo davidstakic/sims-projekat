@@ -6,20 +6,17 @@ public class LikesViewModel
 {
     public int UserId { get; }
     public int PostId { get; }
-    private PostService _postService { get; set; }
     private LikeService _likeService { get; set; }
     public List<LikeViewModel> Likes { get; set; }
 
-    public LikesViewModel(int userId, int postId, PostService postService, LikeService likeService)
+    public LikesViewModel(int userId, int postId, LikeService likeService)
     {
         UserId = userId;
         PostId = postId;
-        _postService = postService;
         _likeService = likeService;
 
         Update();
     }
-
 
     public void Update()
     {

@@ -2,8 +2,8 @@
 using Backend.Models.PostModels;
 using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
@@ -11,6 +11,7 @@ using System.Windows.Input;
 
 public class PostDetailViewModel : ObservableObject
 {
+    public User CurrentUser { get; set; }
     public Post Post { get; set; }
     public Member Member { get; set; }
     public string FirstName { get; set; }
@@ -42,12 +43,15 @@ public class PostDetailViewModel : ObservableObject
     private CommentService _commentService { get; set; }
     private AnimalService _animalService { get; set; }
     private SpecieService _specieService { get; set; }
+    private AdoptionService _adoptionService { get; set; }
+    private DonationService _donationService { get; set; }
     public ICommand LikeCommand { get; }
     public ICommand CommentCommand { get; }
     public ICommand OptionsCommand { get; }
 
-    public PostDetailViewModel(Post post, Member member, Animal animal, string specieName, int likeCount, int commentCount, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService)
+    public PostDetailViewModel(User currentUser, Post post, Member member, Animal animal, string specieName, int likeCount, int commentCount, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService)
     {
+        CurrentUser = currentUser;
         Post = post;
         Member = member;
         FirstName = member.FirstName;
@@ -61,28 +65,30 @@ public class PostDetailViewModel : ObservableObject
         _commentService = commentService;
         _animalService = animalService;
         _specieService = specieService;
+        _adoptionService = adoptionService;
+        _donationService = donationService;
 
         LikeCommand = new RelayCommand(OnLike);
         CommentCommand = new RelayCommand(OnComment);
         OptionsCommand = new RelayCommand(OnOptions);
 
-        IsLiked = _likeService.GetAll().Any(like => like.UserId == Member.Id && like.PostId == Post.Id);
+        IsLiked = _likeService.GetAll().Any(like => like.UserId == CurrentUser.Id && like.PostId == Post.Id);
     }
 
     private void OnLike()
     {
-        var hasAlreadyLiked = _likeService.GetAll().Any(like => like.UserId == Member.Id && like.PostId == Post.Id);
+        var hasAlreadyLiked = _likeService.GetAll().Any(like => like.UserId == CurrentUser.Id && like.PostId == Post.Id);
 
         if (!hasAlreadyLiked)
         {
             LikeCount++;
-            _likeService.Create(new Like(0, DateTime.Now, Member.Id, Post.Id));
+            _likeService.Create(new Like(0, DateTime.Now, CurrentUser.Id, Post.Id));
             IsLiked = true;
         }
         else
         {
             LikeCount--;
-            Like like = _likeService.GetAll().FirstOrDefault(like => like.UserId == Member.Id && like.PostId == Post.Id)!;
+            Like like = _likeService.GetAll().FirstOrDefault(like => like.UserId == CurrentUser.Id && like.PostId == Post.Id)!;
             _likeService.Delete(like.Id);
             IsLiked = false;
         }
@@ -90,7 +96,7 @@ public class PostDetailViewModel : ObservableObject
 
     private void OnComment()
     {
-        var newCommentViewModel = new CreateCommentViewModel(_commentService, Post, Member);
+        var newCommentViewModel = new CreateCommentViewModel(_commentService, Post, CurrentUser);
         var newCommentView = new CreateCommentView(newCommentViewModel);
         newCommentView.ShowDialog();
 
@@ -99,6 +105,6 @@ public class PostDetailViewModel : ObservableObject
 
     private void OnOptions()
     {
-        new OptionsView(Member.Id, Post.Id, _postService, _likeService, _commentService, _animalService, _specieService, PostDetailView).ShowDialog();
+        new OptionsView(Member.Id, Post.Id, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService, PostDetailView).ShowDialog();
     }
 }

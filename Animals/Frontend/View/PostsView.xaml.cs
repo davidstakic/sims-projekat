@@ -1,7 +1,7 @@
 ﻿using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,20 +11,24 @@ namespace Frontend
 {
     public partial class PostsView : Window
     {
-        private Member currentMember { get; set; }
+        private User currentUser { get; set; }
         private LikeService likeService { get; set; }
         private CommentService commentService { get; set; }
         private AnimalService animalService { get; set; }
         private SpecieService specieService { get; set; }
-        public PostsView(Member currentMember, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService)
+        private AdoptionService adoptionService { get; set; }
+        private DonationService donationService { get; set; }
+        public PostsView(User currentUser, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService)
         {
             InitializeComponent();
-            DataContext = new PostsViewModel(currentMember, postService, likeService, commentService, animalService, specieService);
-            this.currentMember = currentMember;
+            DataContext = new PostsViewModel(currentUser, postService, likeService, commentService, animalService, specieService, adoptionService, donationService);
+            this.currentUser = currentUser;
             this.likeService = likeService;
             this.commentService = commentService;
             this.animalService = animalService;
             this.specieService = specieService;
+            this.adoptionService = adoptionService;
+            this.donationService = donationService;
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

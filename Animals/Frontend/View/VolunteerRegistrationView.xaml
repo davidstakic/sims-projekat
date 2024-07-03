@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
-        Title="Volunteer Update" Height="730" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Title="Volunteer Registration" Height="730" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">

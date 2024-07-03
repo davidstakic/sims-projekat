@@ -2,6 +2,7 @@
 using Backend.Models.UserModels;
 using Backend.Services.AssociationServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
@@ -31,6 +32,10 @@ namespace Frontend.View
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

@@ -1,14 +1,17 @@
-﻿using Backend.Services.AnimalServices;
+﻿using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
 using Backend.Services.UserServices;
 using Backend.Services.VetOfficeServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
     public partial class AdministratorMainPageView : Window
     {
+        private Volunteer _Volunteer;
         private SpecieService _specieService;
         private AnimalService _animalService;
         private PostService _postService;
@@ -21,9 +24,11 @@ namespace Frontend.View
         private VolunteerService _volunterService;
         private ProfileService _profileService;
 
-        public AdministratorMainPageView(SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService, VolunteerService volunteerService, ProfileService profileService)
+        public AdministratorMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService, VolunteerService volunteerService, ProfileService profileService)
         {
             InitializeComponent();
+
+            _Volunteer = volunteer;
 
             _specieService = specieService;
             _animalService = animalService;
@@ -82,6 +87,15 @@ namespace Frontend.View
         private void Members_Click(object sender, RoutedEventArgs e)
         {
             new MembersView().Show();
+        }
+
+        private void Posts_Click(object sender, RoutedEventArgs e)
+        {
+            new PostsView(_Volunteer, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

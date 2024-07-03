@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
         Title="Create Animal Species" Height="800" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">
@@ -78,7 +78,7 @@
 
                 <Grid Margin="0,0,0,0"/>
 
-                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Posts_Click"/>
                 <Button x:Name="btAssociation" Content="Associations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="btVolunteers" Content="Volunteers" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="VolunteersButton_Click"/>
                 <Button x:Name="btSpecies" Content="Animal Species" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="SpeciesButton_Click"/>

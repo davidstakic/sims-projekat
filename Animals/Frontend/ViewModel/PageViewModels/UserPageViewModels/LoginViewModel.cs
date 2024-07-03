@@ -57,7 +57,7 @@ namespace Frontend.ViewModels
             _memberService = new MemberService();
             _volunteerService = new VolunteerService();
             _specieService = new SpecieService();
-            _animalService = new AnimalService() ;
+            _animalService = new AnimalService();
             _postService = new PostService();
             _likeService = new LikeService();
             _commentService = new CommentService();
@@ -88,11 +88,11 @@ namespace Frontend.ViewModels
                 {
                     if (member.Status == Status.Accepted && !member.IsBlacklisted)
                     {
-                        new MemberMainPageView(member, _postService, _likeService, _commentService, _animalService, _specieService).Show();
+                        new MemberMainPageView(member, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
                         Application.Current.MainWindow.Close();
                         return;
                     }
-                    new PostsView(member, _postService, _likeService, _commentService, _animalService, _specieService).Show();
+                    new PostsView(member, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
                     Application.Current.MainWindow.Close();
                 }
             }
@@ -104,11 +104,11 @@ namespace Frontend.ViewModels
                 {
                     if (volunteer.IsAdmin)
                     {
-                        new AdministratorMainPageView(_specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService, _volunteerService, _profileService).Show();
+                        new AdministratorMainPageView(volunteer, _specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService, _volunteerService, _profileService).Show();
                         Application.Current.MainWindow.Close();
                         return;
                     }
-                    new VolunteerMainPageView().Show();
+                    new VolunteerMainPageView(volunteer, _specieService, _animalService, _postService, _likeService, _commentService, _treatmentService, _feedbackService, _adoptionService, _donationService).Show();
                     Application.Current.MainWindow.Close();
                 }
             }

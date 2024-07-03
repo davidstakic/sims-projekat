@@ -1,9 +1,8 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using Frontend.ViewModels;
-using Backend.Services.AnimalServices;
+﻿using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
+using Frontend.ViewModels;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {

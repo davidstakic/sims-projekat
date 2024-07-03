@@ -1,14 +1,16 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace Frontend.View
 {
-    public partial class DestructiveActionView : Window
+    public partial class ActionView : Window
     {
         public Action OnYesAction { get; set; }
 
-        public DestructiveActionView()
+        public ActionView(string action)
         {
             InitializeComponent();
+            Message.Text = action;
         }
 
         private void Yes_Click(object sender, RoutedEventArgs e)
@@ -27,7 +29,7 @@ namespace Frontend.View
             Close();
         }
 
-        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
