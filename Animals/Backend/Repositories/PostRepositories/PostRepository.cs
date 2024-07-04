@@ -9,11 +9,6 @@ namespace Backend.Repositories.PostRepositories
         {
         }
 
-        IEnumerable<Post> IPostRepository.GetPostByUserId(int userId)
-        {
-            return GetAll().Where(m => m.UserId == userId);
-        }
-
         IEnumerable<Post> IPostRepository.GetPostByAnimalId(int animalId)
         {
             return GetAll().Where(m => m.AnimalId == animalId);

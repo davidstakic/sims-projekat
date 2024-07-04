@@ -6,18 +6,15 @@ namespace Backend.Services.AnimalServices
 {
     public class FeedbackService : Service<AnimalFeedback>
     {
+        private readonly IFeedbackRepository _feedbackRepository;
         public FeedbackService() : base((IFeedbackRepository)Injector.GetRepositoryInstance("IFeedbackRepository"))
         {
+            _feedbackRepository = (IFeedbackRepository)Injector.GetRepositoryInstance("IFeedbackRepository");
         }
 
         public List<AnimalFeedback> GetAnimalFeedbackByAnimalId(int animalId)
         {
-            return GetAll().Where(m => m.AnimalId == animalId).ToList();
-        }
-
-        public List<AnimalFeedback> GetAnimalFeedbackByMemberId(int memberId)
-        {
-            return GetAll().Where(m => m.MemberId == memberId).ToList();
+            return _feedbackRepository.GetAnimalFeedbackByAnimalId(animalId).ToList();
         }
     }
 }

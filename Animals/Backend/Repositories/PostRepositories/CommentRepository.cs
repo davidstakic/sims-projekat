@@ -9,11 +9,6 @@ namespace Backend.Repositories.PostRepositories
         {
         }
 
-        IEnumerable<Comment> ICommentRepository.GetCommentByUserId(int userId)
-        {
-            return GetAll().Where(m => m.UserId == userId);
-        }
-
         IEnumerable<Comment> ICommentRepository.GetCommentByPostId(int postId)
         {
             return GetAll().Where(m => m.PostId == postId);

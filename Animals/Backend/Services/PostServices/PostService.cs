@@ -6,18 +6,15 @@ namespace Backend.Services.PostServices
 {
     public class PostService : Service<Post>
     {
+        private readonly IPostRepository _postRepository;
         public PostService() : base((IPostRepository)Injector.GetRepositoryInstance("IPostRepository"))
         {
+            _postRepository = (IPostRepository)Injector.GetRepositoryInstance("IPostRepository");
         }
 
         public List<Post> GetPostByAnimalId(int animalId)
         {
-            return GetAll().Where(m => m.AnimalId == animalId).ToList();
-        }
-
-        public List<Post> GetPostByUserId(int userId)
-        {
-            return GetAll().Where(m => m.UserId == userId).ToList();
+            return _postRepository.GetPostByAnimalId(animalId).ToList();
         }
     }
 }

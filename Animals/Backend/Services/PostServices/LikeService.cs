@@ -6,18 +6,15 @@ namespace Backend.Services.PostServices
 {
     public class LikeService : Service<Like>
     {
+        private readonly ILikeRepository _likeRepository;
         public LikeService() : base((ILikeRepository)Injector.GetRepositoryInstance("ILikeRepository"))
         {
-        }
-
-        public List<Like> GetLikeByUserId(int userId)
-        {
-            return GetAll().Where(m => m.UserId == userId).ToList();
+            _likeRepository = (ILikeRepository)Injector.GetRepositoryInstance("ILikeRepository");
         }
 
         public List<Like> GetLikeByPostId(int postId)
         {
-            return GetAll().Where(m => m.PostId == postId).ToList();
+            return _likeRepository.GetLikeByPostId(postId).ToList();
         }
     }
 }

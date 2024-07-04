@@ -6,18 +6,20 @@ namespace Backend.Services.UserServices
 {
     public class MemberService : Service<Member>
     {
+        private readonly IMemberRepository _memberRepository;
         public MemberService() : base((IMemberRepository)Injector.GetRepositoryInstance("IMemberRepository"))
         {
+            _memberRepository = (IMemberRepository)Injector.GetRepositoryInstance("IMemberRepository");
         }
 
         public Member GetMemberByLikeId(int likeUserId)
         {
-            return GetAll().FirstOrDefault(m => m.Id == likeUserId)!;
+            return _memberRepository.GetMemberByLikeId(likeUserId);
         }
 
         public Member GetMemberByCommentId(int commentUserId)
         {
-            return GetAll().FirstOrDefault(m => m.Id == commentUserId)!;
+            return _memberRepository.GetMemberByCommentId(commentUserId);
         }
     }
 }

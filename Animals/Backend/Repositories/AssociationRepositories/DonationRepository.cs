@@ -13,15 +13,5 @@ namespace Backend.Repositories.AssociationRepositories
         {
             return GetAll().Where(m => m.AnimalId == animalId);
         }
-
-        public IEnumerable<Donation> GetDonationByAssociationId(int associationId)
-        {
-            return GetAll().Where(m => m.AssociationId == associationId);
-        }
-
-        public IEnumerable<Donation> GetDonationByMemberId(int memberId)
-        {
-            return GetAll().Where(m => m.MemberId == memberId);
-        }
     }
 }
