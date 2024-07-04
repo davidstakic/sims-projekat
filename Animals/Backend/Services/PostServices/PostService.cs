@@ -12,9 +12,13 @@ namespace Backend.Services.PostServices
             _postRepository = (IPostRepository)Injector.GetRepositoryInstance("IPostRepository");
         }
 
-        public List<Post> GetPostByAnimalId(int animalId)
+        public List<Post> GetPostsByAnimalId(int animalId)
         {
-            return _postRepository.GetPostByAnimalId(animalId).ToList();
+            return _postRepository.GetPostsByAnimalId(animalId).ToList();
+        }
+        public Post GetPostByAnimalId(int animalId)
+        {
+            return _postRepository.GetPostByAnimalId(animalId);
         }
     }
 }

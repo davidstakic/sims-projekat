@@ -30,7 +30,7 @@ namespace Frontend
 
         private void ForgotPassword_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Forgot Password clicked!");
+            new PrintMessageView("Forgot Password clicked!").Show();
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
