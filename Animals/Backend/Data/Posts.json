@@ -106,7 +106,29 @@
     "Image": "https://hypebih.ba/wp-content/uploads/2023/02/nuci-1024x686.jpg",
     "Video": "",
     "Status": 0,
-    "AnimalId": 13,
-    "UserId": 2
+    "AnimalId": 3,
+    "UserId": 4
+  },
+  {
+    "Id": 12,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-04T17:41:16.6588291+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 16,
+    "UserId": 5
+  },
+  {
+    "Id": 13,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-04T17:42:51.1742361+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 17,
+    "UserId": 5
   }
 ]

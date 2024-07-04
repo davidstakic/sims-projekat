@@ -25,7 +25,7 @@ namespace Frontend.View
             else if (currentMember.Gender == Gender.Other) OtherRadioButton.IsChecked = true;
             Profile profile = new ProfileService().GetById(currentMember.ProfileId);
             UsernameTextBox.Text = profile.Username;
-            PasswordBox.Password = profile.Password;
+            PasswordBox.Text = profile.Password;
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
@@ -53,7 +53,7 @@ namespace Frontend.View
             Profile profile = new ProfileService().GetById(_currentMember.ProfileId);
             string username = UsernameTextBox.Text;
             if (string.IsNullOrWhiteSpace(username)) return;
-            string password = PasswordBox.Password;
+            string password = PasswordBox.Text;
             if (string.IsNullOrWhiteSpace(password)) return;
             profile.Username = username;
             profile.Password = password;

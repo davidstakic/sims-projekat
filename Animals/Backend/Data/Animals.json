@@ -138,5 +138,25 @@
     "HealthCondition": "Mostly Great",
     "Location": "Antarctica",
     "AnimalSpecieId": 2
+  },
+  {
+    "Id": 16,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 4
+  },
+  {
+    "Id": 17,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 5
   }
 ]

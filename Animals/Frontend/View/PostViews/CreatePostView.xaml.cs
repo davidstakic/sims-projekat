@@ -12,7 +12,7 @@ namespace Frontend.View
         public CreatePostView(User currentUser, PostService postService, AnimalService animalService, SpecieService specieService)
         {
             InitializeComponent();
-            DataContext = new CreatePostViewModel(currentUser, postService, animalService, specieService);
+            DataContext = new CreatePostViewModel(currentUser, postService, animalService, specieService, this);
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -23,11 +23,6 @@ namespace Frontend.View
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
-        }
-
-        private void Create_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }
