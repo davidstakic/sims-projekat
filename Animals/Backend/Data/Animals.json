@@ -128,5 +128,15 @@
     "HealthCondition": "Zdrav prav",
     "Location": "Kraljevo",
     "AnimalSpecieId": 8
+  },
+  {
+    "Id": 15,
+    "Name": "Halid",
+    "Breed": "Bearded",
+    "Color": "White",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "Mostly Great",
+    "Location": "Antarctica",
+    "AnimalSpecieId": 2
   }
 ]
