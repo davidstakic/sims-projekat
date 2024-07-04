@@ -2,6 +2,7 @@ using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
+using Backend.Services.UserServices;
 using Frontend.View;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,10 +12,10 @@ namespace Frontend
 {
     public partial class PostsView : Window
     {
-        public PostsView(User currentUser, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService)
+        public PostsView(User currentUser, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService, MemberService memberService, VolunteerService volunteerService)
         {
             InitializeComponent();
-            DataContext = new PostsViewModel(currentUser, postService, likeService, commentService, animalService, specieService, adoptionService, donationService);
+            DataContext = new PostsViewModel(currentUser, postService, likeService, commentService, animalService, specieService, adoptionService, donationService, memberService, volunteerService);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

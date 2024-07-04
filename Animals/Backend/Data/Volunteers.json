@@ -2,37 +2,25 @@
   {
     "IsAdmin": false,
     "Id": 4,
-    "FirstName": "Bob",
-    "LastName": "White",
+    "FirstName": "Andjela",
+    "LastName": "Ignjatovic",
     "PhoneNumber": "456-789-0123",
-    "Email": "bob.white@example.com",
+    "Email": "andjela@example.com",
     "BirthDate": "1978-09-23",
-    "Gender": 0,
+    "Gender": 1,
     "ProfileId": 4,
-    "AssociationId": 205
+    "AssociationId": 202
   },
   {
     "IsAdmin": true,
     "Id": 5,
-    "FirstName": "Cathy",
-    "LastName": "Green",
-    "PhoneNumber": "567-890-1234",
-    "Email": "cathy.green@example.com",
-    "BirthDate": "1995-07-19",
-    "Gender": 1,
-    "ProfileId": 5,
-    "AssociationId": 206
-  },
-  {
-    "IsAdmin": true,
-    "Id": 3,
-    "FirstName": "Alice",
-    "LastName": "Brown",
-    "PhoneNumber": "3456789012",
-    "Email": "alice.brown@example.com",
-    "BirthDate": "1992-03-22",
+    "FirstName": "Mihajlo",
+    "LastName": "Veruovic",
+    "PhoneNumber": "456-789-0123",
+    "Email": "mihajlo@example.com",
+    "BirthDate": "1978-09-23",
     "Gender": 0,
-    "ProfileId": 3,
-    "AssociationId": 3
+    "ProfileId": 5,
+    "AssociationId": 202
   }
 ]

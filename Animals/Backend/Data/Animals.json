@@ -1,103 +1,13 @@
 [
   {
-    "Id": 3,
-    "Name": "Gordon",
-    "Breed": "Cat",
+    "Id": 1,
+    "Name": "Timmy",
+    "Breed": "Beagle",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
-    "HealthCondition": "Great",
-    "Location": "Hungary",
+    "HealthCondition": "Awesome",
+    "Location": "Japan",
     "AnimalSpecieId": 1
-  },
-  {
-    "Id": 4,
-    "Name": "Sunny",
-    "Breed": "Cow",
-    "Color": "3-color",
-    "BirthDate": "1990-01-01",
-    "HealthCondition": "Great",
-    "Location": "Cacak",
-    "AnimalSpecieId": 3
-  },
-  {
-    "Id": 5,
-    "Name": "Ramstein",
-    "Breed": "Horse",
-    "Color": "3-color",
-    "BirthDate": "1990-01-01",
-    "HealthCondition": "Great",
-    "Location": "Kraljevo",
-    "AnimalSpecieId": 5
-  },
-  {
-    "Id": 6,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 3
-  },
-  {
-    "Id": 7,
-    "Name": "ff",
-    "Breed": "ff",
-    "Color": "ff",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 2
-  },
-  {
-    "Id": 8,
-    "Name": "Brendon",
-    "Breed": "Husky",
-    "Color": "Black-White",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "Great",
-    "Location": "Senta",
-    "AnimalSpecieId": 4
-  },
-  {
-    "Id": 9,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 2
-  },
-  {
-    "Id": 10,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 3
-  },
-  {
-    "Id": 11,
-    "Name": "asdf",
-    "Breed": "asdfasdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 3
-  },
-  {
-    "Id": 12,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
-    "AnimalSpecieId": 4
   },
   {
     "Id": 2,
@@ -110,53 +20,33 @@
     "AnimalSpecieId": 2
   },
   {
-    "Id": 1,
-    "Name": "Timmy",
-    "Breed": "Beagle",
+    "Id": 3,
+    "Name": "Gordon",
+    "Breed": "Cat",
     "Color": "3-color",
     "BirthDate": "1990-01-01",
-    "HealthCondition": "Awesome",
-    "Location": "Japan",
-    "AnimalSpecieId": 1
+    "HealthCondition": "Great",
+    "Location": "Hungary",
+    "AnimalSpecieId": 3
   },
   {
-    "Id": 13,
-    "Name": "Nucci",
-    "Breed": "Retard",
-    "Color": "Crnac",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "Zdrav prav",
-    "Location": "Kraljevo",
-    "AnimalSpecieId": 8
-  },
-  {
-    "Id": 15,
-    "Name": "Halid",
-    "Breed": "Bearded",
-    "Color": "White",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "Mostly Great",
-    "Location": "Antarctica",
-    "AnimalSpecieId": 2
-  },
-  {
-    "Id": 16,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
+    "Id": 4,
+    "Name": "Sunny",
+    "Breed": "Cow",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Cacak",
     "AnimalSpecieId": 4
   },
   {
-    "Id": 17,
-    "Name": "asdf",
-    "Breed": "asdf",
-    "Color": "asdf",
-    "BirthDate": "0001-01-01",
-    "HealthCondition": "asdf",
-    "Location": "asdf",
+    "Id": 5,
+    "Name": "Ramstein",
+    "Breed": "Horse",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Kraljevo",
     "AnimalSpecieId": 5
   }
 ]

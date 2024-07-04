@@ -4,6 +4,7 @@ using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
+using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
@@ -21,10 +22,12 @@ public class PostDetailViewModel : ObservableObject
     private SpecieService _specieService;
     private AdoptionService _adoptionService;
     private DonationService _donationService;
+    private MemberService _memberService;
+    private VolunteerService _volunteerService;
+    private User _postMaker;
 
     public User CurrentUser { get; set; }
     public Post Post { get; set; }
-    public Member Member { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public Animal Animal { get; set; }
@@ -50,13 +53,16 @@ public class PostDetailViewModel : ObservableObject
     public ICommand CommentCommand { get; }
     public ICommand OptionsCommand { get; }
 
-    public PostDetailViewModel(User currentUser, Post post, Member member, Animal animal, string specieName, int likeCount, int commentCount, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService)
+    public PostDetailViewModel(User currentUser, Post post, Animal animal, string specieName, int likeCount, int commentCount, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService, MemberService memberService, VolunteerService volunteerService)
     {
         CurrentUser = currentUser;
         Post = post;
-        Member = member;
-        FirstName = member.FirstName;
-        LastName = member.LastName;
+
+        _memberService = memberService;
+        _volunteerService = volunteerService;
+        _postMaker = GetUser(post.UserId);
+        FirstName = _postMaker.FirstName;
+        LastName = _postMaker.LastName;
         Animal = animal;
         SpecieName = specieName;
         LikeCount = likeCount;
@@ -74,6 +80,16 @@ public class PostDetailViewModel : ObservableObject
         OptionsCommand = new RelayCommand(OnOptions);
 
         IsLiked = _likeService.GetAll().Any(like => like.UserId == CurrentUser.Id && like.PostId == Post.Id);
+    }
+
+    private User GetUser(int userId)
+    {
+        User user = _memberService.GetById(userId);
+        if (user == null)
+        {
+            return _volunteerService.GetById(userId);
+        }
+        return user;
     }
 
     private void OnLike()
@@ -106,6 +122,6 @@ public class PostDetailViewModel : ObservableObject
 
     private void OnOptions()
     {
-        new OptionsView(Member.Id, Post.Id, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService, PostDetailView).ShowDialog();
+        new OptionsView(_postMaker.Id, Post.Id, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService, PostDetailView).ShowDialog();
     }
 }

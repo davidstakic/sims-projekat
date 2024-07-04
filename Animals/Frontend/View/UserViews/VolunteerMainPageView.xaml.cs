@@ -2,6 +2,7 @@ using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
+using Backend.Services.UserServices;
 using Backend.Services.VetOfficeServices;
 using System.Windows;
 using System.Windows.Input;
@@ -18,8 +19,10 @@ namespace Frontend.View
         private CommentService _commentService;
         private AdoptionService _adoptionService;
         private DonationService _donationService;
+        private MemberService _memberService;
+        private VolunteerService _volunteerService;
 
-        public VolunteerMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService)
+        public VolunteerMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService, MemberService memberService, VolunteerService volunteerService)
         {
             InitializeComponent();
 
@@ -32,6 +35,8 @@ namespace Frontend.View
             _commentService = commentService;
             _adoptionService = adoptionService;
             _donationService = donationService;
+            _memberService = memberService;
+            _volunteerService = volunteerService;
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -72,7 +77,7 @@ namespace Frontend.View
 
         private void Posts_Click(object sender, RoutedEventArgs e)
         {
-            new PostsView(_Volunteer, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
+            new PostsView(_Volunteer, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService, _memberService, _volunteerService).Show();
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

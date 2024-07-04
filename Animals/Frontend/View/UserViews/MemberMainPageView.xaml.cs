@@ -21,11 +21,12 @@ namespace Frontend.View
         private DonationService _donationService;
         private ProfileService _profileService;
         private MemberService _memberService;
+        private VolunteerService _volunteerService;
 
         public MemberMainPageView(Member currentMember, PostService postService,
             LikeService likeService, CommentService commentService, AnimalService animalService,
             SpecieService specieService, AdoptionService adoptionService, DonationService donationService, 
-            ProfileService profileService, MemberService memberService)
+            ProfileService profileService, MemberService memberService, VolunteerService volunteerService)
         {
             InitializeComponent();
             _currentMember = currentMember;
@@ -38,6 +39,7 @@ namespace Frontend.View
             _donationService = donationService;
             _profileService = profileService;
             _memberService = memberService;
+            _volunteerService = volunteerService;
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)
@@ -53,7 +55,7 @@ namespace Frontend.View
 
         private void Posts_Click(object sender, RoutedEventArgs e)
         {
-            new PostsView(_currentMember, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
+            new PostsView(_currentMember, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService, _memberService, _volunteerService).Show();
         }
 
         private void Donate_Click(object sender, RoutedEventArgs e)

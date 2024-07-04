@@ -10,7 +10,7 @@
     "Id": 2,
     "Date": "2024-07-01T16:03:21.9821459+02:00",
     "Content": "Uggh ugly!",
-    "UserId": 1,
+    "UserId": 2,
     "PostId": 2
   },
   {
@@ -18,20 +18,20 @@
     "Date": "2024-07-01T16:03:21.9821485+02:00",
     "Content": "Aww how cute!",
     "UserId": 3,
-    "PostId": 2
+    "PostId": 3
   },
   {
     "Id": 4,
-    "Date": "2024-07-01T16:03:21.9821489+02:00",
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
     "Content": "Aww how cute!",
     "UserId": 4,
-    "PostId": 1
+    "PostId": 4
   },
   {
-    "Id": 6,
-    "Date": "2024-07-04T13:46:21.9335562+02:00",
-    "Content": "lep vam je ker, nego jel ima zlatna jaja",
-    "UserId": 2,
-    "PostId": 1
+    "Id": 5,
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 5,
+    "PostId": 5
   }
 ]

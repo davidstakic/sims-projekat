@@ -1,50 +1,32 @@
 [
   {
     "Id": 1,
-    "Username": "john_doe",
-    "Password": "password123",
+    "Username": "marko",
+    "Password": "marko",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 2,
+    "Username": "daki",
+    "Password": "daki",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 3,
+    "Username": "vlaki",
+    "Password": "vlaki",
     "CreationDate": "2023-01-15T10:20:30"
   },
   {
     "Id": 4,
-    "Username": "bob_white",
-    "Password": "whitePass321",
-    "CreationDate": "2023-04-10T12:45:30"
+    "Username": "andjela",
+    "Password": "andjela",
+    "CreationDate": "2023-01-15T10:20:30"
   },
   {
     "Id": 5,
-    "Username": "cathy_green",
-    "Password": "greenPass654",
-    "CreationDate": "2023-05-18T08:30:25"
-  },
-  {
-    "Id": 7,
-    "Username": "vlado1",
-    "Password": "vlado123",
-    "CreationDate": "2024-07-02T13:19:04.2600728+02:00"
-  },
-  {
-    "Id": 8,
-    "Username": "david1",
-    "Password": "david123",
-    "CreationDate": "2024-07-02T22:29:36.5985571+02:00"
-  },
-  {
-    "Id": 3,
-    "Username": "alice_brown",
-    "Password": "brownPass789",
-    "CreationDate": "2023-03-25T09:15:45"
-  },
-  {
-    "Id": 11,
-    "Username": "mile",
-    "Password": "mile",
-    "CreationDate": "2024-07-04T16:44:26.2513567+02:00"
-  },
-  {
-    "Id": 13,
-    "Username": "dfasss",
-    "Password": "fasd",
-    "CreationDate": "2024-07-04T17:03:56.8015785+02:00"
+    "Username": "mihajlo",
+    "Password": "mihajlo",
+    "CreationDate": "2023-01-15T10:20:30"
   }
 ]
