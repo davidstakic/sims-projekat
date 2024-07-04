@@ -72,20 +72,6 @@ namespace Frontend.ViewModels
 
         private void CreatePost()
         {
-            var newPost = new Post
-            {
-                Title = PostTitle,
-                Description = PostDescription,
-                CreationDate = DateTime.Now,
-                Image = PostImage,
-                Video = "",
-                Status = Backend.Models.Enums.Status.Waiting,
-                AnimalId = SelectedSpecie.Id,
-                UserId = CurrentUser.Id
-            };
-
-            _postService.Create(newPost);
-
             var newAnimal = new Animal
             {
                 Name = PostAnimalName,
@@ -98,6 +84,20 @@ namespace Frontend.ViewModels
             };
 
             _animalService.Create(newAnimal);
+
+            var newPost = new Post
+            {
+                Title = PostTitle,
+                Description = PostDescription,
+                CreationDate = DateTime.Now,
+                Image = PostImage,
+                Video = "",
+                Status = Backend.Models.Enums.Status.Waiting,
+                AnimalId = newAnimal.Id,
+                UserId = CurrentUser.Id
+            };
+
+            _postService.Create(newPost);
         }
     }
 }
