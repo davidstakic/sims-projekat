@@ -1,12 +1,12 @@
-﻿<Window x:Class="Frontend.View.VolunteerMainPageView"
+<Window x:Class="Frontend.View.VolunteerMainPageView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
-        Title="Create Animal Species" Height="500" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Title="Create Animal Species" Height="720" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">
@@ -66,7 +66,7 @@
         </Grid.Background>
 
         <Button Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" Margin="0,10,10,0"
-                Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" />
+                Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" Click="Close_Click" />
 
         <Border Background="White" CornerRadius="10" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20">
             <StackPanel>
@@ -74,10 +74,14 @@
 
                 <Grid Margin="0,0,0,0"/>
 
-                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Posts_Click" />
                 <Button x:Name="btVoting" Content="Voting" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="ViewButton" Content="Donations" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donations_Click" />
+                <Button x:Name="RegistrationRequestsButton" Content="Registration Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="RegistrationRequests_Click" />
+                <Button x:Name="PostRequestsButton" Content="Post Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PostRequests_Click" />
+                <Button x:Name="AdoptionRequestsButton" Content="Adoption Requests" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="AdoptionRequests_Click" />
+                <Button x:Name="MembersButton" Content="Members" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Members_Click" />
+                <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
             </StackPanel>
         </Border>
     </Grid>

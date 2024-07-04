@@ -1,4 +1,4 @@
-﻿<Window x:Class="Frontend.View.MemberMainPageView"
+<Window x:Class="Frontend.View.MemberMainPageView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Frontend"
         mc:Ignorable="d"
         Title="Create Animal Species" Height="580" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Background="Transparent" AllowsTransparency="True" WindowStyle="None">
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
         <Style TargetType="TextBlock">
@@ -74,9 +74,11 @@
 
                 <Grid Margin="0,0,0,0"/>
 
-                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btAssociation" Content="Donate" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Button x:Name="btDelete" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="btPosts" Content="Posts" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Posts_Click"/>
+                <Button x:Name="btAssociation" Content="Donate" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Donate_Click"/>
+                <Button x:Name="btUpdate" Content="Update Profile" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Update_Click"/>
+                <Button x:Name="btDelete" Content="Delete Profile" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Delete_Click"/>
+                <Button x:Name="btLogout" Content="Log Out" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Logout_Click"/>
             </StackPanel>
         </Border>
     </Grid>

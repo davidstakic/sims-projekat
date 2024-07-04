@@ -1,15 +1,23 @@
 ﻿using Backend.Configuration;
+using Backend.Models.UserModels;
 using Backend.Repositories.Interfaces.UserInterfaces;
 
 namespace Backend.Services.UserServices
 {
-    public class MemberService : UserService
+    public class MemberService : Service<Member>
     {
-        private readonly IMemberRepository _memberRepository;
-
-        public MemberService() : base()
+        public MemberService() : base((IMemberRepository)Injector.GetRepositoryInstance("IMemberRepository"))
         {
-            _memberRepository = (IMemberRepository)Injector.GetRepositoryInstance("IMemberRepository");
+        }
+
+        public Member GetMemberByLikeId(int likeUserId)
+        {
+            return GetAll().FirstOrDefault(m => m.Id == likeUserId)!;
+        }
+
+        public Member GetMemberByCommentId(int commentUserId)
+        {
+            return GetAll().FirstOrDefault(m => m.Id == commentUserId)!;
         }
     }
 }

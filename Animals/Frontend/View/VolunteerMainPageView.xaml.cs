@@ -1,27 +1,86 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Backend.Models.UserModels;
+using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
+using Backend.Services.PostServices;
+using Backend.Services.VetOfficeServices;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Frontend.View
 {
-    /// <summary>
-    /// Interaction logic for VolunteerMainPageView.xaml
-    /// </summary>
     public partial class VolunteerMainPageView : Window
     {
-        public VolunteerMainPageView()
+        private Volunteer _Volunteer;
+        private SpecieService _specieService;
+        private AnimalService _animalService;
+        private PostService _postService;
+        private LikeService _likeService;
+        private CommentService _commentService;
+        private TreatmentService _treatmentService;
+        private FeedbackService _feedbackService;
+        private AdoptionService _adoptionService;
+        private DonationService _donationService;
+
+        public VolunteerMainPageView(Volunteer volunteer, SpecieService specieService, AnimalService animalService, PostService postService, LikeService likeService, CommentService commentService, TreatmentService treatmentService, FeedbackService feedbackService, AdoptionService adoptionService, DonationService donationService)
         {
             InitializeComponent();
+
+            _Volunteer = volunteer;
+
+            _specieService = specieService;
+            _animalService = animalService;
+            _postService = postService;
+            _likeService = likeService;
+            _commentService = commentService;
+            _treatmentService = treatmentService;
+            _feedbackService = feedbackService;
+            _adoptionService = adoptionService;
+            _donationService = donationService;
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            Close();
+        }
+
+        private void Donations_Click(object sender, RoutedEventArgs e)
+        {
+            new DonationsView().Show();
+        }
+
+        private void RegistrationRequests_Click(object sender, RoutedEventArgs e)
+        {
+            new RegistrationRequestsView().Show();
+        }
+
+        private void PostRequests_Click(object sender, RoutedEventArgs e)
+        {
+            new PostRequestsView().Show();
+        }
+
+        private void AdoptionRequests_Click(object sender, RoutedEventArgs e)
+        {
+            new AdoptionRequestsView().Show();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Members_Click(object sender, RoutedEventArgs e)
+        {
+            new MembersView().Show();
+        }
+
+        private void Posts_Click(object sender, RoutedEventArgs e)
+        {
+            new PostsView(_Volunteer, _postService, _likeService, _commentService, _animalService, _specieService, _adoptionService, _donationService).Show();
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

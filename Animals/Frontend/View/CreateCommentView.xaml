@@ -1,0 +1,66 @@
+﻿<Window x:Class="Frontend.View.CreateCommentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="New Comment" WindowStartupLocation="CenterScreen"
+        Background="Transparent" AllowsTransparency="True" WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" Height="300" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="#4e54c8" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="#4e54c8" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Background" Value="#4e54c8" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <!-- Background Gradient -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#4e54c8" Offset="0.0" />
+                <GradientStop Color="#8f94fb" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Close Button -->
+        <Button Content="X" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Top" Width="49" Height="50" Margin="0,10,10,0"
+                Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontWeight="Bold" Panel.ZIndex="1" />
+        <Image Source="pack://application:,,,/Frontend;component/Images/animal-service-icon.png" Width="50" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"/>
+
+        <!-- New Comment Container -->
+        <Grid Margin="20,65,20,20">
+            <Border Background="White" CornerRadius="10" Padding="10" Height="200">
+                <Grid>
+                    <TextBlock Text="Create a Comment" Margin="10,10,270,145" FontWeight="Bold"/>
+                    <TextBox x:Name="CommentText" Margin="10,40,10,0" VerticalAlignment="Top" Height="93" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CommentText, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Cursor="Hand" Content="Submit" Click="Submit_Click" Command="{Binding SubmitCommentCommand}" Margin="151,138,151,0" VerticalAlignment="Top" Height="32" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "Date": "2024-07-01T16:03:21.9758925+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 1,
+    "PostId": 1
+  },
+  {
+    "Id": 2,
+    "Date": "2024-07-01T16:03:21.9821459+02:00",
+    "Content": "Uggh ugly!",
+    "UserId": 1,
+    "PostId": 2
+  },
+  {
+    "Id": 3,
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 3,
+    "PostId": 2
+  },
+  {
+    "Id": 4,
+    "Date": "2024-07-01T16:03:21.9821489+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 4,
+    "PostId": 1
+  },
+  {
+    "Id": 5,
+    "Date": "2024-07-01T16:03:21.9821491+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 5,
+    "PostId": 1
+  },
+  {
+    "Id": 5,
+    "Date": "2024-07-01T16:03:21.9821491+02:00",
+    "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "UserId": 5,
+    "PostId": 1
+  }
+]

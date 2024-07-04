@@ -1,6 +1,8 @@
-﻿namespace Backend.Repositories.Interfaces.UserInterfaces
+﻿using Backend.Models.UserModels;
+
+namespace Backend.Repositories.Interfaces.UserInterfaces
 {
-    public interface IVolunteerRepository : IUserRepository
+    public interface IVolunteerRepository : IRepository<Volunteer>
     {
     }
 }
