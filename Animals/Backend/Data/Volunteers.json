@@ -43,7 +43,7 @@
     "PhoneNumber": "123456789",
     "Email": "vladoz03@gmail.com",
     "BirthDate": "2003-07-03",
-    "Gender": 1,
+    "Gender": 0,
     "ProfileId": 10,
     "AssociationId": 6
   }
