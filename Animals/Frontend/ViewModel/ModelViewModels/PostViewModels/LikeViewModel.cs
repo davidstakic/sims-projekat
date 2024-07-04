@@ -10,6 +10,7 @@ namespace Frontend.ViewModel.ModelViewModels.PostViewModels
 
         public Like Like { get; set; }
         public Member Member { get; set; }
+        public string FullName => $"{Member.FirstName} {Member.LastName}";
 
         public LikeViewModel(Like like)
         {

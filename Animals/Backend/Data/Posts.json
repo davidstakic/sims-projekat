@@ -97,5 +97,27 @@
     "Status": 0,
     "AnimalId": 3,
     "UserId": 4
+  },
+  {
+    "Id": 12,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-04T17:41:16.6588291+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 16,
+    "UserId": 5
+  },
+  {
+    "Id": 13,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-04T17:42:51.1742361+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 17,
+    "UserId": 5
   }
 ]
