@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "Name": "Timmy",
+    "Breed": "Beagle",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Awesome",
+    "Location": "Japan",
+    "AnimalSpecieId": 1
+  },
+  {
+    "Id": 2,
+    "Name": "Boa",
+    "Breed": "Monkey",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Serbia",
+    "AnimalSpecieId": 2
+  },
+  {
+    "Id": 3,
+    "Name": "Gordon",
+    "Breed": "Cat",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Hungary",
+    "AnimalSpecieId": 3
+  },
+  {
+    "Id": 4,
+    "Name": "Sunny",
+    "Breed": "Cow",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Cacak",
+    "AnimalSpecieId": 4
+  },
+  {
+    "Id": 5,
+    "Name": "Ramstein",
+    "Breed": "Horse",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Kraljevo",
+    "AnimalSpecieId": 5
+  }
+]

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -9,8 +9,51 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
+    <Compile Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <Compile Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <Compile Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="beagle.jpg" />
+    <None Remove="Images\add.png" />
+    <None Remove="Images\animal-service-icon.png" />
+    <None Remove="Images\comment.png" />
+    <None Remove="Images\delete.png" />
+    <None Remove="Images\edit.png" />
+    <None Remove="Images\hamburger.png" />
+    <None Remove="Images\like.png" />
+    <None Remove="View\beagle.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\comment.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\animal-service-icon.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\hamburger.png" />
+    <Resource Include="Images\like.png" />
   </ItemGroup>
 
 </Project>

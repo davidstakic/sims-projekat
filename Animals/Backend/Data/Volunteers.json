@@ -1,0 +1,26 @@
+[
+  {
+    "IsAdmin": false,
+    "Id": 4,
+    "FirstName": "Andjela",
+    "LastName": "Ignjatovic",
+    "PhoneNumber": "456-789-0123",
+    "Email": "andjela@example.com",
+    "BirthDate": "1978-09-23",
+    "Gender": 1,
+    "ProfileId": 4,
+    "AssociationId": 202
+  },
+  {
+    "IsAdmin": true,
+    "Id": 5,
+    "FirstName": "Mihajlo",
+    "LastName": "Veruovic",
+    "PhoneNumber": "456-789-0123",
+    "Email": "mihajlo@example.com",
+    "BirthDate": "1978-09-23",
+    "Gender": 0,
+    "ProfileId": 5,
+    "AssociationId": 202
+  }
+]

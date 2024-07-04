@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Username": "marko",
+    "Password": "marko",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 2,
+    "Username": "daki",
+    "Password": "daki",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 3,
+    "Username": "vlaki",
+    "Password": "vlaki",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 4,
+    "Username": "andjela",
+    "Password": "andjela",
+    "CreationDate": "2023-01-15T10:20:30"
+  },
+  {
+    "Id": 5,
+    "Username": "mihajlo",
+    "Password": "mihajlo",
+    "CreationDate": "2023-01-15T10:20:30"
+  }
+]

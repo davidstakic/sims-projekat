@@ -1,0 +1,41 @@
+[
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 101,
+    "FirstName": "Marko",
+    "LastName": "Cvijanovic",
+    "PhoneNumber": "2467358697",
+    "Email": "marko@gmail.com",
+    "BirthDate": "2024-06-05",
+    "Gender": 0,
+    "ProfileId": 1,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 0,
+    "Id": 102,
+    "FirstName": "David",
+    "LastName": "Stakic",
+    "PhoneNumber": "13553864",
+    "Email": "david@gmail.com",
+    "BirthDate": "2024-05-05",
+    "Gender": 0,
+    "ProfileId": 2,
+    "AssociationId": 202
+  },
+  {
+    "IsBlacklisted": false,
+    "Status": 2,
+    "Id": 103,
+    "FirstName": "Vlado",
+    "LastName": "Zdravkovic",
+    "PhoneNumber": "13553864",
+    "Email": "vlado@gmail.com",
+    "BirthDate": "2024-05-05",
+    "Gender": 0,
+    "ProfileId": 2,
+    "AssociationId": 202
+  }
+]

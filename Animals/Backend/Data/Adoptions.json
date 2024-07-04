@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "Start": "2024-01-01",
+    "End": "2024-12-31",
+    "Status": 0,
+    "MemberId": 1,
+    "AnimalId": 1
+  },
+  {
+    "Id": 2,
+    "Start": "2024-02-01",
+    "End": "2024-11-30",
+    "Status": 2,
+    "MemberId": 2,
+    "AnimalId": 2
+  }
+]

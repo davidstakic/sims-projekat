@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Date": "2024-07-01T16:03:21.9758925+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 101,
+    "PostId": 1
+  },
+  {
+    "Id": 2,
+    "Date": "2024-07-01T16:03:21.9821459+02:00",
+    "Content": "Uggh ugly!",
+    "UserId": 102,
+    "PostId": 2
+  },
+  {
+    "Id": 3,
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 103,
+    "PostId": 3
+  },
+  {
+    "Id": 4,
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 4,
+    "PostId": 4
+  },
+  {
+    "Id": 5,
+    "Date": "2024-07-01T16:03:21.9821485+02:00",
+    "Content": "Aww how cute!",
+    "UserId": 5,
+    "PostId": 5
+  }
+]
