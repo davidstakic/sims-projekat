@@ -3,21 +3,21 @@
     "Id": 1,
     "Date": "2024-07-01T16:03:21.9758925+02:00",
     "Content": "Aww how cute!",
-    "UserId": 1,
+    "UserId": 101,
     "PostId": 1
   },
   {
     "Id": 2,
     "Date": "2024-07-01T16:03:21.9821459+02:00",
     "Content": "Uggh ugly!",
-    "UserId": 2,
+    "UserId": 102,
     "PostId": 2
   },
   {
     "Id": 3,
     "Date": "2024-07-01T16:03:21.9821485+02:00",
     "Content": "Aww how cute!",
-    "UserId": 3,
+    "UserId": 103,
     "PostId": 3
   },
   {

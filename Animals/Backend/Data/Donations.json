@@ -3,7 +3,7 @@
     "Id": 1,
     "Date": "2024-07-02T12:00:30.3958672+02:00",
     "Amount": 15,
-    "MemberId": 1,
+    "MemberId": 101,
     "AnimalId": -1,
     "AssociationId": 202
   },
@@ -11,7 +11,7 @@
     "Id": 2,
     "Date": "2024-07-02T12:00:33.515599+02:00",
     "Amount": 15,
-    "MemberId": 2,
+    "MemberId": 102,
     "AnimalId": 3,
     "AssociationId": 202
   },
@@ -19,7 +19,7 @@
     "Id": 3,
     "Date": "2024-07-02T12:02:52.1527256+02:00",
     "Amount": 50,
-    "MemberId": 3,
+    "MemberId": 103,
     "AnimalId": -1,
     "AssociationId": 202
   },
@@ -27,7 +27,7 @@
     "Id": 4,
     "Date": "2024-07-02T12:09:33.7183125+02:00",
     "Amount": 30,
-    "MemberId": 1,
+    "MemberId": 101,
     "AnimalId": -1,
     "AssociationId": 202
   },
@@ -35,7 +35,7 @@
     "Id": 5,
     "Date": "2024-07-02T13:31:55.1861751+02:00",
     "Amount": 40,
-    "MemberId": 2,
+    "MemberId": 102,
     "AnimalId": 5,
     "AssociationId": 202
   }
