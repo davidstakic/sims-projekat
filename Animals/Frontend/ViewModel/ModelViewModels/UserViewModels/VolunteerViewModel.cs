@@ -1,7 +1,4 @@
-﻿using Backend.Models.Enums;
-using Backend.Models.UserModels;
-using Backend.Services.UserServices;
-using Frontend.View;
+﻿using Frontend.View;
 using System.Text.RegularExpressions;
 
 namespace Frontend.ViewModel.ModelViewModels.UserViewModels
