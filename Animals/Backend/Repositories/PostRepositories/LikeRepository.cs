@@ -9,6 +9,11 @@ namespace Backend.Repositories.PostRepositories
         {
         }
 
+        IEnumerable<Like> ILikeRepository.GetLikeByUserId(int userId)
+        {
+            return GetAll().Where(m => m.UserId == userId);
+        }
+
         IEnumerable<Like> ILikeRepository.GetLikeByPostId(int postId)
         {
             return GetAll().Where(m => m.PostId == postId);

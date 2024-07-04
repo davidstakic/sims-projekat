@@ -16,5 +16,10 @@ namespace Backend.Services.PostServices
         {
             return _likeRepository.GetLikeByPostId(postId).ToList();
         }
+
+        public List<Like> GetLikeByUserId(int userId)
+        {
+            return _likeRepository.GetLikeByUserId(userId).ToList();
+        }
     }
 }

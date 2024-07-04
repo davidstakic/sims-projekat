@@ -3,6 +3,7 @@ using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
 using Backend.Services.UserServices;
+using Frontend.ViewModel.ModelViewModels.UserViewModels;
 using System.Windows;
 using System.Windows.Input;
 
@@ -71,14 +72,76 @@ namespace Frontend.View
 
             destructiveActionView.OnYesAction = () =>
             {
-                _profileService.Delete(_currentMember.ProfileId);
                 _memberService.Delete(_currentMember.Id);
+                _profileService.Delete(_currentMember.ProfileId);
+                DeleteUserPosts(_currentMember.Id);
+                DeleteUserComments(_currentMember.Id);
+                DeleteUserLikes(_currentMember.Id);
+                DeleteAdoption(_currentMember.Id);
+                new PrintMessageView("Successfuly deleted member.").Show();
                 new MainWindow().Show();
                 Close();
             };
 
             destructiveActionView.ShowDialog();
         }
+
+        private void DeleteAdoption(int userId)
+        {
+            var userAdoptions = _adoptionService.GetAdoptionByUserId(userId);
+            foreach (var adoption in userAdoptions)
+            {
+                _adoptionService.Delete(adoption.Id);
+            }
+        }
+
+        private void DeleteUserPosts(int userId)
+        {
+            var userPosts = _postService.GetPostByUserId(userId);
+            foreach (var post in userPosts)
+            {
+                _postService.Delete(post.Id);
+                DeletePostComments(post.Id);
+                DeletePostLikes(post.Id);
+            }
+        }
+
+        private void DeleteUserComments(int userId)
+        {
+            var userComments = _commentService.GetCommentByUserId(userId);
+            foreach (var comment in userComments)
+            {
+                _commentService.Delete(comment.Id);
+            }
+        }
+
+        private void DeleteUserLikes(int userId)
+        {
+            var userLikes = _likeService.GetLikeByUserId(userId);
+            foreach (var like in userLikes)
+            {
+                _likeService.Delete(like.Id);
+            }
+        }
+
+        private void DeletePostComments(int postId)
+        {
+            var postComments = _commentService.GetCommentByPostId(postId);
+            foreach (var comment in postComments)
+            {
+                _commentService.Delete(comment.Id);
+            }
+        }
+
+        private void DeletePostLikes(int postId)
+        {
+            var postComments = _likeService.GetLikeByPostId(postId);
+            foreach (var like in postComments)
+            {
+                _likeService.Delete(like.Id);
+            }
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

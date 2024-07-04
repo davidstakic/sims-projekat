@@ -56,7 +56,7 @@ namespace Frontend.View
 
         private void VolunteersButton_Click(object sender, RoutedEventArgs e)
         {
-            new VolunteersView(_volunterService, _profileService).Show();
+            new VolunteersView(_volunterService, _profileService, _postService, _commentService, _likeService).Show();
         }
 
         private void Donations_Click(object sender, RoutedEventArgs e)

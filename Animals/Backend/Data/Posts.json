@@ -77,17 +77,6 @@
     "UserId": 1
   },
   {
-    "Id": 11,
-    "Title": "Seal Adopting",
-    "Description": "Very cute seal :D",
-    "CreationDate": "2024-07-04T14:08:28.4702906+02:00",
-    "Image": "https://ih0.redbubble.net/image.5124594101.8686/raf,360x360,075,t,fafafa:ca443f4786.jpg",
-    "Video": "",
-    "Status": 0,
-    "AnimalId": 15,
-    "UserId": 5
-  },
-  {
     "Id": 6,
     "Title": "asdf",
     "Description": "asdf",

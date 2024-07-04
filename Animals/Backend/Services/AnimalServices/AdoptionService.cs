@@ -16,5 +16,10 @@ namespace Backend.Services.AnimalServices
         {
             return _adoptionRepository.GetAdoptionByAnimalId(animalId).ToList();
         }
+
+        public List<Adoption> GetAdoptionByUserId(int userId)
+        {
+            return _adoptionRepository.GetAdoptionByUserId(userId).ToList();
+        }
     }
 }

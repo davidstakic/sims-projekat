@@ -16,5 +16,10 @@ namespace Backend.Services.PostServices
         {
             return _commentRepository.GetCommentByPostId(postId).ToList();
         }
+
+        public List<Comment> GetCommentByUserId(int userId)
+        {
+            return _commentRepository.GetCommentByUserId(userId).ToList();
+        }
     }
 }

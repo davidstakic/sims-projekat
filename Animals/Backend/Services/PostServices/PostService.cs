@@ -16,5 +16,10 @@ namespace Backend.Services.PostServices
         {
             return _postRepository.GetPostByAnimalId(animalId).ToList();
         }
+
+        public List<Post> GetPostByUserId(int userId)
+        {
+            return _postRepository.GetPostByUserId(userId).ToList();
+        }
     }
 }

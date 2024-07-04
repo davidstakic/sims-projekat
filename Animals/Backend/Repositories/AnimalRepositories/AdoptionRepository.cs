@@ -13,5 +13,10 @@ namespace Backend.Repositories.AnimalRepositories
         {
             return GetAll().Where(m => m.AnimalId == animalId);
         }
+
+        IEnumerable<Adoption> IAdoptionRepository.GetAdoptionByUserId(int userId)
+        {
+            return GetAll().Where(m => m.MemberId == userId);
+        }
     }
 }
