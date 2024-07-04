@@ -3,6 +3,7 @@ using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Frontend.View;
 using System.Collections.ObjectModel;
 using System.Windows;
 
@@ -31,7 +32,7 @@ namespace Frontend.ViewModel.UserViewModels
             member.Status = Status.Accepted;
             _memberService.Update(member);
             WaitingMembers.Remove(member);
-            MessageBox.Show($"Member {member.FirstName} {member.LastName} has been accepted.");
+            new PrintMessageView($"Member {member.FirstName} {member.LastName} has been accepted.").Show();
         }
 
         private void RejectMember(Member? member)
@@ -39,7 +40,7 @@ namespace Frontend.ViewModel.UserViewModels
             member.Status = Status.Rejected;
             _memberService.Update(member);
             WaitingMembers.Remove(member);
-            MessageBox.Show($"Member {member.FirstName} {member.LastName} has been rejected.");
+            new PrintMessageView($"Member {member.FirstName} {member.LastName} has been rejected.").Show();
         }
     }
 }

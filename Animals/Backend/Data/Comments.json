@@ -47,5 +47,12 @@
     "Content": "lep vam je ker, nego jel ima zlatna jaja",
     "UserId": 2,
     "PostId": 1
+  },
+  {
+    "Id": 7,
+    "Date": "2024-07-04T16:47:19.3613232+02:00",
+    "Content": "kapicica",
+    "UserId": 2,
+    "PostId": 1
   }
 ]

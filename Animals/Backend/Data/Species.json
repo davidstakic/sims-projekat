@@ -1,9 +1,5 @@
 [
   {
-    "Id": 2,
-    "Name": "Orange"
-  },
-  {
     "Id": 3,
     "Name": "Asian"
   },
@@ -24,7 +20,7 @@
     "Name": "Pas"
   },
   {
-    "Id": 8,
-    "Name": "Krava"
+    "Id": 2,
+    "Name": "Bsdaffds"
   }
 ]

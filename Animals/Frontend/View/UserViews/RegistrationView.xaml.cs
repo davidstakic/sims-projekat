@@ -49,7 +49,7 @@ namespace Frontend.View
             member.AssociationId = 202;
 
             new MemberService().Create(member);
-            MessageBox.Show("Succesfully registered!");
+            new PrintMessageView("Succesfully registered!").Show();
             new MainWindow().Show();
             Close();
         }

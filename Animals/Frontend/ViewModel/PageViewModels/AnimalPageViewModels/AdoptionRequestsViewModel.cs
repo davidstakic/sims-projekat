@@ -1,7 +1,9 @@
 ﻿using Backend.Models.AnimalModels;
 using Backend.Models.Enums;
+using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using CommunityToolkit.Mvvm.Input;
+using Frontend.View;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -56,6 +58,7 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
             {
                 adoption.Status = Status.Accepted;
                 new AdoptionService().Update(adoption);
+                new PrintMessageView("Adoption has been accepted").Show();
                 LoadPendingAdoptions();
             }
         }
@@ -65,6 +68,7 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
             if (adoption != null)
             {
                 new AdoptionService().Delete(adoption.Id);
+                new PrintMessageView("Adoption has been rejected").Show();
                 LoadPendingAdoptions();
             }
         }

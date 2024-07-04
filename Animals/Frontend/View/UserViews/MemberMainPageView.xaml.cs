@@ -67,10 +67,17 @@ namespace Frontend.View
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            _profileService.Delete(_currentMember.ProfileId);
-            _memberService.Delete(_currentMember.Id);
-            new MainWindow().Show();
-            Close();
+            var destructiveActionView = new ActionView("Are you sure you want to delete?");
+
+            destructiveActionView.OnYesAction = () =>
+            {
+                _profileService.Delete(_currentMember.ProfileId);
+                _memberService.Delete(_currentMember.Id);
+                new MainWindow().Show();
+                Close();
+            };
+
+            destructiveActionView.ShowDialog();
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

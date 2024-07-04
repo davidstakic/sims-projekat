@@ -2,7 +2,6 @@ using Frontend.View;
 using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace Frontend
 {
@@ -43,11 +42,6 @@ namespace Frontend
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-        
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
         }
     }
 }

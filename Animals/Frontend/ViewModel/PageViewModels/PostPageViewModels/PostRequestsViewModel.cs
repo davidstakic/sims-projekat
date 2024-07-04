@@ -3,6 +3,7 @@ using Backend.Models.PostModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
 using CommunityToolkit.Mvvm.Input;
+using Frontend.View;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -57,6 +58,7 @@ namespace Frontend.ViewModel.ModelViewModels.PostViewModels
             {
                 post.Status = Status.Accepted;
                 new PostService().Update(post);
+                new PrintMessageView("Post request has been accepted").Show();
                 LoadPendingPosts();
             }
         }
@@ -67,6 +69,7 @@ namespace Frontend.ViewModel.ModelViewModels.PostViewModels
             {
                 new AnimalService().Delete(post.AnimalId);
                 new PostService().Delete(post.Id);
+                new PrintMessageView("Post request has been rejeted").Show();
                 LoadPendingPosts();
             }
         }

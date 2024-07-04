@@ -16,28 +16,12 @@
     "AnimalId": 2
   },
   {
-    "Id": 4,
-    "Start": "2024-04-01",
-    "End": "2024-09-30",
-    "Status": 2,
-    "MemberId": 4,
-    "AnimalId": 4
-  },
-  {
     "Id": 5,
     "Start": "2024-05-01",
     "End": "2024-08-31",
     "Status": 0,
     "MemberId": 5,
     "AnimalId": 5
-  },
-  {
-    "Id": 3,
-    "Start": "2024-03-01",
-    "End": "2024-10-31",
-    "Status": 2,
-    "MemberId": 3,
-    "AnimalId": 3
   },
   {
     "Id": 6,
@@ -54,5 +38,21 @@
     "Status": 2,
     "MemberId": 1,
     "AnimalId": 1
+  },
+  {
+    "Id": 8,
+    "Start": "2024-07-04",
+    "End": "2024-08-04",
+    "Status": 2,
+    "MemberId": 1,
+    "AnimalId": 1
+  },
+  {
+    "Id": 3,
+    "Start": "2024-03-01",
+    "End": "2024-10-31",
+    "Status": 0,
+    "MemberId": 3,
+    "AnimalId": 3
   }
 ]
