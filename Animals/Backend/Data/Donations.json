@@ -38,13 +38,5 @@
     "MemberId": 3,
     "AnimalId": 5,
     "AssociationId": 202
-  },
-  {
-    "Id": 6,
-    "Date": "2024-07-04T16:50:19.4967268+02:00",
-    "Amount": 123,
-    "MemberId": 2,
-    "AnimalId": -1,
-    "AssociationId": 202
   }
 ]

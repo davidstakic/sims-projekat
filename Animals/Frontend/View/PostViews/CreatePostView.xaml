@@ -258,7 +258,7 @@
 
                 </Grid>
 
-                <Button x:Name="Create" Content="Create" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding CreatePostCommand}" Click="Create_Click" />
+                <Button x:Name="Create" Content="Create" Margin="0,0,0,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Command="{Binding CreatePostCommand}" />
             </StackPanel>
         </Border>
     </Grid>

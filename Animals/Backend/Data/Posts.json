@@ -40,6 +40,28 @@
     "Image": "ff",
     "Video": "",
     "Status": 2,
+    "AnimalId": 5,
+    "UserId": 1
+  },
+  {
+    "Id": 6,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-02T18:18:26.3810047+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 3,
+    "UserId": 4
+  },
+  {
+    "Id": 7,
+    "Title": "ff",
+    "Description": "ff",
+    "CreationDate": "2024-07-02T18:22:43.6279297+02:00",
+    "Image": "ff",
+    "Video": "",
+    "Status": 2,
     "AnimalId": 2,
     "UserId": 4
   },
@@ -80,11 +102,11 @@
     "Id": 6,
     "Title": "asdf",
     "Description": "asdf",
-    "CreationDate": "2024-07-02T18:18:26.3810047+02:00",
+    "CreationDate": "2024-07-04T17:42:51.1742361+02:00",
     "Image": "asdf",
     "Video": "",
-    "Status": 0,
-    "AnimalId": 3,
-    "UserId": 4
+    "Status": 2,
+    "AnimalId": 17,
+    "UserId": 5
   }
 ]

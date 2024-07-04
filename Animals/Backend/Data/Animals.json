@@ -20,6 +20,16 @@
     "AnimalSpecieId": 3
   },
   {
+    "Id": 5,
+    "Name": "Ramstein",
+    "Breed": "Horse",
+    "Color": "3-color",
+    "BirthDate": "1990-01-01",
+    "HealthCondition": "Great",
+    "Location": "Kraljevo",
+    "AnimalSpecieId": 5
+  },
+  {
     "Id": 6,
     "Name": "asdf",
     "Breed": "asdf",
@@ -110,6 +120,16 @@
     "AnimalSpecieId": 1
   },
   {
+    "Id": 13,
+    "Name": "Nucci",
+    "Breed": "Retard",
+    "Color": "Crnac",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "Zdrav prav",
+    "Location": "Kraljevo",
+    "AnimalSpecieId": 8
+  },
+  {
     "Id": 15,
     "Name": "Halid",
     "Breed": "Bearded",
@@ -118,5 +138,25 @@
     "HealthCondition": "Mostly Great",
     "Location": "Antarctica",
     "AnimalSpecieId": 2
+  },
+  {
+    "Id": 16,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 4
+  },
+  {
+    "Id": 17,
+    "Name": "asdf",
+    "Breed": "asdf",
+    "Color": "asdf",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "asdf",
+    "Location": "asdf",
+    "AnimalSpecieId": 5
   }
 ]
