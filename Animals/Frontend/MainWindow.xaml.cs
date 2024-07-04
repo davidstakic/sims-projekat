@@ -1,4 +1,4 @@
-﻿using Frontend.View;
+using Frontend.View;
 using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,10 +39,12 @@ namespace Frontend
             new RegistrationView().Show();
             Close();
         }
+        
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
+        
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

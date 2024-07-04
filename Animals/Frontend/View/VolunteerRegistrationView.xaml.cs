@@ -26,6 +26,7 @@ namespace Frontend.View
             Volunteer.CreateVolunteer();
             Close();
         }
+        
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

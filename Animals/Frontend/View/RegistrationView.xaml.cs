@@ -1,4 +1,4 @@
-﻿using Backend.Models.Enums;
+using Backend.Models.Enums;
 using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using System.Windows;

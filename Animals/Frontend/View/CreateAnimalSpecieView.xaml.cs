@@ -1,4 +1,4 @@
-﻿using Backend.Services.AnimalServices;
+using Backend.Services.AnimalServices;
 using Frontend.ViewModels;
 using System.Windows;
 using System.Windows.Input;

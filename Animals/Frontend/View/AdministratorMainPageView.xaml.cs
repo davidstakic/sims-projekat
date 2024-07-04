@@ -1,4 +1,4 @@
-﻿using Backend.Models.UserModels;
+using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
