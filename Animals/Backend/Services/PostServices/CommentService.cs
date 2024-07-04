@@ -6,18 +6,15 @@ namespace Backend.Services.PostServices
 {
     public class CommentService : Service<Comment>
     {
+        private readonly ICommentRepository _commentRepository;
         public CommentService() : base((ICommentRepository)Injector.GetRepositoryInstance("ICommentRepository"))
         {
-        }
-
-        public List<Comment> GetCommentByUserId(int userId)
-        {
-            return GetAll().Where(m => m.UserId == userId).ToList();
+            _commentRepository = (ICommentRepository)Injector.GetRepositoryInstance("ICommentRepository");
         }
 
         public List<Comment> GetCommentByPostId(int postId)
         {
-            return GetAll().Where(m => m.PostId == postId).ToList();
+            return _commentRepository.GetCommentByPostId(postId).ToList();
         }
     }
 }

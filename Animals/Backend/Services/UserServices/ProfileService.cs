@@ -6,18 +6,20 @@ namespace Backend.Services.UserServices
 {
     public class ProfileService : Service<Profile>
     {
+        private readonly IProfileRepository _profileRepository;
         public ProfileService() : base((IProfileRepository)Injector.GetRepositoryInstance("IProfileRepository"))
         {
+            _profileRepository = (IProfileRepository)Injector.GetRepositoryInstance("IProfileRepository");
         }
 
         public Profile GetByUsernameAndPassword(string username, string password)
         {
-            return GetAll().FirstOrDefault(p => p.Username == username && p.Password == password)!;
+            return _profileRepository.GetByUsernameAndPassword(username, password);
         }
 
         public bool DoesUsernameExist(string username)
         {
-            return GetAll().Any(p => p.Username == username);
+            return _profileRepository.DoesUsernameExist(username);
         }
     }
 }

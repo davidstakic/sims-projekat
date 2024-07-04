@@ -13,10 +13,5 @@ namespace Backend.Repositories.VetOfficeRepositories
         {
             return GetAll().Where(m => m.AnimalId == animalId);
         }
-
-        IEnumerable<Treatment> ITreatmentRepository.GetTreatmentByVetOfficeId(int vetOfficeId)
-        {
-            return GetAll().Where(m => m.VetOfficeId == vetOfficeId);
-        }
     }
 }
