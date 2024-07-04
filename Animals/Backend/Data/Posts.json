@@ -97,5 +97,16 @@
     "Status": 0,
     "AnimalId": 1,
     "UserId": 1
+  },
+  {
+    "Id": 9,
+    "Title": "Prodajem Nuccija",
+    "Description": "Dobar je mali",
+    "CreationDate": "2024-07-04T13:49:51.7572452+02:00",
+    "Image": "https://hypebih.ba/wp-content/uploads/2023/02/nuci-1024x686.jpg",
+    "Video": "",
+    "Status": 0,
+    "AnimalId": 8,
+    "UserId": 2
   }
 ]

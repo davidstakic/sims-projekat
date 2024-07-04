@@ -118,5 +118,15 @@
     "HealthCondition": "Awesome",
     "Location": "Japan",
     "AnimalSpecieId": 1
+  },
+  {
+    "Id": 13,
+    "Name": "Nucci",
+    "Breed": "Retard",
+    "Color": "Crnac",
+    "BirthDate": "0001-01-01",
+    "HealthCondition": "Zdrav prav",
+    "Location": "Kraljevo",
+    "AnimalSpecieId": 8
   }
 ]
