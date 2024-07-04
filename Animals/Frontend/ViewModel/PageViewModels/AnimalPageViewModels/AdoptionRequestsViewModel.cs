@@ -1,7 +1,9 @@
 ﻿using Backend.Models.AnimalModels;
 using Backend.Models.Enums;
+using Backend.Models.PostModels;
 using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
+using Backend.Services.PostServices;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
 using System.Collections.ObjectModel;
@@ -13,6 +15,9 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
     public class AdoptionRequestsViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Adoption>? _pendingAdoptions;
+        private PostService _postService;
+        private CommentService _commentService;
+        private LikeService _likeService;
 
         public ObservableCollection<Adoption>? PendingAdoptions
         {
@@ -27,8 +32,11 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
         public ICommand AcceptAdoptionCommand { get; private set; }
         public ICommand RejectAdoptionCommand { get; private set; }
 
-        public AdoptionRequestsViewModel()
+        public AdoptionRequestsViewModel(PostService postService, CommentService commentService, LikeService likeService)
         {
+            _postService = postService;
+            _commentService = commentService;
+            _likeService = likeService;
             AcceptAdoptionCommand = new RelayCommand<Adoption>(AcceptAdoption);
             RejectAdoptionCommand = new RelayCommand<Adoption>(RejectAdoption);
 
@@ -56,11 +64,29 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
         {
             if (adoption != null)
             {
+                _deleteAdoptionComment(adoption);
                 adoption.Status = Status.Accepted;
                 new AdoptionService().Update(adoption);
                 new PrintMessageView("Adoption has been accepted").Show();
                 LoadPendingAdoptions();
             }
+        }
+
+        private void _deleteAdoptionComment(Adoption adoption)
+        {
+            int animalId = adoption.AnimalId;
+            Post post = _postService.GetPostByAnimalId(animalId);
+            List<Comment> comments = _commentService.GetCommentByPostId(post.Id);
+            List<Like> likes = _likeService.GetLikeByPostId(post.Id);
+            foreach (Comment comment in comments)
+            {
+                _commentService.Delete(comment.Id);
+            }
+            foreach (Like like in likes)
+            {
+                _likeService.Delete(like.Id);
+            }
+            _postService.Delete(post.Id);
         }
 
         private void RejectAdoption(Adoption? adoption)

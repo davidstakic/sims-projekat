@@ -36,27 +36,21 @@
     "CreationDate": "2024-07-02T22:30:36.5985571+02:00"
   },
   {
+    "Id": 2,
+    "Username": "jane",
+    "Password": "jane123",
+    "CreationDate": "2023-02-20T14:35:00"
+  },
+  {
     "Id": 3,
     "Username": "alice_brown",
     "Password": "brownPass789",
     "CreationDate": "2023-03-25T09:15:45"
   },
   {
-    "Id": 11,
-    "Username": "mile",
-    "Password": "mile",
-    "CreationDate": "2024-07-04T16:44:26.2513567+02:00"
-  },
-  {
-    "Id": 12,
-    "Username": "fadafds",
-    "Password": "afdsadf",
-    "CreationDate": "2024-07-04T16:58:16.8024343+02:00"
-  },
-  {
-    "Id": 13,
-    "Username": "dfasss",
-    "Password": "fasd",
-    "CreationDate": "2024-07-04T17:03:56.8015785+02:00"
+    "Id": 10,
+    "Username": "vladoz03",
+    "Password": "vlado123",
+    "CreationDate": "2024-07-03T23:25:11.8233555+02:00"
   }
 ]

@@ -57,7 +57,7 @@ namespace Frontend.View
 
         private void AdoptionRequests_Click(object sender, RoutedEventArgs e)
         {
-            new AdoptionRequestsView().Show();
+            new AdoptionRequestsView(_postService, _commentService, _likeService).Show();
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)

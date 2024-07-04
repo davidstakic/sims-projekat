@@ -40,6 +40,28 @@
     "Image": "ff",
     "Video": "",
     "Status": 2,
+    "AnimalId": 5,
+    "UserId": 1
+  },
+  {
+    "Id": 6,
+    "Title": "asdf",
+    "Description": "asdf",
+    "CreationDate": "2024-07-02T18:18:26.3810047+02:00",
+    "Image": "asdf",
+    "Video": "",
+    "Status": 2,
+    "AnimalId": 3,
+    "UserId": 4
+  },
+  {
+    "Id": 7,
+    "Title": "ff",
+    "Description": "ff",
+    "CreationDate": "2024-07-02T18:22:43.6279297+02:00",
+    "Image": "ff",
+    "Video": "",
+    "Status": 2,
     "AnimalId": 2,
     "UserId": 4
   },
@@ -77,22 +99,11 @@
     "UserId": 1
   },
   {
-    "Id": 11,
-    "Title": "Seal Adopting",
-    "Description": "Very cute seal :D",
-    "CreationDate": "2024-07-04T14:08:28.4702906+02:00",
-    "Image": "https://ih0.redbubble.net/image.5124594101.8686/raf,360x360,075,t,fafafa:ca443f4786.jpg",
-    "Video": "",
-    "Status": 0,
-    "AnimalId": 15,
-    "UserId": 5
-  },
-  {
-    "Id": 6,
-    "Title": "asdf",
-    "Description": "asdf",
-    "CreationDate": "2024-07-02T18:18:26.3810047+02:00",
-    "Image": "asdf",
+    "Id": 9,
+    "Title": "Prodajem Nuccija",
+    "Description": "Dobar je mali",
+    "CreationDate": "2024-07-04T13:49:51.7572452+02:00",
+    "Image": "https://hypebih.ba/wp-content/uploads/2023/02/nuci-1024x686.jpg",
     "Video": "",
     "Status": 0,
     "AnimalId": 3,

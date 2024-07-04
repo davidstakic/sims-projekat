@@ -96,7 +96,7 @@ namespace Frontend.View
 
         private void DeleteRelatedPosts(int animalId)
         {
-            var postsTodelete = _postService.GetPostByAnimalId(animalId);
+            var postsTodelete = _postService.GetPostsByAnimalId(animalId);
 
             foreach (var post in postsTodelete)
             {
