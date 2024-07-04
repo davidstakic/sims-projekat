@@ -6,18 +6,15 @@ namespace Backend.Services.AnimalServices
 {
     public class AdoptionService : Service<Adoption>
     {
+        protected readonly IAdoptionRepository _adoptionRepository;
         public AdoptionService() : base((IAdoptionRepository)Injector.GetRepositoryInstance("IAdoptionRepository"))
         {
+            _adoptionRepository = (IAdoptionRepository)Injector.GetRepositoryInstance("IAdoptionRepository");
         }
 
         public List<Adoption> GetAdoptionByAnimalId(int animalId)
         {
-            return GetAll().Where(m => m.AnimalId == animalId).ToList();
-        }
-
-        public List<Adoption> GetAdoptionByMemberId(int memberId)
-        {
-            return GetAll().Where(m => m.MemberId == memberId).ToList();
+            return _adoptionRepository.GetAdoptionByAnimalId(animalId).ToList();
         }
     }
 }

@@ -8,14 +8,15 @@ namespace Backend.Repositories.UserRepositories
         public MemberRepository(string filePath) : base(filePath)
         {
         }
-        public Member GetMemberByProfileId(int profileId)
+
+        public Member GetMemberByLikeId(int likeUserId)
         {
-            return GetAll().FirstOrDefault(m => m.ProfileId == profileId)!;
+            return GetAll().FirstOrDefault(m => m.Id == likeUserId)!;
         }
 
-        public Member GetMemberByAssociationId(int associationId)
+        public Member GetMemberByCommentId(int commentUserId)
         {
-            return GetAll().FirstOrDefault(m => m.AssociationId == associationId)!;
+            return GetAll().FirstOrDefault(m => m.Id == commentUserId)!;
         }
     }
 }
