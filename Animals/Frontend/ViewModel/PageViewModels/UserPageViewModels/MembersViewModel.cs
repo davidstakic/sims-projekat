@@ -1,7 +1,5 @@
-﻿using Backend.Models.AnimalModels;
-using Backend.Models.UserModels;
+﻿using Backend.Models.UserModels;
 using Backend.Services.UserServices;
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -43,20 +41,16 @@ namespace Frontend.ViewModel.UserViewModels
 
         private void BlacklistMember(Member? member)
         {
-            // Set IsBlacklisted to true
             member.IsBlacklisted = true;
 
-            // Update the member in the database
             _memberService.Update(member);
             LoadMembers();
         }
 
         private void UnblacklistMember(Member? member)
         {
-            // Set IsBlacklisted to false
             member.IsBlacklisted = false;
 
-            // Update the member in the database
             _memberService.Update(member);
             LoadMembers();
         }

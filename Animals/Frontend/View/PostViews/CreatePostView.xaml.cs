@@ -9,12 +9,9 @@ namespace Frontend.View
 {
     public partial class CreatePostView : Window
     {
-        private User _currentUser { get; set; }
-
         public CreatePostView(User currentUser, PostService postService, AnimalService animalService, SpecieService specieService)
         {
             InitializeComponent();
-            _currentUser = currentUser;
             DataContext = new CreatePostViewModel(currentUser, postService, animalService, specieService);
         }
 

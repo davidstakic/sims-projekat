@@ -3,7 +3,6 @@ using Backend.Models.PostModels;
 using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
@@ -13,10 +12,9 @@ namespace Frontend.ViewModels
 {
     public partial class CreatePostViewModel : ObservableObject
     {
-        private MemberService _memberService = new MemberService();
-        private SpecieService _animalSpecieService { get; set; }
-        private AnimalService _animalService { get; set; }
-        private PostService _postService { get; set; }
+        private SpecieService _animalSpecieService;
+        private AnimalService _animalService;
+        private PostService _postService;
 
         [ObservableProperty]
         private string _postTitle;

@@ -1,8 +1,8 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Backend.Models.Enums;
+﻿using Backend.Models.Enums;
 using Backend.Models.UserModels;
 using Backend.Services.UserServices;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Frontend.ViewModel.ModelViewModels
 {
@@ -18,60 +18,45 @@ namespace Frontend.ViewModel.ModelViewModels
         private string _password;
 
         public int Id { get; set; }
-
         public string FirstName
         {
             get => _firstName;
             set { if (_firstName != value) { _firstName = value; OnPropertyChanged("FirstName"); } }
         }
-
         public string LastName
         {
             get => _lastName;
             set { if (_lastName != value) { _lastName = value; OnPropertyChanged("LastName"); } }
         }
-
         public string PhoneNumber
         {
             get => _phoneNumber;
             set { if (_phoneNumber != value) { _phoneNumber = value; OnPropertyChanged("PhoneNumber"); } }
         }
-
         public string Email
         {
             get => _email;
             set { if (_email != value) { _email = value; OnPropertyChanged("Email"); } }
         }
-
         public DateTime BirthDate
         {
             get => _birthDate;
             set { if (_birthDate != value) { _birthDate = value; OnPropertyChanged("BirthDate"); } }
         }
-
         public Gender Gender { get; set; }
-
         public string Username
         {
             get => _username;
             set { if (_username != value) { _username = value; OnPropertyChanged("Username"); } }
         }
-
         public string Password
         {
             get => _password;
             set { if (_password != value) { _password = value; OnPropertyChanged("Password"); } }
         }
-
         public int ProfileId { get; set; }
-
         public int AssociationId { get; set; }
-
-        public string FullName
-        {
-            get { return $"{FirstName} {LastName}"; }
-        }
-
+        public string FullName { get { return $"{FirstName} {LastName}"; } }
         public bool IsMale { get; set; }
         public bool IsFemale {  get; set; }
         public bool IsOther { get; set; }
@@ -95,7 +80,6 @@ namespace Frontend.ViewModel.ModelViewModels
             IsFemale = Gender == Gender .Female ? true : false;
             IsOther = Gender == Gender .Other ? true : false;
         }
-
         public UserViewModel(ProfileService profileService)
         {
             _profileService = profileService;

@@ -1,5 +1,5 @@
-﻿using Backend.Models.UserModels;
-using Backend.Models.Enums;
+﻿using Backend.Models.Enums;
+using Backend.Models.UserModels;
 using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -13,7 +13,6 @@ namespace Frontend.ViewModel.UserViewModels
         private readonly MemberService _memberService;
 
         public ObservableCollection<Member> WaitingMembers { get; }
-
         public RelayCommand<Member> AcceptCommand { get; }
         public RelayCommand<Member> RejectCommand { get; }
 
@@ -29,18 +28,16 @@ namespace Frontend.ViewModel.UserViewModels
 
         private void AcceptMember(Member? member)
         {
-            // Logic to accept the member, e.g., updating status in the database
             member.Status = Status.Accepted;
-            _memberService.Update(member); // Assuming there's an Update method in MemberService
+            _memberService.Update(member);
             WaitingMembers.Remove(member);
             MessageBox.Show($"Member {member.FirstName} {member.LastName} has been accepted.");
         }
 
         private void RejectMember(Member? member)
         {
-            // Logic to reject the member, e.g., updating status in the database
             member.Status = Status.Rejected;
-            _memberService.Update(member); // Assuming there's an Update method in MemberService
+            _memberService.Update(member);
             WaitingMembers.Remove(member);
             MessageBox.Show($"Member {member.FirstName} {member.LastName} has been rejected.");
         }

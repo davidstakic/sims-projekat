@@ -8,11 +8,12 @@ namespace Frontend.View
 {
     public partial class DonationView : Window
     {
-        private Member currentMember { get; set; }
+        private Member _currentMember;
+
         public DonationView(Member currentMember)
         {
             InitializeComponent();
-            this.currentMember = currentMember;
+            _currentMember = currentMember;
         }
 
         private void Donate_Click(object sender, RoutedEventArgs e)
@@ -25,7 +26,7 @@ namespace Frontend.View
                 return;
             }
             DonationService donationService = new DonationService();
-            donationService.Create(new Donation(DateTime.Now, amount, currentMember.Id, -1, currentMember.AssociationId));
+            donationService.Create(new Donation(DateTime.Now, amount, _currentMember.Id, -1, _currentMember.AssociationId));
             Close();
         }
 

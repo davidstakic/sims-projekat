@@ -10,6 +10,7 @@ public class CreateCommentViewModel : ObservableObject
     private readonly Post _post;
     private readonly User _currentUser;
     private readonly CommentService _commentService;
+
     public string CommentText { get; set; }
     public ICommand SubmitCommentCommand { get; }
 

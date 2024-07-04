@@ -5,10 +5,12 @@ namespace Frontend.ViewModel.ModelViewModels.PostViewModels
 {
     public class CommentsViewModel
     {
+        private CommentService _commentService;
+
         public int UserId { get; }
         public int PostId { get; }
-        private CommentService _commentService { get; set; }
         public List<CommentViewModel> Comments { get; set; }
+
         public CommentsViewModel(int userId, int postId, CommentService commentService)
         {
             UserId = userId;

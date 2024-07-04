@@ -46,7 +46,7 @@ namespace Frontend.View
             member.ProfileId = profile.Id;
             member.IsBlacklisted = false;
             member.Status = Status.Waiting;
-            member.AssociationId = 202; // for more associations needs new logic!
+            member.AssociationId = 202;
 
             new MemberService().Create(member);
             MessageBox.Show("Succesfully registered!");

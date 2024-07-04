@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <Compile Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <Compile Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <EmbeddedResource Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <None Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\AssociationViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\VetOfficeViewModels\**" />
+    <Page Remove="ViewModel\ModelViewModels\VoteViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="beagle.jpg" />
     <None Remove="Images\add.png" />
     <None Remove="Images\animal-service-icon.png" />
@@ -23,12 +38,6 @@
   <ItemGroup>
     <Resource Include="Images\add.png" />
     <Resource Include="Images\comment.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\ModelViewModels\AssociationViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\VoteViewModels\" />
-    <Folder Include="ViewModel\ModelViewModels\VetOfficeViewModels\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,11 +8,12 @@ namespace Frontend.View
 {
     public partial class MemberUpdateView : Window
     {
-        private Member currentMember { get; set; }
+        private Member _currentMember;
+
         public MemberUpdateView(Member currentMember)
         {
             InitializeComponent();
-            this.currentMember = currentMember;
+            _currentMember = currentMember;
             FirstNameTextBox.Text = currentMember.FirstName;
             LastNameTextBox.Text = currentMember.LastName;
             EmailTextBox.Text = currentMember.Email;
@@ -33,23 +34,23 @@ namespace Frontend.View
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            currentMember.FirstName = FirstNameTextBox.Text;
-            if (string.IsNullOrWhiteSpace(currentMember.FirstName)) return;
-            currentMember.LastName = LastNameTextBox.Text;
-            if (string.IsNullOrWhiteSpace(currentMember.LastName)) return;
-            currentMember.Email = EmailTextBox.Text;
-            if (string.IsNullOrWhiteSpace(currentMember.Email)) return;
-            currentMember.PhoneNumber = PhoneNumberTextBox.Text;
-            if (string.IsNullOrWhiteSpace(currentMember.PhoneNumber)) return;
+            _currentMember.FirstName = FirstNameTextBox.Text;
+            if (string.IsNullOrWhiteSpace(_currentMember.FirstName)) return;
+            _currentMember.LastName = LastNameTextBox.Text;
+            if (string.IsNullOrWhiteSpace(_currentMember.LastName)) return;
+            _currentMember.Email = EmailTextBox.Text;
+            if (string.IsNullOrWhiteSpace(_currentMember.Email)) return;
+            _currentMember.PhoneNumber = PhoneNumberTextBox.Text;
+            if (string.IsNullOrWhiteSpace(_currentMember.PhoneNumber)) return;
             DateTime? birthDate = BirthDatePicker.SelectedDate;
             if (birthDate == null) return;
-            currentMember.BirthDate = DateOnly.FromDateTime(birthDate.Value);
-            if (MaleRadioButton.IsChecked == true) currentMember.Gender = Gender.Male;
-            else if (FemaleRadioButton.IsChecked == true) currentMember.Gender = Gender.Female;
-            else if (OtherRadioButton.IsChecked == true) currentMember.Gender = Gender.Other;
+            _currentMember.BirthDate = DateOnly.FromDateTime(birthDate.Value);
+            if (MaleRadioButton.IsChecked == true) _currentMember.Gender = Gender.Male;
+            else if (FemaleRadioButton.IsChecked == true) _currentMember.Gender = Gender.Female;
+            else if (OtherRadioButton.IsChecked == true) _currentMember.Gender = Gender.Other;
             else return;
 
-            Profile profile = new ProfileService().GetById(currentMember.ProfileId);
+            Profile profile = new ProfileService().GetById(_currentMember.ProfileId);
             string username = UsernameTextBox.Text;
             if (string.IsNullOrWhiteSpace(username)) return;
             string password = PasswordBox.Password;
@@ -58,12 +59,12 @@ namespace Frontend.View
             profile.Password = password;
             new ProfileService().Update(profile);
 
-            currentMember.ProfileId = currentMember.ProfileId;
-            currentMember.IsBlacklisted = currentMember.IsBlacklisted;
-            currentMember.Status = currentMember.Status;
-            currentMember.AssociationId = currentMember.AssociationId;
+            _currentMember.ProfileId = _currentMember.ProfileId;
+            _currentMember.IsBlacklisted = _currentMember.IsBlacklisted;
+            _currentMember.Status = _currentMember.Status;
+            _currentMember.AssociationId = _currentMember.AssociationId;
 
-            new MemberService().Update(currentMember);
+            new MemberService().Update(_currentMember);
             MessageBox.Show("Succesfully updated!");
             Close();
         }

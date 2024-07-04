@@ -10,6 +10,14 @@ using System.Windows.Input;
 
 public class OptionsViewModel : ObservableObject
 {
+    private PostService _postService;
+    private LikeService _likeService;
+    private CommentService _commentService;
+    private AnimalService _animalService;
+    private SpecieService _specieService;
+    private AdoptionService _adoptionService;
+    private DonationService _donationService;
+
     public int UserId { get; }
     public int PostId { get; }
     public ICommand DeletePostCommand { get; }
@@ -18,13 +26,6 @@ public class OptionsViewModel : ObservableObject
     public ICommand ShowCommentsCommand { get; }
     public ICommand ShowLikesCommand { get; }
     public PostDetailView PostDetailView { get; }
-    private PostService _postService { get; set; }
-    private LikeService _likeService { get; set; }
-    private CommentService _commentService { get; set; }
-    private AnimalService _animalService { get; set; }
-    private SpecieService _specieService { get; set; }
-    private AdoptionService _adoptionService { get; set; }
-    private DonationService _donationService { get; set; }
 
     public OptionsViewModel(int userId, int postId, PostService postService, LikeService likeService, CommentService commentService, AnimalService animalService, SpecieService specieService, AdoptionService adoptionService, DonationService donationService, PostDetailView postDetailView)
     {

@@ -4,9 +4,10 @@ using Frontend.ViewModel.ModelViewModels.PostViewModels;
 
 public class LikesViewModel
 {
+    private LikeService _likeService;
+    
     public int UserId { get; }
     public int PostId { get; }
-    private LikeService _likeService { get; set; }
     public List<LikeViewModel> Likes { get; set; }
 
     public LikesViewModel(int userId, int postId, LikeService likeService)

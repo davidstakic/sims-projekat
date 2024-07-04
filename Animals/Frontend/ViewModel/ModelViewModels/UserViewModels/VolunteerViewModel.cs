@@ -1,6 +1,6 @@
-﻿using Backend.Models.UserModels;
+﻿using Backend.Models.Enums;
+using Backend.Models.UserModels;
 using Backend.Services.UserServices;
-using Backend.Models.Enums;
 using Frontend.View;
 using System.Text.RegularExpressions;
 
@@ -30,12 +30,6 @@ namespace Frontend.ViewModel.ModelViewModels.UserViewModels
             _volunteerService = volunteerService;
             _profileService = profileService;
             BirthDate = DateTime.Today;
-        }
-        public VolunteerViewModel(VolunteerViewModel volunteerViewModel, VolunteerService volunteerService, ProfileService profileService) : base(volunteerViewModel.Id, volunteerViewModel.FirstName, volunteerViewModel.LastName, volunteerViewModel.PhoneNumber, volunteerViewModel.Email, volunteerViewModel.BirthDate, volunteerViewModel.Gender, volunteerViewModel.ProfileId, volunteerViewModel.Id, profileService)
-        {
-            _volunteerService = volunteerService;
-            _profileService = profileService;
-            IsAdmin = volunteerViewModel.IsAdmin;
         }
         public VolunteerViewModel(Volunteer volunteer, VolunteerService volunteerService, ProfileService profileService) : base(volunteer.Id, volunteer.FirstName, volunteer.LastName, volunteer.PhoneNumber, volunteer.Email, volunteer.BirthDate.ToDateTime(TimeOnly.MinValue), volunteer.Gender, volunteer.ProfileId, volunteer.Id, profileService)
         {

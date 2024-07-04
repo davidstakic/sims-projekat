@@ -1,10 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Windows.Input;
-using Backend.Models.AnimalModels;
+﻿using Backend.Models.AnimalModels;
 using Backend.Models.Enums;
 using Backend.Services.AnimalServices;
 using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Windows.Input;
 
 namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
 {
@@ -27,11 +27,9 @@ namespace Frontend.ViewModel.ModelViewModels.AnimalViewModels
 
         public AdoptionRequestsViewModel()
         {
-            // Initialize commands
             AcceptAdoptionCommand = new RelayCommand<Adoption>(AcceptAdoption);
             RejectAdoptionCommand = new RelayCommand<Adoption>(RejectAdoption);
 
-            // Load pending adoptions
             LoadPendingAdoptions();
         }
 

@@ -11,6 +11,17 @@ using System.Windows.Input;
 
 public class PostDetailViewModel : ObservableObject
 {
+    private bool _isLiked;
+    private int _likeCount;
+    private int _commentCount;
+    private PostService _postService;
+    private LikeService _likeService;
+    private CommentService _commentService;
+    private AnimalService _animalService;
+    private SpecieService _specieService;
+    private AdoptionService _adoptionService;
+    private DonationService _donationService;
+
     public User CurrentUser { get; set; }
     public Post Post { get; set; }
     public Member Member { get; set; }
@@ -18,19 +29,16 @@ public class PostDetailViewModel : ObservableObject
     public string LastName { get; set; }
     public Animal Animal { get; set; }
     public string SpecieName { get; set; }
-    private bool _isLiked;
     public bool IsLiked
     {
         get { return _isLiked; }
         set { SetProperty(ref _isLiked, value); }
     }
-    private int _likeCount;
     public int LikeCount
     {
         get { return _likeCount; }
         set { SetProperty(ref _likeCount, value); }
     }
-    private int _commentCount;
     public int CommentCount
     {
         get { return _commentCount; }
@@ -38,13 +46,6 @@ public class PostDetailViewModel : ObservableObject
     }
     public string FullName => $"{FirstName} {LastName}";
     public PostDetailView PostDetailView { get; set; }
-    private PostService _postService { get; set; }
-    private LikeService _likeService { get; set; }
-    private CommentService _commentService { get; set; }
-    private AnimalService _animalService { get; set; }
-    private SpecieService _specieService { get; set; }
-    private AdoptionService _adoptionService { get; set; }
-    private DonationService _donationService { get; set; }
     public ICommand LikeCommand { get; }
     public ICommand CommentCommand { get; }
     public ICommand OptionsCommand { get; }

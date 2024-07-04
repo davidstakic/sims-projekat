@@ -16,8 +16,6 @@ namespace Frontend.View
         private PostService _postService;
         private LikeService _likeService;
         private CommentService _commentService;
-        private TreatmentService _treatmentService;
-        private FeedbackService _feedbackService;
         private AdoptionService _adoptionService;
         private DonationService _donationService;
 
@@ -32,8 +30,6 @@ namespace Frontend.View
             _postService = postService;
             _likeService = likeService;
             _commentService = commentService;
-            _treatmentService = treatmentService;
-            _feedbackService = feedbackService;
             _adoptionService = adoptionService;
             _donationService = donationService;
         }

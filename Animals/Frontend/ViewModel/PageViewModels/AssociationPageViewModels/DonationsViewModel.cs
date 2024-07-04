@@ -1,11 +1,11 @@
-﻿using Backend.Models.AssociationModels;
-using Backend.Models.AnimalModels;
+﻿using Backend.Models.AnimalModels;
+using Backend.Models.AssociationModels;
 using Backend.Models.UserModels;
-using Backend.Services.AssociationServices;
-using System.Collections.ObjectModel;
 using Backend.Services.AnimalServices;
+using Backend.Services.AssociationServices;
 using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Frontend.ViewModel.AssociationViewModels
 {
@@ -15,8 +15,8 @@ namespace Frontend.ViewModel.AssociationViewModels
         private readonly MemberService _memberService;
         private readonly AnimalService _animalService;
         private readonly AssociationService _associationService;
-
         private ObservableCollection<DonationViewModel> _donations;
+
         public ObservableCollection<DonationViewModel> Donations
         {
             get { return _donations; }
@@ -26,9 +26,9 @@ namespace Frontend.ViewModel.AssociationViewModels
         public DonationsViewModel()
         {
             _donationService = new DonationService();
-            _memberService = new MemberService();  // Replace with your MemberService
-            _animalService = new AnimalService();  // Replace with your AnimalService
-            _associationService = new AssociationService();  // Replace with your AssociationService
+            _memberService = new MemberService();
+            _animalService = new AnimalService();
+            _associationService = new AssociationService();
 
             LoadDonations();
         }

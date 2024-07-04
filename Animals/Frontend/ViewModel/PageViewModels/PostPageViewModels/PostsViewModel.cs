@@ -4,7 +4,6 @@ using Backend.Models.UserModels;
 using Backend.Services.AnimalServices;
 using Backend.Services.AssociationServices;
 using Backend.Services.PostServices;
-using Backend.Services.UserServices;
 using CommunityToolkit.Mvvm.Input;
 using Frontend.View;
 using Newtonsoft.Json;
@@ -16,14 +15,14 @@ using System.Windows.Input;
 
 public class PostsViewModel : INotifyPropertyChanged, IObserver
 {
-    private User CurrentUser { get; set; }
-    private PostService postService { get; set; }
-    private LikeService likeService { get; set; }
-    private CommentService commentService { get; set; }
-    private AnimalService animalService { get; set; }
-    private SpecieService specieService { get; set; }
-    private AdoptionService adoptionService { get; set; }
-    private DonationService donationService { get; set; }
+    private User CurrentUser;
+    private PostService postService;
+    private LikeService likeService;
+    private CommentService commentService;
+    private AnimalService animalService;
+    private SpecieService specieService;
+    private AdoptionService adoptionService;
+    private DonationService donationService;
     private ObservableCollection<PostDetailViewModel> posts;
     public ObservableCollection<PostDetailViewModel> Posts
     {

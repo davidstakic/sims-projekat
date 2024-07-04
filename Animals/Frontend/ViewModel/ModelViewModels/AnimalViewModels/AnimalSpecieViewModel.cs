@@ -7,8 +7,8 @@ namespace Frontend.ViewModels
 {
     public class AnimalSpecieViewModel : INotifyPropertyChanged
     {
-        private string _name;
         private SpecieService _specieService;
+        private string _name;
 
         public int Id { get; set; }
 
@@ -53,10 +53,7 @@ namespace Frontend.ViewModels
             try
             {
                 AnimalSpecie newSpecie = new AnimalSpecie(Id, Name);
-
                 _specieService.Create(newSpecie);
-
-                Name = string.Empty;
 
                 new PrintMessageView("Successfuly created animal specie.").Show();
             }
@@ -77,10 +74,7 @@ namespace Frontend.ViewModels
             try
             {
                 AnimalSpecie updatedSpecie = new AnimalSpecie(Id, Name);
-
                 _specieService.Update(updatedSpecie);
-
-                Name = string.Empty;
 
                 new PrintMessageView("Successfuly updated animal specie.").Show();
             }

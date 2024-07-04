@@ -7,6 +7,7 @@ namespace Frontend.ViewModel.ModelViewModels.PostViewModels
     public class LikeViewModel
     {
         private MemberService _memberService = new MemberService();
+
         public Like Like { get; set; }
         public Member Member { get; set; }
 
